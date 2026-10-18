@@ -1,0 +1,14 @@
+{
+  "host": "server.fritz.box",
+  "port": 25565,
+  "version": "26.1",
+  "botEmail": "HIER_DIE_EMAIL_VOM_ZWEITACCOUNT",
+  "besitzer": "L0rdr3spawn",
+
+  "folgeAbstand": 3,
+  "kampfRadius": 12,
+  "lootRadius": 16,
+  "fluchtLeben": 6,
+  "essenAb": 16,
+  "reconnectSekunden": 15
+}

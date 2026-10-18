@@ -1,0 +1,29 @@
+shortname,fullname,category,startdate,visible,format
+FA-GS1,Freiarbeit GS1 Bienen,Freiarbeit,2026-08-31,1,topics
+FA-GS2,Freiarbeit GS2 Hummeln,Freiarbeit,2026-08-31,1,topics
+FA-GS3,Freiarbeit GS3 Schmetterlinge,Freiarbeit,2026-08-31,1,topics
+FA-GS4,Freiarbeit GS4 Marienkäfer,Freiarbeit,2026-08-31,1,topics
+FA-MS1,Freiarbeit MS1 Füchse,Freiarbeit,2026-08-31,1,topics
+FA-MS2,Freiarbeit MS2 Dachse,Freiarbeit,2026-08-31,1,topics
+FA-MS3,Freiarbeit MS3 Igel,Freiarbeit,2026-08-31,1,topics
+FA-SEK1,Freiarbeit SEK1 Eichen,Freiarbeit,2026-08-31,1,topics
+FA-SEK2,Freiarbeit SEK2 Buchen,Freiarbeit,2026-08-31,1,topics
+FA-SEK3,Freiarbeit SEK3 Linden,Freiarbeit,2026-08-31,1,topics
+EPO-GS-1,Epoche 1 GS,Epochen,2026-08-31,1,topics
+EPO-GS-2,Epoche 2 GS,Epochen,2026-08-31,1,topics
+EPO-GS-3,Epoche 3 GS,Epochen,2026-08-31,1,topics
+EPO-GS-4,Epoche 4 GS,Epochen,2026-08-31,1,topics
+EPO-MS-1,Epoche 1 MS,Epochen,2026-08-31,1,topics
+EPO-MS-2,Epoche 2 MS,Epochen,2026-08-31,1,topics
+EPO-MS-3,Epoche 3 MS,Epochen,2026-08-31,1,topics
+EPO-MS-4,Epoche 4 MS,Epochen,2026-08-31,1,topics
+EPO-SEK-1,Epoche 1 SEK,Epochen,2026-08-31,1,topics
+EPO-SEK-2,Epoche 2 SEK,Epochen,2026-08-31,1,topics
+EPO-SEK-3,Epoche 3 SEK,Epochen,2026-08-31,1,topics
+EPO-SEK-4,Epoche 4 SEK,Epochen,2026-08-31,1,topics
+ENG-GS,Englisch Grundstufe,Sprachen,2026-08-31,1,topics
+ENG-MS,Englisch Mittelstufe,Sprachen,2026-08-31,1,topics
+ENG-SEK,Englisch Sekundarstufe,Sprachen,2026-08-31,1,topics
+AG-HAUS,AG Haus,AG,2026-08-31,1,topics
+AG-HOF,AG Hof,AG,2026-08-31,1,topics
+ABD-ENG,Abendschule Englisch,Abendschule,2026-08-31,1,topics

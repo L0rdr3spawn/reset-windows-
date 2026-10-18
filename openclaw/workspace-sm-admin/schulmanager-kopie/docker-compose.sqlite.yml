@@ -1,0 +1,57 @@
+# Schulmanager – schlanke Variante mit SQLite (ohne PostgreSQL)
+#
+# Für Tests, Demos, Schulungsumgebungen oder sehr kleine Installationen. Für den Produktiv-
+# betrieb einer großen Schule (≈2500 Schüler) wird PostgreSQL (docker-compose.yml) empfohlen.
+#
+#   docker compose -f docker-compose.sqlite.yml up -d --build
+#   docker compose -f docker-compose.sqlite.yml logs -f app
+#
+# Benötigt dieselbe .env wie docker-compose.yml (POSTGRES_* werden ignoriert).
+# Caddy, Backup-Sidecar und Härtung werden aus docker-compose.yml übernommen ("extends").
+
+name: ${COMPOSE_PROJECT_NAME:-schulmanager-sqlite}
+
+services:
+  app:
+    extends:
+      file: docker-compose.yml
+      service: app
+    environment:
+      SM_DATABASE_URL: sqlite:////app/data/schulmanager.db
+    depends_on: !reset {}
+    networks: !override
+      - web
+      - backend
+
+  caddy:
+    extends:
+      file: docker-compose.yml
+      service: caddy
+
+  backup:
+    extends:
+      file: docker-compose.yml
+      service: backup
+    environment:
+      BACKUP_DB_TYPE: sqlite
+      BACKUP_SQLITE_PATH: /appdata/schulmanager.db
+      PGHOST: ""
+      PGPASSWORD: ""
+    # Erst sichern, wenn die App die Datenbankdatei angelegt hat
+    depends_on: !override
+      app:
+        condition: service_healthy
+
+networks:
+  web:
+    ipam:
+      config:
+        - subnet: ${SM_WEB_SUBNET:-172.29.40.0/24}
+  backend:
+    internal: true
+  egress:
+
+volumes:
+  app_data:
+  caddy_data:
+  caddy_config:

@@ -1,0 +1,30 @@
+Aufgabe 2 – Welche Schlüsse ziehst du aus den Experimenten?
+
+(a) Soll man Texte so schreiben wie oben gezeigt – man versteht sie doch?
+
+Nein. Man kann den Text zwar mit Mühe entziffern, aber:
+- Das Lesen dauert viel länger und ist anstrengend.
+- Es entstehen leicht Missverständnisse, weil manche Wörter mehrdeutig werden
+  (z. B. "Mnnr" oder "snd" könnte Verschiedenes bedeuten).
+- Nicht jeder Leser kann den Text verstehen (z. B. Kinder, Menschen, die Deutsch
+  lernen, oder Vorleseprogramme für Sehbehinderte).
+- Der Text wirkt unprofessionell, und bei wichtigen Texten wie einem Gesetz
+  muss die Bedeutung eindeutig sein.
+
+(b) Soll man HTML-Quelltexte so salopp schreiben – der Browser versteht sie doch?
+
+Nein. Die Fehlertoleranz des Browsers ist kein Freibrief:
+- Jeder Browser "repariert" Fehler auf seine eigene Art. Die Seite kann deshalb
+  in verschiedenen Browsern unterschiedlich aussehen.
+- Der Browser muss raten, was gemeint ist – und rät manchmal falsch.
+- Andere Programme (Suchmaschinen, Screenreader, Übersetzer) verstehen die Seite
+  schlechter, wenn die Struktur fehlt.
+- Fehlerhafter Code ist schwerer zu lesen, zu warten und zu erweitern.
+  Spätestens wenn CSS oder JavaScript dazukommen, führen Strukturfehler zu
+  Problemen, die schwer zu finden sind.
+- Es gibt einen Standard. Wer sich daran hält, kann sicher sein, dass die Seite
+  überall richtig funktioniert – auch in zukünftigen Browsern.
+
+Fazit: Wie bei normalen Texten gilt auch bei HTML: Nur weil man etwas
+"irgendwie" versteht, ist es nicht richtig. Sauberer, korrekter Code sorgt für
+Eindeutigkeit, Zuverlässigkeit und Verständlichkeit.

@@ -1,0 +1,558 @@
+# Schulmanager – Produktionsbetrieb mit Docker Compose
+#
+#   cp .env.example .env && $EDITOR .env      # Domain, Passwörter, Secret setzen
+#   docker compose up -d --build              # app + db + caddy (HTTPS) + backup
+#   docker compose --profile monitoring up -d # zusätzlich Prometheus + Grafana
+#   docker compose --profile uptime up -d     # zusätzlich Uptime-Kuma (Erreichbarkeit/Alarme)
+#   docker compose --profile antivirus up -d  # zusätzlich ClamAV-Virenscan der Uploads (.env: SM_CLAMAV_HOST=clamav)
+#
+# Netze:
+#   web        caddy ↔ app (+ Uptime-Kuma); Ausgang ins Internet (SMTP, Webhooks, Let's Encrypt)
+#   backend    app ↔ db ↔ backup – "internal": kein Zugang von/nach außen, Datenbank nie veröffentlicht
+#   egress     nur backup/clamav → Internet (Offsite-Kopie per rclone, Virensignaturen per freshclam)
+#   monitoring app ↔ prometheus ↔ grafana
+#
+# Ausführliche Anleitung: docs/BETRIEB.md
+
+name: ${COMPOSE_PROJECT_NAME:-schulmanager}
+
+x-logging: &logging
+  driver: json-file
+  options:
+    max-size: "${LOG_MAX_SIZE:-10m}"
+    max-file: "${LOG_MAX_FILES:-5}"
+    compress: "true"
+
+x-hardening: &hardening
+  security_opt:
+    - no-new-privileges:true
+  cap_drop:
+    - ALL
+
+services:
+  # -------------------------------------------------------------------------
+  # Anwendung (FastAPI + ausgeliefertes React-Frontend)
+  # -------------------------------------------------------------------------
+  app:
+    image: ${SM_IMAGE:-schulmanager:latest}
+    build:
+      context: .
+      args:
+        APP_VERSION: ${SM_VERSION:-dev}
+    restart: unless-stopped
+    init: true
+    <<: *hardening
+    read_only: true
+    tmpfs:
+      - /tmp:size=256m,mode=1777
+    # Alle in .env.example dokumentierten SM_*-Variablen stehen unten (Werte aus .env). app.env nur für weitere,
+    # hier nicht aufgeführte Variablen – Einträge unter environment: haben Vorrang vor app.env.
+    env_file:
+      - path: ./app.env
+        required: false
+    environment:
+      SM_ENV: production
+      SM_DB_POOL_SIZE: ${SM_DB_POOL_SIZE:-20}
+      SM_THREADPOOL: ${SM_THREADPOOL:-40}
+      SM_HOLIDAY_IMPORT: ${SM_HOLIDAY_IMPORT:-1}
+      SM_LICENSE_PUBKEY: ${SM_LICENSE_PUBKEY:-}
+      SM_LICENSE_SERVER: ${SM_LICENSE_SERVER:-}
+      SM_LICENSE_FILE: ${SM_LICENSE_FILE:-}
+      SM_LICENSE_ENFORCE: ${SM_LICENSE_ENFORCE:-}
+      SM_LICENSE_GRACE_DAYS: ${SM_LICENSE_GRACE_DAYS:-14}
+      SM_LICENSE_CHECK_HOURS: ${SM_LICENSE_CHECK_HOURS:-24}
+      SM_LICENSE_PING_MINUTES: ${SM_LICENSE_PING_MINUTES:-15}
+      SM_DEMO_PUBLIC: ${SM_DEMO_PUBLIC:-0}
+      SM_DEMO_ALL_ACCOUNTS: ${SM_DEMO_ALL_ACCOUNTS:-1}
+      SM_MODE: ${SM_MODE:-production}       # production = Echtbetrieb: Start bricht bei fehlenden Pflichtwerten ab, Demo aus
+      SM_DATABASE_URL: postgresql+psycopg://${POSTGRES_USER:-schulmanager}:${POSTGRES_PASSWORD:-}@db:5432/${POSTGRES_DB:-schulmanager}
+      SM_SECRET_KEY: ${SM_SECRET_KEY:?SM_SECRET_KEY fehlt in .env (openssl rand -hex 32)}
+      SM_BASE_URL: ${SM_BASE_URL:-https://${SM_DOMAIN:?SM_DOMAIN fehlt in .env}}
+      SM_COOKIE_SECURE: "1"
+      SM_TRUST_PROXY: "1"
+      SM_PROXY_COUNT: "1"
+      # Nur Caddy im Netz "web" darf X-Forwarded-* setzen (S-10); Netz unten fest vergeben, bei Konflikt SM_WEB_SUBNET ändern
+      SM_TRUSTED_PROXIES: ${SM_TRUSTED_PROXIES:-${SM_WEB_SUBNET:-172.29.40.0/24}}
+      SM_WORKERS: "1"                       # bewusst 1 – In-Memory-Store + SSE (siehe docs/BETRIEB.md)
+      SM_APP_NAME: ${SM_APP_NAME:-Schulmanager}
+      SM_ADMIN_USER: ${SM_ADMIN_USER:-admin}
+      SM_ADMIN_PASSWORD: ${SM_ADMIN_PASSWORD:-}
+      SM_LOAD_DEMO: ${SM_LOAD_DEMO:-0}
+      SM_LOG_LEVEL: ${SM_LOG_LEVEL:-INFO}
+      SM_LOG_FORMAT: ${SM_LOG_FORMAT:-json}
+      SM_ACCESS_LOG: ${SM_ACCESS_LOG:-1}
+      SM_ENABLE_DOCS: ${SM_ENABLE_DOCS:-0}   # 0 aus · admin nur angemeldete Admins · 1 öffentlich (S-15)
+      SM_OUTBOUND_ALLOW: ${SM_OUTBOUND_ALLOW:-}   # Ausnahmen der Zielprüfung (z. B. schulinterner Mailserver), S-02/S-05
+      SM_GENERATE_TIME_LIMIT: ${SM_GENERATE_TIME_LIMIT:-30}
+      SM_KEEP_VERSIONS: ${SM_KEEP_VERSIONS:-300}
+      SM_BACKUP_KEEP: ${SM_BACKUP_KEEP:-30}
+      SM_AUTO_BACKUP_HOURS: ${SM_AUTO_BACKUP_HOURS:-0}
+      SM_SESSION_IDLE_MINUTES: ${SM_SESSION_IDLE_MINUTES:-10080}
+      SM_SESSION_MAX_DAYS: ${SM_SESSION_MAX_DAYS:-30}
+      SM_LOGIN_MAX_FAILURES: ${SM_LOGIN_MAX_FAILURES:-5}
+      SM_LOGIN_MAX_FAILURES_IP: ${SM_LOGIN_MAX_FAILURES_IP:-30}
+      SM_LOGIN_LOCK_MINUTES: ${SM_LOGIN_LOCK_MINUTES:-15}
+      SM_SMTP_HOST: ${SM_SMTP_HOST:-}
+      SM_SMTP_PORT: ${SM_SMTP_PORT:-587}
+      SM_SMTP_USER: ${SM_SMTP_USER:-}
+      SM_SMTP_PASSWORD: ${SM_SMTP_PASSWORD:-}
+      SM_SMTP_FROM: ${SM_SMTP_FROM:-}
+      SM_SMTP_TLS: ${SM_SMTP_TLS:-starttls}
+      SM_WEBHOOK_SECRET: ${SM_WEBHOOK_SECRET:-}
+      SM_OIDC_ISSUER: ${SM_OIDC_ISSUER:-}
+      SM_OIDC_CLIENT_ID: ${SM_OIDC_CLIENT_ID:-}
+      SM_OIDC_CLIENT_SECRET: ${SM_OIDC_CLIENT_SECRET:-}
+      SM_OIDC_SCOPES: ${SM_OIDC_SCOPES:-openid profile email}
+      SM_OIDC_USERNAME_CLAIM: ${SM_OIDC_USERNAME_CLAIM:-preferred_username}
+      SM_OIDC_AUTO_CREATE: ${SM_OIDC_AUTO_CREATE:-0}
+      SM_OIDC_DEFAULT_ROLE: ${SM_OIDC_DEFAULT_ROLE:-lehrer}
+      SM_OIDC_LABEL: ${SM_OIDC_LABEL:-Single Sign-on}
+      SM_NOTIFY_DISPATCHER: ${SM_NOTIFY_DISPATCHER:-1}
+      # Auto-Planer (Stundenplan nach Änderungen reparieren)
+      SM_AUTOPLAN: ${SM_AUTOPLAN:-1}
+      SM_AUTOPLAN_DELAY: ${SM_AUTOPLAN_DELAY:-3}
+      SM_AUTOPLAN_TIME_LIMIT: ${SM_AUTOPLAN_TIME_LIMIT:-15}
+      # Postfach ↔ E-Mail-Konten der Nutzer/innen
+      SM_MAIL_SYNC: ${SM_MAIL_SYNC:-1}
+      SM_MAIL_SYNC_MINUTES: ${SM_MAIL_SYNC_MINUTES:-5}
+      SM_OAUTH_GOOGLE_CLIENT_ID: ${SM_OAUTH_GOOGLE_CLIENT_ID:-}
+      SM_OAUTH_GOOGLE_CLIENT_SECRET: ${SM_OAUTH_GOOGLE_CLIENT_SECRET:-}
+      SM_OAUTH_MICROSOFT_CLIENT_ID: ${SM_OAUTH_MICROSOFT_CLIENT_ID:-}
+      SM_OAUTH_MICROSOFT_CLIENT_SECRET: ${SM_OAUTH_MICROSOFT_CLIENT_SECRET:-}
+      SM_OAUTH_MICROSOFT_TENANT: ${SM_OAUTH_MICROSOFT_TENANT:-common}
+      SM_AUTO_MIGRATE: ${SM_AUTO_MIGRATE:-1}
+      SM_DEMO_BACKGROUND: ${SM_DEMO_BACKGROUND:-1}
+      SM_DEMO_CLASSES_PER_GRADE: ${SM_DEMO_CLASSES_PER_GRADE:-14}
+      SM_SCRYPT_N: ${SM_SCRYPT_N:-32768}
+      SM_SSE_PING_SECONDS: ${SM_SSE_PING_SECONDS:-20}
+      SM_MAINTENANCE_INTERVAL: ${SM_MAINTENANCE_INTERVAL:-3600}
+      # Mehrere App-Knoten mit gemeinsamer Datenbank/Ablage (docs/UPDATES-UND-HOCHVERFUEGBARKEIT.md): Name des Knotens,
+      # Hintergrundjobs nur auf dem Leader-Knoten
+      SM_NODE_ID: ${SM_NODE_ID:-main}
+      SM_HA: ${SM_HA:-0}
+      SM_METRICS_TOKEN: ${SM_METRICS_TOKEN:-}
+      # Verschlüsselung (Nachrichten, Dateien, Atteste) – Pflicht; Schlüssel GETRENNT vom Backup aufbewahren!
+      SM_ENCRYPTION_KEYS: ${SM_ENCRYPTION_KEYS:?SM_ENCRYPTION_KEYS fehlt in .env (siehe .env.example, Abschnitt 2a)}
+      # Datei-Uploads: Größenlimit/Kontingente in MB, optional Virenscan (Profil "antivirus")
+      SM_UPLOAD_MAX_MB: ${SM_UPLOAD_MAX_MB:-25}
+      SM_QUOTA_MB_STAFF: ${SM_QUOTA_MB_STAFF:-2000}
+      SM_QUOTA_MB_STUDENT: ${SM_QUOTA_MB_STUDENT:-200}
+      # Chat-Bilder (liegen als Blobs in der Datenbank): Kontingent je Konto/Chat in MB (0 = unbegrenzt), Bilder je 10 Min.
+      SM_CHAT_QUOTA_MB_STAFF: ${SM_CHAT_QUOTA_MB_STAFF:-500}
+      SM_CHAT_QUOTA_MB_STUDENT: ${SM_CHAT_QUOTA_MB_STUDENT:-100}
+      SM_CHAT_QUOTA_MB_CHAT: ${SM_CHAT_QUOTA_MB_CHAT:-1000}
+      SM_CHAT_UPLOADS_PER_10MIN: ${SM_CHAT_UPLOADS_PER_10MIN:-30}
+      SM_CLAMAV_HOST: ${SM_CLAMAV_HOST:-}
+      SM_CLAMAV_PORT: ${SM_CLAMAV_PORT:-3310}
+      SM_CLAMAV_REQUIRED: ${SM_CLAMAV_REQUIRED:-0}
+      SM_CLAMAV_TIMEOUT: ${SM_CLAMAV_TIMEOUT:-30}
+      SM_STUDENT_DOCS_RETENTION_DAYS: ${SM_STUDENT_DOCS_RETENTION_DAYS:-400}
+      # Anmeldung: 2FA-Pflicht je Rolle, Gültigkeit von Codes/Links, Zugangsbrief-Stapel
+      SM_REQUIRE_2FA_ROLES: ${SM_REQUIRE_2FA_ROLES:-}
+      SM_AUTH_CODE_MINUTES: ${SM_AUTH_CODE_MINUTES:-15}
+      SM_LETTER_BATCH_MINUTES: ${SM_LETTER_BATCH_MINUTES:-60}
+      # SMS für Bestätigungs- und „Passwort vergessen“-Codes (leer = aus)
+      SM_SMS_PROVIDER: ${SM_SMS_PROVIDER:-}
+      SM_SMS_URL: ${SM_SMS_URL:-}
+      SM_SMS_TOKEN: ${SM_SMS_TOKEN:-}
+      SM_SMS_ACCOUNT_SID: ${SM_SMS_ACCOUNT_SID:-}
+      SM_SMS_FROM: ${SM_SMS_FROM:-}
+      SM_SMS_TIMEOUT: ${SM_SMS_TIMEOUT:-10}
+      # Test-Postausgang und Test-Anmeldedienst – in Produktion verboten (die App startet sonst nicht)
+      SM_DEV_OUTBOX: ${SM_DEV_OUTBOX:-0}
+      SM_SSO_DEV_MOCK: ${SM_SSO_DEV_MOCK:-0}
+      # Anmeldung mit Microsoft / Google / Apple (leer = Einrichtung in der Oberfläche „Anmeldedienste“)
+      SM_SSO_MICROSOFT_CLIENT_ID: ${SM_SSO_MICROSOFT_CLIENT_ID:-}
+      SM_SSO_MICROSOFT_CLIENT_SECRET: ${SM_SSO_MICROSOFT_CLIENT_SECRET:-}
+      SM_SSO_MICROSOFT_TENANT: ${SM_SSO_MICROSOFT_TENANT:-}
+      SM_SSO_GOOGLE_CLIENT_ID: ${SM_SSO_GOOGLE_CLIENT_ID:-}
+      SM_SSO_GOOGLE_CLIENT_SECRET: ${SM_SSO_GOOGLE_CLIENT_SECRET:-}
+      SM_SSO_GOOGLE_HD: ${SM_SSO_GOOGLE_HD:-}
+      SM_SSO_APPLE_CLIENT_ID: ${SM_SSO_APPLE_CLIENT_ID:-}
+      SM_SSO_APPLE_TEAM_ID: ${SM_SSO_APPLE_TEAM_ID:-}
+      SM_SSO_APPLE_KEY_ID: ${SM_SSO_APPLE_KEY_ID:-}
+      SM_SSO_APPLE_PRIVATE_KEY: ${SM_SSO_APPLE_PRIVATE_KEY:-}
+      # Ablage im Container (leer = /app/data/files bzw. /app/data/backups im Volume app_data)
+      SM_FILES_DIR: ${SM_FILES_DIR:-}
+      SM_BACKUP_DIR: ${SM_BACKUP_DIR:-}
+      TZ: ${TZ:-Europe/Berlin}
+    volumes:
+      - app_data:/app/data
+    expose:
+      - "8000"
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - web
+      - backend
+      - monitoring
+    healthcheck:
+      test: ["CMD", "/app/scripts/healthcheck.sh", "--quiet"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 180s
+    stop_grace_period: 30s
+    deploy:
+      resources:
+        limits:
+          cpus: "${APP_CPUS:-2.0}"
+          memory: ${APP_MEMORY:-3g}
+          pids: 512
+        reservations:
+          memory: 512m
+    logging: *logging
+
+  # -------------------------------------------------------------------------
+  # PostgreSQL 16 – nur im internen Netz "backend" erreichbar
+  # -------------------------------------------------------------------------
+  db:
+    image: postgres:${POSTGRES_VERSION:-16}-alpine
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-schulmanager}
+      POSTGRES_USER: ${POSTGRES_USER:-schulmanager}
+      # Leer → das postgres-Image verweigert die Initialisierung mit klarer Fehlermeldung
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-}
+      POSTGRES_INITDB_ARGS: "--encoding=UTF8 --data-checksums"
+      TZ: ${TZ:-Europe/Berlin}
+    command:
+      - postgres
+      - -c
+      - shared_buffers=${PG_SHARED_BUFFERS:-256MB}
+      - -c
+      - effective_cache_size=${PG_EFFECTIVE_CACHE_SIZE:-768MB}
+      - -c
+      - max_connections=${PG_MAX_CONNECTIONS:-60}
+      - -c
+      - log_min_duration_statement=${PG_LOG_SLOW_MS:-2000}
+      - -c
+      - log_timezone=${TZ:-Europe/Berlin}
+      - -c
+      - timezone=UTC
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    shm_size: 256m
+    networks:
+      - backend
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U \"$${POSTGRES_USER}\" -d \"$${POSTGRES_DB}\" -q"]
+      interval: 10s
+      timeout: 5s
+      retries: 6
+      start_period: 30s
+    stop_grace_period: 60s
+    deploy:
+      resources:
+        limits:
+          cpus: "${DB_CPUS:-1.0}"
+          memory: ${DB_MEMORY:-1g}
+    logging: *logging
+
+  # -------------------------------------------------------------------------
+  # Caddy – HTTPS (Let's Encrypt), Security-Header, Kompression, SSE
+  # -------------------------------------------------------------------------
+  caddy:
+    image: ${CADDY_IMAGE:-caddy:2.11-alpine}
+    restart: unless-stopped
+    <<: *hardening
+    cap_add:
+      - NET_BIND_SERVICE
+    read_only: true
+    tmpfs:
+      - /tmp
+    environment:
+      SM_DOMAIN: ${SM_DOMAIN:?SM_DOMAIN fehlt in .env}
+      ACME_EMAIL: ${ACME_EMAIL:?ACME_EMAIL fehlt in .env}
+      ACME_CA: ${ACME_CA:-https://acme-v02.api.letsencrypt.org/directory}
+      SM_UPSTREAM: app:8000
+    ports:
+      - "${HTTP_PORT:-80}:80"
+      - "${HTTPS_PORT:-443}:443"
+      - "${HTTPS_PORT:-443}:443/udp"
+    volumes:
+      - ./deploy/Caddyfile:/etc/caddy/Caddyfile:ro
+      - ./deploy/caddy/conf.d:/etc/caddy/conf.d:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    depends_on:
+      - app
+    networks:
+      - web
+    healthcheck:
+      test: ["CMD", "wget", "-q", "-O", "/dev/null", "http://127.0.0.1:2019/config/"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+    deploy:
+      resources:
+        limits:
+          cpus: "0.5"
+          memory: 256m
+    logging: *logging
+
+  # -------------------------------------------------------------------------
+  # Backup-Sidecar – pg_dump nachts, Rotation 14/8/12, optional verschlüsselt + offsite
+  # -------------------------------------------------------------------------
+  backup:
+    image: ${SM_BACKUP_IMAGE:-schulmanager-backup:latest}
+    build:
+      context: .
+      dockerfile: deploy/backup/Dockerfile
+      args:
+        POSTGRES_VERSION: ${POSTGRES_VERSION:-16}
+    restart: unless-stopped
+    init: true
+    security_opt:
+      - no-new-privileges:true
+    environment:
+      TZ: ${TZ:-Europe/Berlin}
+      PGHOST: db
+      PGPORT: "5432"
+      PGUSER: ${POSTGRES_USER:-schulmanager}
+      PGPASSWORD: ${POSTGRES_PASSWORD:-}
+      PGDATABASE: ${POSTGRES_DB:-schulmanager}
+      BACKUP_DB_TYPE: postgres
+      BACKUP_DIR: /backups
+      BACKUP_DATA_DIR: /appdata
+      BACKUP_TIMES: ${BACKUP_TIMES:-02:30}
+      BACKUP_ON_START: ${BACKUP_ON_START:-1}
+      BACKUP_KEEP_DAILY: ${BACKUP_KEEP_DAILY:-14}
+      BACKUP_KEEP_WEEKLY: ${BACKUP_KEEP_WEEKLY:-8}
+      BACKUP_KEEP_MONTHLY: ${BACKUP_KEEP_MONTHLY:-12}
+      BACKUP_KEEP_MANUAL: ${BACKUP_KEEP_MANUAL:-10}
+      BACKUP_MAX_AGE_HOURS: ${BACKUP_MAX_AGE_HOURS:-26}
+      BACKUP_GPG_PASSPHRASE: ${BACKUP_GPG_PASSPHRASE:-}
+      BACKUP_PING_URL: ${BACKUP_PING_URL:-}
+      BACKUP_PING_URL_FAIL: ${BACKUP_PING_URL_FAIL:-}
+      BACKUP_RCLONE_REMOTE: ${BACKUP_RCLONE_REMOTE:-}
+      BACKUP_RCLONE_MODE: ${BACKUP_RCLONE_MODE:-sync}
+      BACKUP_RCLONE_FLAGS: ${BACKUP_RCLONE_FLAGS:-}
+      # rclone-Ziel "offsite" vollständig über Umgebungsvariablen (Beispiel S3, siehe .env.example)
+      RCLONE_CONFIG_OFFSITE_TYPE: ${RCLONE_CONFIG_OFFSITE_TYPE:-}
+      RCLONE_CONFIG_OFFSITE_PROVIDER: ${RCLONE_CONFIG_OFFSITE_PROVIDER:-}
+      RCLONE_CONFIG_OFFSITE_ENDPOINT: ${RCLONE_CONFIG_OFFSITE_ENDPOINT:-}
+      RCLONE_CONFIG_OFFSITE_REGION: ${RCLONE_CONFIG_OFFSITE_REGION:-}
+      RCLONE_CONFIG_OFFSITE_ACCESS_KEY_ID: ${RCLONE_CONFIG_OFFSITE_ACCESS_KEY_ID:-}
+      RCLONE_CONFIG_OFFSITE_SECRET_ACCESS_KEY: ${RCLONE_CONFIG_OFFSITE_SECRET_ACCESS_KEY:-}
+      RCLONE_CONFIG_OFFSITE_HOST: ${RCLONE_CONFIG_OFFSITE_HOST:-}
+      RCLONE_CONFIG_OFFSITE_USER: ${RCLONE_CONFIG_OFFSITE_USER:-}
+      RCLONE_CONFIG_OFFSITE_PASS: ${RCLONE_CONFIG_OFFSITE_PASS:-}
+      RCLONE_CONFIG_OFFSITE_URL: ${RCLONE_CONFIG_OFFSITE_URL:-}
+      RCLONE_CONFIG_OFFSITE_VENDOR: ${RCLONE_CONFIG_OFFSITE_VENDOR:-}
+    volumes:
+      - ${BACKUP_HOST_DIR:-./backups}:/backups
+      - app_data:/appdata
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - backend
+      - egress
+    deploy:
+      resources:
+        limits:
+          cpus: "0.5"
+          memory: 512m
+    logging: *logging
+
+  # -------------------------------------------------------------------------
+  # Virenscanner (optional, Profil "antivirus"): ClamAV prüft jeden Upload per INSTREAM.
+  # Aktivieren: .env → SM_CLAMAV_HOST=clamav (optional SM_CLAMAV_REQUIRED=1), dann
+  #   docker compose --profile antivirus up -d
+  # Braucht ≈ 1,5–3 GB RAM; der erste Start lädt Signaturen (einige Minuten, bis "healthy").
+  # -------------------------------------------------------------------------
+  clamav:
+    image: ${CLAMAV_IMAGE:-clamav/clamav:1.4}
+    profiles: ["antivirus"]
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
+    environment:
+      TZ: ${TZ:-Europe/Berlin}
+    volumes:
+      - clamav_db:/var/lib/clamav
+    networks:
+      - backend
+      - egress
+    healthcheck:
+      test: ["CMD", "clamdcheck.sh"]
+      interval: 60s
+      timeout: 10s
+      retries: 3
+      start_period: 600s
+    deploy:
+      resources:
+        limits:
+          cpus: "1.0"
+          memory: ${CLAMAV_MEMORY:-3g}
+    logging: *logging
+
+  # -------------------------------------------------------------------------
+  # Monitoring (Profil "monitoring"): Prometheus + Grafana
+  # Grafana ist nur lokal gebunden → Zugriff per SSH-Tunnel: ssh -L 3000:127.0.0.1:3000 server
+  # -------------------------------------------------------------------------
+  prometheus:
+    image: ${PROMETHEUS_IMAGE:-prom/prometheus:v3}
+    profiles: ["monitoring"]
+    restart: unless-stopped
+    <<: *hardening
+    command:
+      - --config.file=/etc/prometheus/prometheus.yml
+      - --storage.tsdb.path=/prometheus
+      - --storage.tsdb.retention.time=${PROMETHEUS_RETENTION:-30d}
+      - --storage.tsdb.retention.size=${PROMETHEUS_RETENTION_SIZE:-5GB}
+      - --web.enable-lifecycle
+    volumes:
+      - ./deploy/prometheus:/etc/prometheus:ro
+      - prometheus_data:/prometheus
+    ports:
+      - "127.0.0.1:${PROMETHEUS_PORT:-9090}:9090"
+    networks:
+      - monitoring
+    deploy:
+      resources:
+        limits:
+          cpus: "0.5"
+          memory: 1g
+    logging: *logging
+
+  grafana:
+    image: ${GRAFANA_IMAGE:-grafana/grafana:12.2}
+    profiles: ["monitoring"]
+    restart: unless-stopped
+    <<: *hardening
+    # Ohne gesetztes Admin-Passwort nicht starten (sonst Grafana-Default admin/admin)
+    entrypoint:
+      - /bin/sh
+      - -c
+      - '[ -n "$$GF_SECURITY_ADMIN_PASSWORD" ] || { echo "GRAFANA_ADMIN_PASSWORD fehlt in .env" >&2; exit 1; }; exec /run.sh'
+    environment:
+      GF_SECURITY_ADMIN_USER: ${GRAFANA_ADMIN_USER:-admin}
+      GF_SECURITY_ADMIN_PASSWORD: ${GRAFANA_ADMIN_PASSWORD:-}
+      GF_SERVER_ROOT_URL: ${GRAFANA_ROOT_URL:-http://localhost:3000}
+      GF_USERS_ALLOW_SIGN_UP: "false"
+      GF_AUTH_ANONYMOUS_ENABLED: "false"
+      GF_ANALYTICS_REPORTING_ENABLED: "false"
+      GF_ANALYTICS_CHECK_FOR_UPDATES: "false"
+      GF_ANALYTICS_CHECK_FOR_PLUGIN_UPDATES: "false"
+      GF_NEWS_NEWS_FEED_ENABLED: "false"
+      GF_SMTP_ENABLED: ${GRAFANA_SMTP_ENABLED:-false}
+      GF_SMTP_HOST: ${GRAFANA_SMTP_HOST:-}
+      GF_SMTP_USER: ${SM_SMTP_USER:-}
+      GF_SMTP_PASSWORD: ${SM_SMTP_PASSWORD:-}
+      GF_SMTP_FROM_ADDRESS: ${SM_SMTP_FROM:-}
+      ALERT_EMAIL: ${ALERT_EMAIL:-root@localhost}
+      TZ: ${TZ:-Europe/Berlin}
+    volumes:
+      - ./deploy/grafana/provisioning:/etc/grafana/provisioning:ro
+      - ./deploy/grafana/dashboards:/var/lib/grafana/dashboards:ro
+      - grafana_data:/var/lib/grafana
+    ports:
+      - "127.0.0.1:${GRAFANA_PORT:-3000}:3000"
+    depends_on:
+      - prometheus
+    networks:
+      - monitoring
+    deploy:
+      resources:
+        limits:
+          cpus: "0.5"
+          memory: 512m
+    logging: *logging
+
+  # -------------------------------------------------------------------------
+  # Uptime-Kuma (Profil "uptime"): Erreichbarkeit von außen + Benachrichtigungen
+  # (E-Mail, Matrix, Telegram …). Ebenfalls nur lokal gebunden.
+  # -------------------------------------------------------------------------
+  uptime-kuma:
+    image: ${UPTIME_KUMA_IMAGE:-louislam/uptime-kuma:2}
+    profiles: ["uptime"]
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
+    volumes:
+      - uptime_data:/app/data
+    ports:
+      - "127.0.0.1:${UPTIME_KUMA_PORT:-3001}:3001"
+    networks:
+      - web
+    deploy:
+      resources:
+        limits:
+          cpus: "0.5"
+          memory: 512m
+    logging: *logging
+
+  # -------------------------------------------------------------------------
+  # Update-Agent (Profil "updater"): holt vom Anbieter freigegebene, signierte Updates und installiert sie im Zeitfenster
+  # (Sicherung -> neue Version -> Gesundheitsprüfung -> bei Fehler zurück). Braucht den Docker-Socket des Hosts, siehe
+  # docs/UPDATES-UND-HOCHVERFUEGBARKEIT.md (Sicherheit). Start:  scripts/compose.sh --profile updater up -d updater
+  # -------------------------------------------------------------------------
+  updater:
+    image: ${SM_UPDATER_IMAGE:-schulpuls-updater:latest}
+    profiles: ["updater"]
+    build:
+      context: .
+      dockerfile: updater/Dockerfile
+    restart: unless-stopped
+    init: true
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    read_only: true
+    tmpfs:
+      - /tmp
+    environment:
+      UPDATER_VENDOR_URL: ${UPDATER_VENDOR_URL:-https://lizenz.l0rdr3spawn.duckdns.org:10489}
+      UPDATER_NODE: ${UPDATER_NODE:-main}
+      SM_NODE_ID: ${SM_NODE_ID:-main}
+      UPDATER_MODE: ${UPDATER_MODE:-auto}
+      UPDATER_POLL_SECONDS: ${UPDATER_POLL_SECONDS:-900}
+      UPDATER_DRAIN_SECONDS: ${UPDATER_DRAIN_SECONDS:-20}
+      UPDATER_ALLOWED_REGISTRY: ${UPDATER_ALLOWED_REGISTRY:-}
+      UPDATER_DATA_DIR: /appdata
+      UPDATER_STATE_DIR: /state
+      UPDATER_COMPOSE_DIR: ${UPDATER_HOST_DIR:-/opt/schulpuls}
+      UPDATER_HEALTH_URL: http://app:8000/healthz
+      COMPOSE_PROJECT_NAME: ${COMPOSE_PROJECT_NAME:-schulmanager}
+      TZ: ${TZ:-Europe/Berlin}
+    volumes:
+      - app_data:/appdata
+      - updater_state:/state
+      - /var/run/docker.sock:/var/run/docker.sock
+      # Projektordner unter demselben Pfad wie auf dem Host (relative Pfade der Compose-Datei müssen stimmen)
+      - ${UPDATER_HOST_DIR:-/opt/schulpuls}:${UPDATER_HOST_DIR:-/opt/schulpuls}
+    networks:
+      - web
+    deploy:
+      resources:
+        limits:
+          cpus: "0.5"
+          memory: 256m
+    logging: *logging
+
+networks:
+  web:
+    ipam:
+      config:
+        - subnet: ${SM_WEB_SUBNET:-172.29.40.0/24}
+  backend:
+    internal: true
+  egress:
+  monitoring:
+
+volumes:
+  app_data:
+  updater_state:
+  pgdata:
+  clamav_db:
+  caddy_data:
+  caddy_config:
+  prometheus_data:
+  grafana_data:
+  uptime_data:

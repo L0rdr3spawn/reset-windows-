@@ -1,0 +1,247 @@
+{
+  "name": "Jeff",
+  "weckwort": "hey jeff",
+  "weckwort_sicherheit": 0.65,
+  "hotkey": "",
+  "wartezeit_befehl_sekunden": 8,
+  "wartezeit_rueckfrage_sekunden": 10,
+  "sprachausgabe": true,
+  "schwellen": {
+    "absicht": 0.55,
+    "ziel": 0.5,
+    "pc_sperren": 0.85
+  },
+  "lautstaerke_schritte": 5,
+  "whisper_modell": "small",
+  "whisper_gpu": 1,
+  "wartezeit_bestaetigung_sekunden": 10,
+  "spotify": {
+    "client_id": ""
+  },
+  "discord": {
+    "tasten": {
+      "mikro": "ctrl+shift+alt+m",
+      "taub": "ctrl+shift+alt+d"
+    },
+    "namen": {}
+  },
+  "apps": {
+    "spotify": {
+      "beschreibung": "Spotify, Musik-Streaming",
+      "woerter": [
+        "spotify"
+      ],
+      "start": "%APPDATA%\\Spotify\\Spotify.exe",
+      "prozess": "Spotify.exe"
+    },
+    "discord": {
+      "beschreibung": "Discord, Chat und Sprachkanäle",
+      "woerter": [
+        "disco"
+      ],
+      "start": "%LOCALAPPDATA%\\Discord\\Update.exe",
+      "argumente": "--processStart Discord.exe",
+      "prozess": "Discord.exe",
+      "suche_taste": "ctrl+f",
+      "chat": true
+    },
+    "steam": {
+      "beschreibung": "Steam, Spiele-Plattform",
+      "woerter": [
+        "steam",
+        "spiele"
+      ],
+      "start": "%ProgramFiles(x86)%\\Steam\\steam.exe",
+      "prozess": "steam.exe",
+      "suche_taste": "ctrl+f"
+    },
+    "brave": {
+      "beschreibung": "Brave, Webbrowser (Standardbrowser)",
+      "woerter": [
+        "brave",
+        "browser"
+      ],
+      "start": "%LOCALAPPDATA%\\BraveSoftware\\Brave-Browser\\Application\\brave.exe",
+      "prozess": "brave.exe"
+    },
+    "opera": {
+      "beschreibung": "Opera GX, Webbrowser",
+      "woerter": [
+        "opera",
+        "oper"
+      ],
+      "start": "%LOCALAPPDATA%\\Programs\\Opera GX\\opera.exe",
+      "prozess": "opera.exe"
+    },
+    "edge": {
+      "beschreibung": "Microsoft Edge, Webbrowser",
+      "woerter": [
+        "edge"
+      ],
+      "start": "%ProgramFiles(x86)%\\Microsoft\\Edge\\Application\\msedge.exe",
+      "prozess": "msedge.exe"
+    },
+    "vs_code": {
+      "beschreibung": "Visual Studio Code, Code-Editor",
+      "woerter": [
+        "code",
+        "visual",
+        "studio"
+      ],
+      "start": "%LOCALAPPDATA%\\Programs\\Microsoft VS Code\\Code.exe",
+      "prozess": "Code.exe",
+      "suche_taste": "ctrl+shift+f"
+    },
+    "teams": {
+      "beschreibung": "Microsoft Teams, Videokonferenzen",
+      "woerter": [
+        "teams"
+      ],
+      "start": "shell:AppsFolder\\MSTeams_8wekyb3d8bbwe!MSTeams",
+      "prozess": "ms-teams.exe",
+      "chat": true
+    },
+    "outlook": {
+      "beschreibung": "Outlook, E-Mail-Programm",
+      "woerter": [
+        "outlook",
+        "mail",
+        "mails",
+        "email"
+      ],
+      "start": "shell:AppsFolder\\Microsoft.OutlookForWindows_8wekyb3d8bbwe!Microsoft.OutlookforWindows",
+      "prozess": "olk.exe",
+      "suche_taste": "alt+q"
+    },
+    "explorer": {
+      "beschreibung": "Datei-Explorer, Ordner und Dateien",
+      "woerter": [
+        "explorer",
+        "dateien",
+        "ordner"
+      ],
+      "start": "explorer.exe",
+      "suche_taste": "ctrl+e"
+    },
+    "rechner": {
+      "beschreibung": "Windows-Rechner, Taschenrechner",
+      "woerter": [
+        "rechner",
+        "taschenrechner"
+      ],
+      "start": "calc.exe",
+      "prozess": "CalculatorApp.exe"
+    },
+    "editor": {
+      "beschreibung": "Editor (Notepad), einfacher Texteditor",
+      "woerter": [
+        "editor",
+        "notepad",
+        "notizen"
+      ],
+      "start": "notepad.exe",
+      "prozess": "Notepad.exe"
+    },
+    "einstellungen": {
+      "beschreibung": "Windows-Einstellungen",
+      "woerter": [
+        "einstellungen"
+      ],
+      "start": "ms-settings:"
+    },
+    "task_manager": {
+      "beschreibung": "Task-Manager, laufende Prozesse",
+      "woerter": [
+        "task",
+        "manager"
+      ],
+      "start": "taskmgr.exe"
+    }
+  },
+  "webseiten": {
+    "youtube": {
+      "beschreibung": "YouTube, Videos",
+      "woerter": [
+        "youtube"
+      ],
+      "url": "https://www.youtube.com",
+      "suche": "https://www.youtube.com/results?search_query={}"
+    },
+    "google": {
+      "beschreibung": "Google-Suche",
+      "woerter": [
+        "google"
+      ],
+      "url": "https://www.google.com",
+      "suche": "https://www.google.com/search?q={}"
+    },
+    "gmail": {
+      "beschreibung": "Gmail, Google-Mail im Browser",
+      "woerter": [
+        "gmail"
+      ],
+      "url": "https://mail.google.com",
+      "suche": "https://mail.google.com/mail/u/0/#search/{}"
+    },
+    "netflix": {
+      "beschreibung": "Netflix, Filme und Serien",
+      "woerter": [
+        "netflix"
+      ],
+      "url": "https://www.netflix.com",
+      "suche": "https://www.netflix.com/search?q={}"
+    },
+    "twitch": {
+      "beschreibung": "Twitch, Livestreams",
+      "woerter": [
+        "twitch"
+      ],
+      "url": "https://www.twitch.tv",
+      "suche": "https://www.twitch.tv/search?term={}"
+    },
+    "claude": {
+      "beschreibung": "Claude, KI-Assistent im Browser",
+      "woerter": [
+        "claude",
+        "chat"
+      ],
+      "url": "https://claude.ai"
+    },
+    "wetter": {
+      "beschreibung": "Wetter und Wettervorhersage, z. B. \"wie wird das wetter\"",
+      "woerter": [
+        "wetter"
+      ],
+      "url": "https://www.google.com/search?q=wetter"
+    },
+    "amazon": {
+      "beschreibung": "Amazon, Online-Shop",
+      "woerter": [
+        "amazon"
+      ],
+      "url": "https://www.amazon.de",
+      "suche": "https://www.amazon.de/s?k={}"
+    },
+    "wikipedia": {
+      "beschreibung": "Wikipedia, Lexikon",
+      "woerter": [
+        "wikipedia",
+        "wiki"
+      ],
+      "url": "https://de.wikipedia.org",
+      "suche": "https://de.wikipedia.org/w/index.php?search={}"
+    }
+  },
+  "spiele": [
+    "cs2.exe",
+    "DayZ_x64.exe",
+    "DayZ_BE.exe",
+    "javaw.exe",
+    "Minecraft.Windows.exe"
+  ],
+  "claude": {
+    "aktiv": true,
+    "modell": "sonnet",
+    "zeitlimit_sekunden": 25
+  }
+}

@@ -1,0 +1,35 @@
+- [Kleine Aufgaben ans lokale LLM delegieren](delegate-small-tasks-to-local-llm.md) — Token sparen: kleine, prüfbare Aufgaben an LM Studio auslagern, Ausgabe immer verifizieren
+- [lmstudio.py Tool](lmstudio-tool.md) — selbstgebautes CLI für LM-Studio-Chats + Multi-Agent (team/roundtable/gen)
+- [Steam/MyDayZ Tool](steam-mydayz-tool.md) — steam-switch.ps1: Account-Wechsel via `steam -login`, 1-Klick MyDayZ-Start am DZSA-Launcher vorbei
+- [Heimserver Debian/CasaOS](home-server-debian-casaos.md) — direkt `ssh server`, README.md dort zuerst lesen; hängt im BIOS wegen CMOS-Batterie
+- [MC-Portfreigaben](mc-portfreigaben.md) — belegte + reservierte Ports (Reserve-1..5 schon offen), nicht neu einrichten
+- [Minecraft-Server (Crafty)](minecraft-server-crafty.md) — Paper 26.2 + Crossplay + Grim; DS-Lite erlaubt nur Ports 10476-10495, portfrei nur über IPv6
+- [MC-Begleitbot (Mineflayer)](mc-begleitbot-mineflayer.md) — folgt/kämpft/lootet; läuft auf Protokoll 26.1 via ViaBackwards, weil Mineflayer 26.2 nicht kann
+- [Jev-Baritone-Bot](jevbaritone-bot.md) — echter 2. MC-Client + Baritone + eigene Mod; Jev entscheidet, LM Studio plant Mehrschritt-Aufgaben
+- [Lokaler MC-Testserver](mc-testserver-lokal.md) — Paper 26.2 auf 127.0.0.1:25566 offline-mode, Bot + Spieler zum Testen, echte Welt bleibt unberührt
+- [Fliegenhirn-Simulation](flybrain-simulation.md) — FlyWire-LIF-Modell unter flybrain/, nur PyTorch-GPU-Backend läuft (kein WSL/Conda/Compiler)
+- [TypeSafe-Skill](typesafe-skill.md) — Plugin installiert; bei KI-Features in diesem Projekt TypeSafe-Skill nutzen
+- [Eigene Fabric-Mods](eigene-fabric-mods.md) — attrswap + autocart 26.3 v1.4.0, Gametests via runClientGameTest; bauen nur mit Prisms JDK
+- [CS2-Jev-Coach](cs2-jev-coach.md) — GSI-Coach fertig; Jev soll per netcon einen Spieler steuern, wartet auf Workshop Tools
+- [Jev im eigenen Workflow](jev-im-workflow.md) — jev.py route/check/decide + PreToolUse-Hook: Jev entscheidet, stoppt oder fragt den User
+- [SteelSeries lokal steuern](steelseries-local-api.md) — Sonar/Engine-Endpunkte, Schreibformat, DPI-Tabelle, Akku per HID; leere PUTs zerstören Profile
+- [Jev-Assistent (Hauptwerkzeug)](jev-assistent.md) — "hey jeff": Autostart, wirkt in jeder App, Whisper auf GPU 1; SendInput braucht Scancodes
+- [Jev Voice Browser](voice-browser.md) — Sprachsteuerung für Edge + Windows; Edge ist das Mikrofon, weil Brave keine Spracherkennung hat
+- [Upgrader-Server 1.21.11](mc-upgrader-server.md) — Fabric-Gambling-Server im Docker, extern :10478, Prism-Instanz + .mrpack
+- [MC-Server immer über Crafty](mc-server-immer-ueber-crafty.md) — keine eigenen Docker-MC-Container mehr; Crafty hat Java 8–25 + Ports 25500–25600
+- [SteelSeries GG tabu](steelseries-gg-tabu.md) — GG/Sonar nie anfassen oder vorschlagen; Audio nur über Windows lösen
+- [Jev-Plugins](jev-plugins.md) — claude-jev (lokal gepatcht) + building-with-jev installiert; User will wenig Rückfragen
+- [MC-Tests im Singleplayer](mc-testen-singleplayer.md) — „starte Minecraft zum Testen" = nur Prism + Singleplayer, Testserver nicht von selbst starten
+- [MC-Einstellungen synchron](mc-settings-sync.md) — Master settings.txt, Prism Pre-Launch/Post-Exit spielt Tasten/FOV/Sens/Lautstärke in jede Instanz
+- [Rovyl-Launcher](rovyl-launcher.md) — Radial-Launcher Alt+Y; vor Config-Edit hart beenden, AppIDs mit Punkt starten nicht → exe-Pfad
+- [Begleiter-System (Mineflayer)](begleiter-bot.md) — begleiter/ + Mod botlink 0.2.0 (/bot, Kiste, Glow, Portal, MLG); Labor-Server + Gametest zum Testen, Wand-/Wasser-Fallen
+- [Seelen-UI-Review](seelen-ui-review.md) — lokal installiert in Program Files (scripts/install-local.ps1), Autostart via Dienst-Task; nach `tauri dev` Skript neu ausführen
+- [Find The Needle Save](find-the-needle-save.md) — GDEC-Save unter app_userdata\Haystack Incremental, Save-Passwort + PCK-Key zum Geld-Editieren
+- [Nur Brave als Browser](nur-brave-als-browser.md) — Opera/Yandex weg seit 2026-10-01; Edge bleibt nur fürs Voice-Browser-Mikro, per Richtlinie ruhiggestellt
+- [Claude-App-Container virtualisiert HKCU](claude-app-container-virtualisiert-hkcu.md) — Registry-/AppData-Änderungen wirken nur in der Paket-Kopie; echt nur über WMI-Prozess außerhalb
+- [Wallpaper-Engine-Autostart](wallpaper-engine-autostart.md) — Wächter-Skript, seit 2026-09-29 DEAKTIVIERT (kein WE-Autostart mehr)
+- [Obsidian-Vault](obsidian-vault.md) — Memory-Ordner + Projekt-Doku per Junction/Hardlink im Vault; obsidian-verbinden.ps1 repariert
+- [CS2-Ping-Tools](cs2-ping-tools.md) — cs2-ping/: Relay-Scanner + Tweaks mit Undo-Log; Downloads heben Ping um ~45 ms, .NET-Ping-Timeout-Falle
+- [Geofinder](geofinder.md) — geofinder/: Ausschnitt per Umschalt+Alt+G, 5 Geo-KIs, Karte auf :8777; Gemma braucht laufenden LM-Studio-Server
+- [OpenCode + GLM](opencode-glm.md) — 1.18.34 per npm, Standardmodell zai/glm-5.3 (Flash nur für Nebenaufgaben); Z.ai-Login muss der User selbst machen
+- [Roblox-Radar](roblox-radar.md) — roblox-radar/: externe Live-Karte fürs eigene Spiel per HttpService (Port 8790); Speicher-ESP abgelehnt

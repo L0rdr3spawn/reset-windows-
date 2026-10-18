@@ -1,0 +1,1 @@
+(keine Antwort; Fehler: Couldn't connect to the AI service. Check your connection, then try again. For details, open Settings → Logs in the Control UI or run `openclaw logs --follow`.

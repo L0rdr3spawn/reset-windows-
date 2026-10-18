@@ -1,0 +1,3966 @@
+{
+  "meta": {
+    "id": "gymnasium-nrw",
+    "name": "Gymnasium Sonnenhügel Musterhausen (fiktiv)",
+    "fiktiv": true,
+    "hinweis": "Fiktive Beispielschule. Alle Schul-, Orts- und Personenangaben sind frei erfunden; es wurden keine personenbezogenen Daten realer Schüler/innen oder Lehrkräfte erhoben oder gespeichert. Rahmendaten stammen aus amtlichen Quellen (siehe quellen).",
+    "schulform": "Gymnasium (G9, Sekundarstufe I + gymnasiale Oberstufe)",
+    "bundesland": "Nordrhein-Westfalen",
+    "schuljahr": "2026/27",
+    "stand": "2026-10-10",
+    "schueler_gesamt": 1000,
+    "schueler_sek1": 650,
+    "schueler_sek2": 350,
+    "zuegigkeit": "4-zügig (Sek I)",
+    "standorte": [
+      {
+        "id": "HS",
+        "name": "Hauptgebäude Sonnenhügel (fiktiv)",
+        "ort": "Musterhausen (fiktiv)",
+        "jahrgaenge": [
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "wegezeit_min": 0
+      }
+    ],
+    "vergleich_amtlich": {
+      "klassenfrequenz_richtwert": 27,
+      "bandbreite": [
+        25,
+        29
+      ],
+      "klassengroesse_nrw_gymnasium_2024_25": 27.1,
+      "klassengroesse_beispiel_sek1": 27.08,
+      "quellen": [
+        "Q-AVO",
+        "Q-ITNRW-KLASSE"
+      ]
+    },
+    "quellen": [
+      {
+        "id": "Q-ST-GY",
+        "titel": "APO-S I Anlage 3a – Stundentafel Gymnasium G9 (ab 01.08.2021 neu ab Klasse 5)",
+        "url": "https://www.schulministerium.nrw/system/files/media/document/file/Stundentafel_SI_G9_Anlage_3a_ab_210801_neu_ab_Klasse5.pdf",
+        "stand": "Fassung ab 01.08.2021, Abruf über Websuche 2026-10-10",
+        "verwendet_fuer": "Lernbereichssummen Kl. 5/6 und 7–10, Kernstunden 59/123/182, Gesamt 182–188, Wochenstundenrahmen 28–30 (5/6) und 30–33 (7–10), Informatik 2 Std. in 5/6, Mindeststunden je Fach"
+      },
+      {
+        "id": "Q-GOST",
+        "titel": "APO-GOSt NRW (Verordnung über den Bildungsgang und die Abiturprüfung in der gymnasialen Oberstufe)",
+        "url": "https://recht.nrw.de/system/files/BH/12644-25175.htm",
+        "stand": "geltende Fassung laut Rechtsportal; Entwürfe zur Neufassung vom 10.12.2025 und 22.04.2026 noch nicht berücksichtigt; Abruf über Websuche 2026-10-10",
+        "verwendet_fuer": "LK 5 Wochenstunden, GK 3 (neu einsetzende Fremdsprache 4), Vertiefungs- und Projektkurse 2; EF nur Grundkurse; Q-Phase 2 LK + mind. 7 GK; Pflichtunterricht EF+Q insgesamt 102 Wochenstunden (Ø 34)"
+      },
+      {
+        "id": "Q-GOST-ENTWURF",
+        "titel": "Schulministerium NRW: Entwurf APO-GOSt neu / VVzAPO-GOSt neu – Synopse",
+        "url": "https://www.schulministerium.nrw/system/files/media/document/file/260422_entwurf_apo-gost_neu_vvzapo-gost_neu_synopse.pdf",
+        "stand": "Entwurf vom 22.04.2026 (nicht in Kraft laut Suchstand), Abruf über Websuche 2026-10-10",
+        "verwendet_fuer": "Hinweis: Oberstufenregeln können sich ändern – Werte vor Nutzung prüfen"
+      },
+      {
+        "id": "Q-G9-ABI",
+        "titel": "Land NRW: Nach Rückkehr von G8 zu G9 bestehen rund 27.000 Schülerinnen und Schüler das Abitur",
+        "url": "https://www.land.nrw/pressemitteilung/nach-rueckkehr-von-g8-zu-g9-nordrhein-westfalen-bestehen-rund-27000-schuelerinnen",
+        "stand": "Pressemitteilung 2026, Abruf über Websuche 2026-10-10",
+        "verwendet_fuer": "2026 kein regulärer Abiturjahrgang an den meisten Gymnasien; erster G9-Abiturjahrgang 2027 (→ Q2 2026/27 besetzt)"
+      },
+      {
+        "id": "Q-AVO",
+        "titel": "Anlage zur VO zu § 93 Abs. 2 SchulG: Schüler je Lehrerstelle, Klassenfrequenzrichtwerte, Bandbreiten (Schuljahr 2026/2027)",
+        "url": "https://bass.schule.nrw/anlagen/20305-1.pdf",
+        "stand": "Schuljahr 2026/2027, Abruf über Websuche 2026-10-10",
+        "verwendet_fuer": "Gymnasium 5–10 (G9): Relation 19,87, Richtwert 27, Bandbreite 25–29; Gesamtschule 5–10: 18,63, 27, 25–29; Sekundarstufe II: 12,70 und Wert 19,5 (Spaltenzuordnung aus Tabellenlayout erschlossen)"
+      },
+      {
+        "id": "Q-VO93",
+        "titel": "VO zu § 93 Abs. 2 SchulG (BASS 11-11 Nr. 1) – § 2 Abs. 1 Pflichtstunden",
+        "url": "https://bass.schule.nrw/6218.htm",
+        "stand": "BASS 2026/2027 (zuletzt geändert durch VO vom 13.05.2025), Abruf über Websuche 2026-10-10",
+        "verwendet_fuer": "Pflichtstunden Lehrkräfte Gymnasium und Gesamtschule 25,5 (Bruchteil über drei Schuljahre abwechselnd auf-/abgerundet)"
+      },
+      {
+        "id": "Q-ITNRW-KLASSE",
+        "titel": "IT.NRW: Zahl der Schülerinnen und Schüler je Klasse steigt auf 23,9 (Schuljahr 2024/25)",
+        "url": "https://www.it.nrw/nrw-zahl-der-schuelerinnen-und-schueler-je-klasse-steigt-auf-239-127366",
+        "stand": "Pressemitteilung 2025 zum Schuljahr 2024/25 (Werte über News4teachers und Landtag-Drucksache 18/20461 bestätigt), Abruf über Websuche 2026-10-10",
+        "verwendet_fuer": "durchschnittliche Klassengröße Gymnasium 27,1 und Gesamtschule 27,0 (2024/25)"
+      },
+      {
+        "id": "Q-N4T",
+        "titel": "News4teachers: Dicht an dicht – Schülerzahl pro Klasse gestiegen (berichtet IT.NRW-Werte)",
+        "url": "https://www.news4teachers.de/2025/05/dicht-an-dicht-schuelerzahl-pro-klasse-gestiegen-gymnasien-besonders-betroffen/",
+        "stand": "Mai 2025, Abruf über Websuche 2026-10-10",
+        "verwendet_fuer": "Schüler je Vollzeitlehrereinheit: Gymnasium 14,5, Gesamtschule 11,4, NRW gesamt 12,8 (Sekundärquelle)"
+      },
+      {
+        "id": "Q-ZEIT",
+        "titel": "RdErl. Unterrichtsbeginn, Verteilung der Wochenstunden, Fünf-Tage-Woche, Klassenarbeiten und Hausaufgaben (BASS 12-63 Nr. 3)",
+        "url": "https://bass.schule.nrw/15325.htm",
+        "stand": "RdErl. vom 05.05.2015 mit späteren Änderungen, BASS 2026/2027, Abruf über Websuche 2026-10-10",
+        "verwendet_fuer": "Unterrichtsbeginn zwischen 7.30 und 8.30 Uhr; Vormittagspausen insgesamt ≥ 40 Min., davon eine ≥ 15 Min.; Mittagspause 60 Min. in Sek I (bis 15 Min. kürzer mit Zustimmung der Schulkonferenz); Sek II Pausen nach § 11 JArbSchG"
+      },
+      {
+        "id": "Q-FERIEN",
+        "titel": "Ferienordnung NRW – Ferientermine Schuljahre bis 2029/30 (BASS 12-65 Nr. 1)",
+        "url": "https://bass.schule.nrw/191.htm",
+        "stand": "BASS 2026/2027, Abruf über Websuche 2026-10-10",
+        "verwendet_fuer": "Herbst-, Weihnachts-, Oster-, Pfingst- und Sommerferien 2026/27"
+      },
+      {
+        "id": "Q-FERIEN-MSB",
+        "titel": "Schulministerium NRW: Ferienordnung für NRW für die Schuljahre bis 2029/30",
+        "url": "https://www.schulministerium.nrw/service/ferienordnung-nrw-bis-2029-30",
+        "stand": "Abruf über Websuche 2026-10-10",
+        "verwendet_fuer": "Sommerferien 2027 (19.07.–31.08.2027); 3 bewegliche Ferientage 2026/27, Festlegung durch Schulkonferenz"
+      },
+      {
+        "id": "Q-FEIERTAGE",
+        "titel": "Feiertagsgesetz NRW (FeiertG NRW) § 2 – gesetzliche Feiertage (Spiegel des Gesetzestexts)",
+        "url": "https://lexmea.de/de/gesetz/feiertg-nrw/2",
+        "stand": "Abruf über Websuche 2026-10-10; Datumsberechnung (Ostern 2027 = 28.03.2027) selbst durchgeführt",
+        "verwendet_fuer": "gesetzliche Feiertage 2026/27"
+      },
+      {
+        "id": "Q-KAOA",
+        "titel": "KAoA-Standardelement Praxiselemente in Betrieben (SBO 6.2.3) – Handreichung (kommunale Koordinierung)",
+        "url": "https://www.wuppertal.de/microsite/schule-beruf/schuelerinnen/content/schueler-studienorientierung.php.media/302313/09.2019__KH_Praxiselemente.pdf",
+        "stand": "Stand September 2019, Abruf über Websuche 2026-10-10",
+        "verwendet_fuer": "Betriebspraktikum als verbindliches Standardelement der Beruflichen Orientierung (Dauer/Termin hier als Annahme)"
+      }
+    ],
+    "abrufhinweis": "Direkter Seitenabruf (WebFetch/curl) der NRW-Portale war in der Arbeitsumgebung nicht möglich (DNS-Fehler bzw. Proxy-Sperre). Die Werte stammen aus den Websuche-Auszügen der angegebenen URLs (Abruf 2026-10-10) und sollten vor einer produktiven Nutzung im Originaldokument geprüft werden."
+  },
+  "zeitraster": {
+    "beginn": "07:50",
+    "stundenlaenge_min": 45,
+    "wechselzeit_min": 5,
+    "stunden_pro_tag": 10,
+    "pausen": [
+      {
+        "nach_stunde": 2,
+        "minuten": 20,
+        "name": "1. große Pause"
+      },
+      {
+        "nach_stunde": 4,
+        "minuten": 20,
+        "name": "2. große Pause"
+      },
+      {
+        "nach_stunde": 6,
+        "minuten": 60,
+        "name": "Mittagspause"
+      }
+    ],
+    "stunden": [
+      {
+        "stunde": 1,
+        "von": "07:50",
+        "bis": "08:35"
+      },
+      {
+        "stunde": 2,
+        "von": "08:40",
+        "bis": "09:25"
+      },
+      {
+        "stunde": 3,
+        "von": "09:45",
+        "bis": "10:30"
+      },
+      {
+        "stunde": 4,
+        "von": "10:35",
+        "bis": "11:20"
+      },
+      {
+        "stunde": 5,
+        "von": "11:40",
+        "bis": "12:25"
+      },
+      {
+        "stunde": 6,
+        "von": "12:30",
+        "bis": "13:15"
+      },
+      {
+        "stunde": 7,
+        "von": "14:15",
+        "bis": "15:00"
+      },
+      {
+        "stunde": 8,
+        "von": "15:05",
+        "bis": "15:50"
+      },
+      {
+        "stunde": 9,
+        "von": "15:55",
+        "bis": "16:40"
+      },
+      {
+        "stunde": 10,
+        "von": "16:45",
+        "bis": "17:30"
+      }
+    ],
+    "hinweis_import": "nach_stunde ist 1-basiert (Pause NACH der n-ten Stunde). Im Schulmanager ist Settings.breaks[].after 0-basiert → after = nach_stunde − 1; Settings.period_times = Liste der 'von'-Zeiten; Settings.period_minutes = stundenlaenge_min.",
+    "quellen": [
+      "Q-ZEIT"
+    ],
+    "hinweis": "Beginn/Pausen im Rahmen von BASS 12-63 Nr. 3; konkrete Uhrzeiten = Annahme (typisches Muster)."
+  },
+  "tage_pro_woche": 5,
+  "faecher": [
+    {
+      "kuerzel": "D",
+      "name": "Deutsch"
+    },
+    {
+      "kuerzel": "M",
+      "name": "Mathematik"
+    },
+    {
+      "kuerzel": "E",
+      "name": "Englisch"
+    },
+    {
+      "kuerzel": "F",
+      "name": "Französisch"
+    },
+    {
+      "kuerzel": "L",
+      "name": "Latein"
+    },
+    {
+      "kuerzel": "S",
+      "name": "Spanisch"
+    },
+    {
+      "kuerzel": "GE",
+      "name": "Geschichte"
+    },
+    {
+      "kuerzel": "EK",
+      "name": "Erdkunde"
+    },
+    {
+      "kuerzel": "PW",
+      "name": "Wirtschaft-Politik"
+    },
+    {
+      "kuerzel": "SW",
+      "name": "Sozialwissenschaften (Oberstufe)"
+    },
+    {
+      "kuerzel": "GEB",
+      "name": "Geschichte bilingual (Englisch)"
+    },
+    {
+      "kuerzel": "EKB",
+      "name": "Erdkunde bilingual (Englisch)"
+    },
+    {
+      "kuerzel": "BI",
+      "name": "Biologie",
+      "fachraum": "Biologie"
+    },
+    {
+      "kuerzel": "CH",
+      "name": "Chemie",
+      "fachraum": "Chemie"
+    },
+    {
+      "kuerzel": "PH",
+      "name": "Physik",
+      "fachraum": "Physik"
+    },
+    {
+      "kuerzel": "IF",
+      "name": "Informatik",
+      "fachraum": "Informatik"
+    },
+    {
+      "kuerzel": "BC",
+      "name": "Biologie-Chemie (Wahlpflicht)",
+      "fachraum": "Chemie"
+    },
+    {
+      "kuerzel": "DS",
+      "name": "Darstellendes Spiel (Wahlpflicht)",
+      "fachraum": "Aula/Bühne"
+    },
+    {
+      "kuerzel": "KU",
+      "name": "Kunst",
+      "fachraum": "Kunst"
+    },
+    {
+      "kuerzel": "MU",
+      "name": "Musik",
+      "fachraum": "Musik"
+    },
+    {
+      "kuerzel": "LI",
+      "name": "Literatur (Oberstufe)"
+    },
+    {
+      "kuerzel": "ER",
+      "name": "Evangelische Religionslehre"
+    },
+    {
+      "kuerzel": "KR",
+      "name": "Katholische Religionslehre"
+    },
+    {
+      "kuerzel": "PP",
+      "name": "Praktische Philosophie (Sek I)"
+    },
+    {
+      "kuerzel": "PL",
+      "name": "Philosophie (Oberstufe)"
+    },
+    {
+      "kuerzel": "SP",
+      "name": "Sport",
+      "fachraum": "Sporthalle"
+    },
+    {
+      "kuerzel": "VD",
+      "name": "Vertiefungskurs Deutsch (EF)"
+    },
+    {
+      "kuerzel": "VM",
+      "name": "Vertiefungskurs Mathematik (EF)"
+    },
+    {
+      "kuerzel": "VE",
+      "name": "Vertiefungskurs Englisch (EF)"
+    },
+    {
+      "kuerzel": "PJ",
+      "name": "Projektkurs (Q1)"
+    },
+    {
+      "kuerzel": "FÖ",
+      "name": "Förder-/Lernzeitband (Ergänzungsstunde)"
+    }
+  ],
+  "bildungsgaenge": [
+    {
+      "id": "sek1-g9",
+      "name": "Sekundarstufe I (G9)",
+      "beschreibung": "Erprobungsstufe 5/6, Mittelstufe 7–10; 2. Fremdsprache ab 7, Wahlpflichtbereich II ab 9, Halbtag mit Nachmittagsunterricht an 1–2 Tagen",
+      "jahrgaenge": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "rhythmus": {
+        "typ": "wöchentlich"
+      },
+      "max_stunden_pro_tag": {
+        "5": 8,
+        "6": 8,
+        "7": 8,
+        "8": 8,
+        "9": 8,
+        "10": 8
+      },
+      "quellen": [
+        "Q-ST-GY"
+      ]
+    },
+    {
+      "id": "sek1-g9-bili",
+      "name": "Sekundarstufe I (G9) – bilingualer Zweig Englisch",
+      "beschreibung": "d-Klassen: Englisch-Verstärkung in Kl. 6, bilingualer Sachfachunterricht (Geschichte/Erdkunde) ab Kl. 7 über Ergänzungsstunden (Annahme)",
+      "jahrgaenge": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "rhythmus": {
+        "typ": "wöchentlich"
+      },
+      "max_stunden_pro_tag": {
+        "5": 8,
+        "6": 8,
+        "7": 8,
+        "8": 8,
+        "9": 8,
+        "10": 8
+      },
+      "quellen": [
+        "Q-ST-GY"
+      ],
+      "annahme": true
+    },
+    {
+      "id": "gost",
+      "name": "Gymnasiale Oberstufe (EF, Q1, Q2)",
+      "beschreibung": "Kurssystem mit Tutorgruppen; EF = Jg. 11, Q1 = Jg. 12, Q2 = Jg. 13 (erster G9-Abiturjahrgang 2027)",
+      "jahrgaenge": [
+        11,
+        12,
+        13
+      ],
+      "rhythmus": {
+        "typ": "wöchentlich mit Blockphasen",
+        "blockphasen": [
+          {
+            "name": "Betriebspraktikum EF (2 Wochen)",
+            "jahrgaenge": [
+              11
+            ],
+            "von": "2027-01-18",
+            "bis": "2027-01-29",
+            "wochen": [
+              21,
+              22
+            ],
+            "unterricht_in_der_schule": false,
+            "beschreibung": "Alle EF-Tutorgruppen sind im Praktikum; Lehrkräfte der EF-Kurse werden frei (Vertretungsreserve).",
+            "quellen": [
+              "Q-KAOA"
+            ],
+            "annahme": true
+          },
+          {
+            "name": "Q2: Unterrichtsende vor den Abiturprüfungen (fiktiver Termin)",
+            "jahrgaenge": [
+              13
+            ],
+            "von": "2027-04-12",
+            "bis": "2027-07-16",
+            "wochen": [
+              33,
+              34,
+              35,
+              36,
+              37,
+              38,
+              39,
+              40,
+              41,
+              42,
+              43,
+              44,
+              45,
+              46
+            ],
+            "unterricht_in_der_schule": false,
+            "beschreibung": "Fiktiver Beispieltermin zum Testen 'Klasse ist nicht da' – tatsächliche Termine laut Abiturterminplan prüfen.",
+            "quellen": [
+              "Q-G9-ABI"
+            ],
+            "annahme": true
+          }
+        ]
+      },
+      "max_stunden_pro_tag": {
+        "11": 10,
+        "12": 10,
+        "13": 10
+      },
+      "quellen": [
+        "Q-GOST"
+      ]
+    }
+  ],
+  "klassengruppen": [
+    {
+      "id": "JG5",
+      "name": "Jahrgang 5",
+      "klassen": [
+        "5a",
+        "5b",
+        "5c",
+        "5d"
+      ],
+      "zweck": "Jahrgangsbänder (2. FS ab 7, WP ab 9)"
+    },
+    {
+      "id": "JG5-REGEL",
+      "name": "Jahrgang 5 Regelzweig",
+      "klassen": [
+        "5a",
+        "5b",
+        "5c"
+      ],
+      "zweck": "Förder-/Lernzeitband"
+    },
+    {
+      "id": "REL5ab",
+      "name": "Religionsband 5a/5b",
+      "klassen": [
+        "5a",
+        "5b"
+      ],
+      "zweck": "ER/KR/PP parallel"
+    },
+    {
+      "id": "REL5cd",
+      "name": "Religionsband 5c/5d",
+      "klassen": [
+        "5c",
+        "5d"
+      ],
+      "zweck": "ER/KR/PP parallel"
+    },
+    {
+      "id": "JG6",
+      "name": "Jahrgang 6",
+      "klassen": [
+        "6a",
+        "6b",
+        "6c",
+        "6d"
+      ],
+      "zweck": "Jahrgangsbänder (2. FS ab 7, WP ab 9)"
+    },
+    {
+      "id": "JG6-REGEL",
+      "name": "Jahrgang 6 Regelzweig",
+      "klassen": [
+        "6a",
+        "6b",
+        "6c"
+      ],
+      "zweck": "Förder-/Lernzeitband"
+    },
+    {
+      "id": "REL6ab",
+      "name": "Religionsband 6a/6b",
+      "klassen": [
+        "6a",
+        "6b"
+      ],
+      "zweck": "ER/KR/PP parallel"
+    },
+    {
+      "id": "REL6cd",
+      "name": "Religionsband 6c/6d",
+      "klassen": [
+        "6c",
+        "6d"
+      ],
+      "zweck": "ER/KR/PP parallel"
+    },
+    {
+      "id": "JG7",
+      "name": "Jahrgang 7",
+      "klassen": [
+        "7a",
+        "7b",
+        "7c",
+        "7d"
+      ],
+      "zweck": "Jahrgangsbänder (2. FS ab 7, WP ab 9)"
+    },
+    {
+      "id": "JG7-REGEL",
+      "name": "Jahrgang 7 Regelzweig",
+      "klassen": [
+        "7a",
+        "7b",
+        "7c"
+      ],
+      "zweck": "Förder-/Lernzeitband"
+    },
+    {
+      "id": "REL7ab",
+      "name": "Religionsband 7a/7b",
+      "klassen": [
+        "7a",
+        "7b"
+      ],
+      "zweck": "ER/KR/PP parallel"
+    },
+    {
+      "id": "REL7cd",
+      "name": "Religionsband 7c/7d",
+      "klassen": [
+        "7c",
+        "7d"
+      ],
+      "zweck": "ER/KR/PP parallel"
+    },
+    {
+      "id": "JG8",
+      "name": "Jahrgang 8",
+      "klassen": [
+        "8a",
+        "8b",
+        "8c",
+        "8d"
+      ],
+      "zweck": "Jahrgangsbänder (2. FS ab 7, WP ab 9)"
+    },
+    {
+      "id": "JG8-REGEL",
+      "name": "Jahrgang 8 Regelzweig",
+      "klassen": [
+        "8a",
+        "8b",
+        "8c"
+      ],
+      "zweck": "Förder-/Lernzeitband"
+    },
+    {
+      "id": "REL8ab",
+      "name": "Religionsband 8a/8b",
+      "klassen": [
+        "8a",
+        "8b"
+      ],
+      "zweck": "ER/KR/PP parallel"
+    },
+    {
+      "id": "REL8cd",
+      "name": "Religionsband 8c/8d",
+      "klassen": [
+        "8c",
+        "8d"
+      ],
+      "zweck": "ER/KR/PP parallel"
+    },
+    {
+      "id": "JG9",
+      "name": "Jahrgang 9",
+      "klassen": [
+        "9a",
+        "9b",
+        "9c",
+        "9d"
+      ],
+      "zweck": "Jahrgangsbänder (2. FS ab 7, WP ab 9)"
+    },
+    {
+      "id": "JG9-REGEL",
+      "name": "Jahrgang 9 Regelzweig",
+      "klassen": [
+        "9a",
+        "9b",
+        "9c"
+      ],
+      "zweck": "Förder-/Lernzeitband"
+    },
+    {
+      "id": "REL9ab",
+      "name": "Religionsband 9a/9b",
+      "klassen": [
+        "9a",
+        "9b"
+      ],
+      "zweck": "ER/KR/PP parallel"
+    },
+    {
+      "id": "REL9cd",
+      "name": "Religionsband 9c/9d",
+      "klassen": [
+        "9c",
+        "9d"
+      ],
+      "zweck": "ER/KR/PP parallel"
+    },
+    {
+      "id": "JG10",
+      "name": "Jahrgang 10",
+      "klassen": [
+        "10a",
+        "10b",
+        "10c",
+        "10d"
+      ],
+      "zweck": "Jahrgangsbänder (2. FS ab 7, WP ab 9)"
+    },
+    {
+      "id": "JG10-REGEL",
+      "name": "Jahrgang 10 Regelzweig",
+      "klassen": [
+        "10a",
+        "10b",
+        "10c"
+      ],
+      "zweck": "Förder-/Lernzeitband"
+    },
+    {
+      "id": "REL10ab",
+      "name": "Religionsband 10a/10b",
+      "klassen": [
+        "10a",
+        "10b"
+      ],
+      "zweck": "ER/KR/PP parallel"
+    },
+    {
+      "id": "REL10cd",
+      "name": "Religionsband 10c/10d",
+      "klassen": [
+        "10c",
+        "10d"
+      ],
+      "zweck": "ER/KR/PP parallel"
+    },
+    {
+      "id": "BILI",
+      "name": "Bilingualer Zweig (d-Klassen)",
+      "klassen": [
+        "5d",
+        "6d",
+        "7d",
+        "8d",
+        "9d",
+        "10d"
+      ],
+      "zweck": "eigener Bildungsgang sek1-g9-bili"
+    },
+    {
+      "id": "ERPROBUNG",
+      "name": "Erprobungsstufe",
+      "klassen": [
+        "5a",
+        "5b",
+        "5c",
+        "5d",
+        "6a",
+        "6b",
+        "6c",
+        "6d"
+      ],
+      "zweck": "Vertretung: nie Entfall (cancel_min_grade = 7)"
+    },
+    {
+      "id": "OS-EF",
+      "name": "Oberstufe EF",
+      "klassen": [
+        "EF-1",
+        "EF-2",
+        "EF-3",
+        "EF-4",
+        "EF-5"
+      ],
+      "zweck": "Kursschienen der Jahrgangsstufe"
+    },
+    {
+      "id": "OS-Q1",
+      "name": "Oberstufe Q1",
+      "klassen": [
+        "Q1-1",
+        "Q1-2",
+        "Q1-3",
+        "Q1-4",
+        "Q1-5"
+      ],
+      "zweck": "Kursschienen der Jahrgangsstufe"
+    },
+    {
+      "id": "OS-Q2",
+      "name": "Oberstufe Q2",
+      "klassen": [
+        "Q2-1",
+        "Q2-2",
+        "Q2-3",
+        "Q2-4"
+      ],
+      "zweck": "Kursschienen der Jahrgangsstufe"
+    }
+  ],
+  "klassen": [
+    {
+      "id": "5a",
+      "name": "5a",
+      "bildungsgang": "sek1-g9",
+      "jahrgang": 5,
+      "schueler": 27,
+      "standort": "HS"
+    },
+    {
+      "id": "5b",
+      "name": "5b",
+      "bildungsgang": "sek1-g9",
+      "jahrgang": 5,
+      "schueler": 28,
+      "standort": "HS"
+    },
+    {
+      "id": "5c",
+      "name": "5c",
+      "bildungsgang": "sek1-g9",
+      "jahrgang": 5,
+      "schueler": 27,
+      "standort": "HS"
+    },
+    {
+      "id": "5d",
+      "name": "5d",
+      "bildungsgang": "sek1-g9-bili",
+      "jahrgang": 5,
+      "schueler": 26,
+      "standort": "HS"
+    },
+    {
+      "id": "6a",
+      "name": "6a",
+      "bildungsgang": "sek1-g9",
+      "jahrgang": 6,
+      "schueler": 28,
+      "standort": "HS"
+    },
+    {
+      "id": "6b",
+      "name": "6b",
+      "bildungsgang": "sek1-g9",
+      "jahrgang": 6,
+      "schueler": 27,
+      "standort": "HS"
+    },
+    {
+      "id": "6c",
+      "name": "6c",
+      "bildungsgang": "sek1-g9",
+      "jahrgang": 6,
+      "schueler": 27,
+      "standort": "HS"
+    },
+    {
+      "id": "6d",
+      "name": "6d",
+      "bildungsgang": "sek1-g9-bili",
+      "jahrgang": 6,
+      "schueler": 26,
+      "standort": "HS"
+    },
+    {
+      "id": "7a",
+      "name": "7a",
+      "bildungsgang": "sek1-g9",
+      "jahrgang": 7,
+      "schueler": 27,
+      "standort": "HS"
+    },
+    {
+      "id": "7b",
+      "name": "7b",
+      "bildungsgang": "sek1-g9",
+      "jahrgang": 7,
+      "schueler": 27,
+      "standort": "HS"
+    },
+    {
+      "id": "7c",
+      "name": "7c",
+      "bildungsgang": "sek1-g9",
+      "jahrgang": 7,
+      "schueler": 28,
+      "standort": "HS"
+    },
+    {
+      "id": "7d",
+      "name": "7d",
+      "bildungsgang": "sek1-g9-bili",
+      "jahrgang": 7,
+      "schueler": 26,
+      "standort": "HS"
+    },
+    {
+      "id": "8a",
+      "name": "8a",
+      "bildungsgang": "sek1-g9",
+      "jahrgang": 8,
+      "schueler": 28,
+      "standort": "HS"
+    },
+    {
+      "id": "8b",
+      "name": "8b",
+      "bildungsgang": "sek1-g9",
+      "jahrgang": 8,
+      "schueler": 27,
+      "standort": "HS"
+    },
+    {
+      "id": "8c",
+      "name": "8c",
+      "bildungsgang": "sek1-g9",
+      "jahrgang": 8,
+      "schueler": 27,
+      "standort": "HS"
+    },
+    {
+      "id": "8d",
+      "name": "8d",
+      "bildungsgang": "sek1-g9-bili",
+      "jahrgang": 8,
+      "schueler": 26,
+      "standort": "HS"
+    },
+    {
+      "id": "9a",
+      "name": "9a",
+      "bildungsgang": "sek1-g9",
+      "jahrgang": 9,
+      "schueler": 28,
+      "standort": "HS"
+    },
+    {
+      "id": "9b",
+      "name": "9b",
+      "bildungsgang": "sek1-g9",
+      "jahrgang": 9,
+      "schueler": 27,
+      "standort": "HS"
+    },
+    {
+      "id": "9c",
+      "name": "9c",
+      "bildungsgang": "sek1-g9",
+      "jahrgang": 9,
+      "schueler": 27,
+      "standort": "HS"
+    },
+    {
+      "id": "9d",
+      "name": "9d",
+      "bildungsgang": "sek1-g9-bili",
+      "jahrgang": 9,
+      "schueler": 27,
+      "standort": "HS"
+    },
+    {
+      "id": "10a",
+      "name": "10a",
+      "bildungsgang": "sek1-g9",
+      "jahrgang": 10,
+      "schueler": 27,
+      "standort": "HS"
+    },
+    {
+      "id": "10b",
+      "name": "10b",
+      "bildungsgang": "sek1-g9",
+      "jahrgang": 10,
+      "schueler": 27,
+      "standort": "HS"
+    },
+    {
+      "id": "10c",
+      "name": "10c",
+      "bildungsgang": "sek1-g9",
+      "jahrgang": 10,
+      "schueler": 28,
+      "standort": "HS"
+    },
+    {
+      "id": "10d",
+      "name": "10d",
+      "bildungsgang": "sek1-g9-bili",
+      "jahrgang": 10,
+      "schueler": 27,
+      "standort": "HS"
+    },
+    {
+      "id": "EF-1",
+      "name": "EF Tutorgruppe 1",
+      "bildungsgang": "gost",
+      "jahrgang": 11,
+      "schueler": 26,
+      "standort": "HS"
+    },
+    {
+      "id": "EF-2",
+      "name": "EF Tutorgruppe 2",
+      "bildungsgang": "gost",
+      "jahrgang": 11,
+      "schueler": 26,
+      "standort": "HS"
+    },
+    {
+      "id": "EF-3",
+      "name": "EF Tutorgruppe 3",
+      "bildungsgang": "gost",
+      "jahrgang": 11,
+      "schueler": 26,
+      "standort": "HS"
+    },
+    {
+      "id": "EF-4",
+      "name": "EF Tutorgruppe 4",
+      "bildungsgang": "gost",
+      "jahrgang": 11,
+      "schueler": 26,
+      "standort": "HS"
+    },
+    {
+      "id": "EF-5",
+      "name": "EF Tutorgruppe 5",
+      "bildungsgang": "gost",
+      "jahrgang": 11,
+      "schueler": 26,
+      "standort": "HS"
+    },
+    {
+      "id": "Q1-1",
+      "name": "Q1 Tutorgruppe 1",
+      "bildungsgang": "gost",
+      "jahrgang": 12,
+      "schueler": 24,
+      "standort": "HS"
+    },
+    {
+      "id": "Q1-2",
+      "name": "Q1 Tutorgruppe 2",
+      "bildungsgang": "gost",
+      "jahrgang": 12,
+      "schueler": 23,
+      "standort": "HS"
+    },
+    {
+      "id": "Q1-3",
+      "name": "Q1 Tutorgruppe 3",
+      "bildungsgang": "gost",
+      "jahrgang": 12,
+      "schueler": 23,
+      "standort": "HS"
+    },
+    {
+      "id": "Q1-4",
+      "name": "Q1 Tutorgruppe 4",
+      "bildungsgang": "gost",
+      "jahrgang": 12,
+      "schueler": 23,
+      "standort": "HS"
+    },
+    {
+      "id": "Q1-5",
+      "name": "Q1 Tutorgruppe 5",
+      "bildungsgang": "gost",
+      "jahrgang": 12,
+      "schueler": 23,
+      "standort": "HS"
+    },
+    {
+      "id": "Q2-1",
+      "name": "Q2 Tutorgruppe 1",
+      "bildungsgang": "gost",
+      "jahrgang": 13,
+      "schueler": 26,
+      "standort": "HS"
+    },
+    {
+      "id": "Q2-2",
+      "name": "Q2 Tutorgruppe 2",
+      "bildungsgang": "gost",
+      "jahrgang": 13,
+      "schueler": 26,
+      "standort": "HS"
+    },
+    {
+      "id": "Q2-3",
+      "name": "Q2 Tutorgruppe 3",
+      "bildungsgang": "gost",
+      "jahrgang": 13,
+      "schueler": 26,
+      "standort": "HS"
+    },
+    {
+      "id": "Q2-4",
+      "name": "Q2 Tutorgruppe 4",
+      "bildungsgang": "gost",
+      "jahrgang": 13,
+      "schueler": 26,
+      "standort": "HS"
+    }
+  ],
+  "stundentafeln": [
+    {
+      "id": "ST-GY-5",
+      "bildungsgang": "sek1-g9",
+      "jahrgaenge": [
+        5
+      ],
+      "eintraege": [
+        {
+          "fach": "D",
+          "wochenstunden": 5,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "M",
+          "wochenstunden": 4,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "E",
+          "wochenstunden": 5,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "EK",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "PW",
+          "wochenstunden": 1,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "BI",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": true
+        },
+        {
+          "fach": "PH",
+          "wochenstunden": 1,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "IF",
+          "wochenstunden": 1,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "KU",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": true
+        },
+        {
+          "fach": "MU",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "ER/KR/PP",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": false,
+          "kopplung": {
+            "art": "parallel",
+            "faecher": [
+              "ER",
+              "KR",
+              "PP"
+            ],
+            "klassengruppe": "Religionsband (je 2 Parallelklassen)",
+            "teilgruppen": 3,
+            "hinweis": "ER/KR/PP liegen gleichzeitig; 2 Klassen → 3 Lerngruppen"
+          }
+        },
+        {
+          "fach": "SP",
+          "wochenstunden": 3,
+          "doppelstunde_bevorzugt": true
+        }
+      ],
+      "summe_wochenstunden": 30.0,
+      "quellen": [
+        "Q-ST-GY"
+      ],
+      "hinweis": "Lernbereichssummen und Rahmen laut Anlage 3a; Verteilung auf Jahrgänge = Annahme"
+    },
+    {
+      "id": "ST-GY-6",
+      "bildungsgang": "sek1-g9",
+      "jahrgaenge": [
+        6
+      ],
+      "eintraege": [
+        {
+          "fach": "D",
+          "wochenstunden": 4,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "M",
+          "wochenstunden": 5,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "E",
+          "wochenstunden": 4,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "GE",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "PW",
+          "wochenstunden": 1,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "BI",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": true
+        },
+        {
+          "fach": "PH",
+          "wochenstunden": 1,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "IF",
+          "wochenstunden": 1,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "KU",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": true
+        },
+        {
+          "fach": "MU",
+          "wochenstunden": 1,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "ER/KR/PP",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": false,
+          "kopplung": {
+            "art": "parallel",
+            "faecher": [
+              "ER",
+              "KR",
+              "PP"
+            ],
+            "klassengruppe": "Religionsband (je 2 Parallelklassen)",
+            "teilgruppen": 3,
+            "hinweis": "ER/KR/PP liegen gleichzeitig; 2 Klassen → 3 Lerngruppen"
+          }
+        },
+        {
+          "fach": "SP",
+          "wochenstunden": 4,
+          "doppelstunde_bevorzugt": true
+        },
+        {
+          "fach": "FÖ",
+          "wochenstunden": 1,
+          "doppelstunde_bevorzugt": false,
+          "art": "Ergänzungsstunde",
+          "kopplung": {
+            "art": "parallel",
+            "faecher": [
+              "FÖ"
+            ],
+            "klassengruppe": "Jahrgang ohne d-Klasse (JG<n>-REGEL)",
+            "teilgruppen": 4,
+            "hinweis": "Förder-/Forderband D/M/E/LRS parallel für die 3 Regelklassen (Annahme)"
+          }
+        }
+      ],
+      "summe_wochenstunden": 30.0,
+      "quellen": [
+        "Q-ST-GY"
+      ],
+      "hinweis": "Lernbereichssummen und Rahmen laut Anlage 3a; Verteilung auf Jahrgänge = Annahme"
+    },
+    {
+      "id": "ST-GY-7",
+      "bildungsgang": "sek1-g9",
+      "jahrgaenge": [
+        7
+      ],
+      "eintraege": [
+        {
+          "fach": "D",
+          "wochenstunden": 4,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "M",
+          "wochenstunden": 4,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "E",
+          "wochenstunden": 4,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "F/L",
+          "wochenstunden": 4,
+          "doppelstunde_bevorzugt": false,
+          "kopplung": {
+            "art": "parallel",
+            "faecher": [
+              "F",
+              "L"
+            ],
+            "klassengruppe": "Jahrgang (alle 4 Klassen)",
+            "teilgruppen": 5,
+            "hinweis": "2. Fremdsprache ab Kl. 7: Französisch (3 Gruppen) oder Latein (2 Gruppen) parallel"
+          }
+        },
+        {
+          "fach": "GE",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "PW",
+          "wochenstunden": 1,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "CH",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": true
+        },
+        {
+          "fach": "PH",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": true
+        },
+        {
+          "fach": "KU",
+          "wochenstunden": 1,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "MU",
+          "wochenstunden": 1,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "ER/KR/PP",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": false,
+          "kopplung": {
+            "art": "parallel",
+            "faecher": [
+              "ER",
+              "KR",
+              "PP"
+            ],
+            "klassengruppe": "Religionsband (je 2 Parallelklassen)",
+            "teilgruppen": 3,
+            "hinweis": "ER/KR/PP liegen gleichzeitig; 2 Klassen → 3 Lerngruppen"
+          }
+        },
+        {
+          "fach": "SP",
+          "wochenstunden": 3,
+          "doppelstunde_bevorzugt": true
+        },
+        {
+          "fach": "FÖ",
+          "wochenstunden": 1,
+          "doppelstunde_bevorzugt": false,
+          "art": "Ergänzungsstunde",
+          "kopplung": {
+            "art": "parallel",
+            "faecher": [
+              "FÖ"
+            ],
+            "klassengruppe": "Jahrgang ohne d-Klasse (JG<n>-REGEL)",
+            "teilgruppen": 4,
+            "hinweis": "Förder-/Forderband D/M/E/LRS parallel für die 3 Regelklassen (Annahme)"
+          }
+        }
+      ],
+      "summe_wochenstunden": 31.0,
+      "quellen": [
+        "Q-ST-GY"
+      ],
+      "hinweis": "Lernbereichssummen und Rahmen laut Anlage 3a; Verteilung auf Jahrgänge = Annahme"
+    },
+    {
+      "id": "ST-GY-8",
+      "bildungsgang": "sek1-g9",
+      "jahrgaenge": [
+        8
+      ],
+      "eintraege": [
+        {
+          "fach": "D",
+          "wochenstunden": 3,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "M",
+          "wochenstunden": 3,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "E",
+          "wochenstunden": 3,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "F/L",
+          "wochenstunden": 4,
+          "doppelstunde_bevorzugt": false,
+          "kopplung": {
+            "art": "parallel",
+            "faecher": [
+              "F",
+              "L"
+            ],
+            "klassengruppe": "Jahrgang (alle 4 Klassen)",
+            "teilgruppen": 5,
+            "hinweis": "2. Fremdsprache ab Kl. 7: Französisch (3 Gruppen) oder Latein (2 Gruppen) parallel"
+          }
+        },
+        {
+          "fach": "PW",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "EK",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "BI",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": true
+        },
+        {
+          "fach": "CH",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": true
+        },
+        {
+          "fach": "PH",
+          "wochenstunden": 1,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "KU",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": true
+        },
+        {
+          "fach": "MU",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "ER/KR/PP",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": false,
+          "kopplung": {
+            "art": "parallel",
+            "faecher": [
+              "ER",
+              "KR",
+              "PP"
+            ],
+            "klassengruppe": "Religionsband (je 2 Parallelklassen)",
+            "teilgruppen": 3,
+            "hinweis": "ER/KR/PP liegen gleichzeitig; 2 Klassen → 3 Lerngruppen"
+          }
+        },
+        {
+          "fach": "SP",
+          "wochenstunden": 3,
+          "doppelstunde_bevorzugt": true
+        }
+      ],
+      "summe_wochenstunden": 31.0,
+      "quellen": [
+        "Q-ST-GY"
+      ],
+      "hinweis": "Lernbereichssummen und Rahmen laut Anlage 3a; Verteilung auf Jahrgänge = Annahme"
+    },
+    {
+      "id": "ST-GY-9",
+      "bildungsgang": "sek1-g9",
+      "jahrgaenge": [
+        9
+      ],
+      "eintraege": [
+        {
+          "fach": "D",
+          "wochenstunden": 3,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "M",
+          "wochenstunden": 3,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "E",
+          "wochenstunden": 3,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "F/L",
+          "wochenstunden": 4,
+          "doppelstunde_bevorzugt": false,
+          "kopplung": {
+            "art": "parallel",
+            "faecher": [
+              "F",
+              "L"
+            ],
+            "klassengruppe": "Jahrgang (alle 4 Klassen)",
+            "teilgruppen": 5,
+            "hinweis": "2. Fremdsprache ab Kl. 7: Französisch (3 Gruppen) oder Latein (2 Gruppen) parallel"
+          }
+        },
+        {
+          "fach": "GE",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "PW",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "EK",
+          "wochenstunden": 1,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "BI",
+          "wochenstunden": 1,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "CH",
+          "wochenstunden": 1,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "PH",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": true
+        },
+        {
+          "fach": "KU",
+          "wochenstunden": 1,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "MU",
+          "wochenstunden": 1,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "ER/KR/PP",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": false,
+          "kopplung": {
+            "art": "parallel",
+            "faecher": [
+              "ER",
+              "KR",
+              "PP"
+            ],
+            "klassengruppe": "Religionsband (je 2 Parallelklassen)",
+            "teilgruppen": 3,
+            "hinweis": "ER/KR/PP liegen gleichzeitig; 2 Klassen → 3 Lerngruppen"
+          }
+        },
+        {
+          "fach": "SP",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": true
+        },
+        {
+          "fach": "WP",
+          "wochenstunden": 3,
+          "doppelstunde_bevorzugt": true,
+          "art": "Wahlpflicht",
+          "kopplung": {
+            "art": "parallel",
+            "faecher": [
+              "S",
+              "IF",
+              "BC",
+              "DS"
+            ],
+            "klassengruppe": "Jahrgang (alle 4 Klassen)",
+            "teilgruppen": 5,
+            "hinweis": "Wahlpflichtbereich II Kl. 9/10: Spanisch (3. FS), Informatik (2 Gruppen), Biologie-Chemie, Darstellendes Spiel"
+          }
+        },
+        {
+          "fach": "FÖ",
+          "wochenstunden": 1,
+          "doppelstunde_bevorzugt": false,
+          "art": "Ergänzungsstunde",
+          "kopplung": {
+            "art": "parallel",
+            "faecher": [
+              "FÖ"
+            ],
+            "klassengruppe": "Jahrgang ohne d-Klasse (JG<n>-REGEL)",
+            "teilgruppen": 4,
+            "hinweis": "Förder-/Forderband D/M/E/LRS parallel für die 3 Regelklassen (Annahme)"
+          }
+        }
+      ],
+      "summe_wochenstunden": 32.0,
+      "quellen": [
+        "Q-ST-GY"
+      ],
+      "hinweis": "Lernbereichssummen und Rahmen laut Anlage 3a; Verteilung auf Jahrgänge = Annahme"
+    },
+    {
+      "id": "ST-GY-10",
+      "bildungsgang": "sek1-g9",
+      "jahrgaenge": [
+        10
+      ],
+      "eintraege": [
+        {
+          "fach": "D",
+          "wochenstunden": 3,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "M",
+          "wochenstunden": 3,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "E",
+          "wochenstunden": 3,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "F/L",
+          "wochenstunden": 3,
+          "doppelstunde_bevorzugt": false,
+          "kopplung": {
+            "art": "parallel",
+            "faecher": [
+              "F",
+              "L"
+            ],
+            "klassengruppe": "Jahrgang (alle 4 Klassen)",
+            "teilgruppen": 5,
+            "hinweis": "2. Fremdsprache ab Kl. 7: Französisch (3 Gruppen) oder Latein (2 Gruppen) parallel"
+          }
+        },
+        {
+          "fach": "GE",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "PW",
+          "wochenstunden": 1,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "EK",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "BI",
+          "wochenstunden": 1,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "CH",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": true
+        },
+        {
+          "fach": "PH",
+          "wochenstunden": 1,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "KU",
+          "wochenstunden": 1,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "MU",
+          "wochenstunden": 1,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "ER/KR/PP",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": false,
+          "kopplung": {
+            "art": "parallel",
+            "faecher": [
+              "ER",
+              "KR",
+              "PP"
+            ],
+            "klassengruppe": "Religionsband (je 2 Parallelklassen)",
+            "teilgruppen": 3,
+            "hinweis": "ER/KR/PP liegen gleichzeitig; 2 Klassen → 3 Lerngruppen"
+          }
+        },
+        {
+          "fach": "SP",
+          "wochenstunden": 3,
+          "doppelstunde_bevorzugt": true
+        },
+        {
+          "fach": "WP",
+          "wochenstunden": 3,
+          "doppelstunde_bevorzugt": true,
+          "art": "Wahlpflicht",
+          "kopplung": {
+            "art": "parallel",
+            "faecher": [
+              "S",
+              "IF",
+              "BC",
+              "DS"
+            ],
+            "klassengruppe": "Jahrgang (alle 4 Klassen)",
+            "teilgruppen": 5,
+            "hinweis": "Wahlpflichtbereich II Kl. 9/10: Spanisch (3. FS), Informatik (2 Gruppen), Biologie-Chemie, Darstellendes Spiel"
+          }
+        },
+        {
+          "fach": "FÖ",
+          "wochenstunden": 1,
+          "doppelstunde_bevorzugt": false,
+          "art": "Ergänzungsstunde",
+          "kopplung": {
+            "art": "parallel",
+            "faecher": [
+              "FÖ"
+            ],
+            "klassengruppe": "Jahrgang ohne d-Klasse (JG<n>-REGEL)",
+            "teilgruppen": 4,
+            "hinweis": "Förder-/Forderband D/M/E/LRS parallel für die 3 Regelklassen (Annahme)"
+          }
+        }
+      ],
+      "summe_wochenstunden": 32.0,
+      "quellen": [
+        "Q-ST-GY"
+      ],
+      "hinweis": "Lernbereichssummen und Rahmen laut Anlage 3a; Verteilung auf Jahrgänge = Annahme"
+    },
+    {
+      "id": "ST-GY-BILI-5",
+      "bildungsgang": "sek1-g9-bili",
+      "jahrgaenge": [
+        5
+      ],
+      "eintraege": [
+        {
+          "fach": "D",
+          "wochenstunden": 5,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "M",
+          "wochenstunden": 4,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "E",
+          "wochenstunden": 5,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "EK",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "PW",
+          "wochenstunden": 1,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "BI",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": true
+        },
+        {
+          "fach": "PH",
+          "wochenstunden": 1,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "IF",
+          "wochenstunden": 1,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "KU",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": true
+        },
+        {
+          "fach": "MU",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "ER/KR/PP",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": false,
+          "kopplung": {
+            "art": "parallel",
+            "faecher": [
+              "ER",
+              "KR",
+              "PP"
+            ],
+            "klassengruppe": "Religionsband (je 2 Parallelklassen)",
+            "teilgruppen": 3,
+            "hinweis": "ER/KR/PP liegen gleichzeitig; 2 Klassen → 3 Lerngruppen"
+          }
+        },
+        {
+          "fach": "SP",
+          "wochenstunden": 3,
+          "doppelstunde_bevorzugt": true
+        }
+      ],
+      "summe_wochenstunden": 30.0,
+      "quellen": [
+        "Q-ST-GY"
+      ],
+      "hinweis": "wie Regelzweig; Ergänzungsstunden für den bilingualen Zweig (Annahme)"
+    },
+    {
+      "id": "ST-GY-BILI-6",
+      "bildungsgang": "sek1-g9-bili",
+      "jahrgaenge": [
+        6
+      ],
+      "eintraege": [
+        {
+          "fach": "D",
+          "wochenstunden": 4,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "M",
+          "wochenstunden": 5,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "E",
+          "wochenstunden": 4,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "GE",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "PW",
+          "wochenstunden": 1,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "BI",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": true
+        },
+        {
+          "fach": "PH",
+          "wochenstunden": 1,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "IF",
+          "wochenstunden": 1,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "KU",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": true
+        },
+        {
+          "fach": "MU",
+          "wochenstunden": 1,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "ER/KR/PP",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": false,
+          "kopplung": {
+            "art": "parallel",
+            "faecher": [
+              "ER",
+              "KR",
+              "PP"
+            ],
+            "klassengruppe": "Religionsband (je 2 Parallelklassen)",
+            "teilgruppen": 3,
+            "hinweis": "ER/KR/PP liegen gleichzeitig; 2 Klassen → 3 Lerngruppen"
+          }
+        },
+        {
+          "fach": "SP",
+          "wochenstunden": 4,
+          "doppelstunde_bevorzugt": true
+        },
+        {
+          "fach": "E",
+          "wochenstunden": 1,
+          "doppelstunde_bevorzugt": false,
+          "art": "Ergänzungsstunde",
+          "hinweis": "Englisch-Verstärkung bilingualer Zweig"
+        }
+      ],
+      "summe_wochenstunden": 30.0,
+      "quellen": [
+        "Q-ST-GY"
+      ],
+      "hinweis": "wie Regelzweig; Ergänzungsstunden für den bilingualen Zweig (Annahme)"
+    },
+    {
+      "id": "ST-GY-BILI-7",
+      "bildungsgang": "sek1-g9-bili",
+      "jahrgaenge": [
+        7
+      ],
+      "eintraege": [
+        {
+          "fach": "D",
+          "wochenstunden": 4,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "M",
+          "wochenstunden": 4,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "E",
+          "wochenstunden": 4,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "F/L",
+          "wochenstunden": 4,
+          "doppelstunde_bevorzugt": false,
+          "kopplung": {
+            "art": "parallel",
+            "faecher": [
+              "F",
+              "L"
+            ],
+            "klassengruppe": "Jahrgang (alle 4 Klassen)",
+            "teilgruppen": 5,
+            "hinweis": "2. Fremdsprache ab Kl. 7: Französisch (3 Gruppen) oder Latein (2 Gruppen) parallel"
+          }
+        },
+        {
+          "fach": "PW",
+          "wochenstunden": 1,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "CH",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": true
+        },
+        {
+          "fach": "PH",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": true
+        },
+        {
+          "fach": "KU",
+          "wochenstunden": 1,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "MU",
+          "wochenstunden": 1,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "ER/KR/PP",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": false,
+          "kopplung": {
+            "art": "parallel",
+            "faecher": [
+              "ER",
+              "KR",
+              "PP"
+            ],
+            "klassengruppe": "Religionsband (je 2 Parallelklassen)",
+            "teilgruppen": 3,
+            "hinweis": "ER/KR/PP liegen gleichzeitig; 2 Klassen → 3 Lerngruppen"
+          }
+        },
+        {
+          "fach": "SP",
+          "wochenstunden": 3,
+          "doppelstunde_bevorzugt": true
+        },
+        {
+          "fach": "GEB",
+          "wochenstunden": 3,
+          "doppelstunde_bevorzugt": true,
+          "hinweis": "Geschichte bilingual: 2 Kern- + 1 Ergänzungsstunde"
+        }
+      ],
+      "summe_wochenstunden": 31.0,
+      "quellen": [
+        "Q-ST-GY"
+      ],
+      "hinweis": "wie Regelzweig; Ergänzungsstunden für den bilingualen Zweig (Annahme)"
+    },
+    {
+      "id": "ST-GY-BILI-8",
+      "bildungsgang": "sek1-g9-bili",
+      "jahrgaenge": [
+        8
+      ],
+      "eintraege": [
+        {
+          "fach": "D",
+          "wochenstunden": 3,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "M",
+          "wochenstunden": 3,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "E",
+          "wochenstunden": 3,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "F/L",
+          "wochenstunden": 4,
+          "doppelstunde_bevorzugt": false,
+          "kopplung": {
+            "art": "parallel",
+            "faecher": [
+              "F",
+              "L"
+            ],
+            "klassengruppe": "Jahrgang (alle 4 Klassen)",
+            "teilgruppen": 5,
+            "hinweis": "2. Fremdsprache ab Kl. 7: Französisch (3 Gruppen) oder Latein (2 Gruppen) parallel"
+          }
+        },
+        {
+          "fach": "PW",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "BI",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": true
+        },
+        {
+          "fach": "CH",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": true
+        },
+        {
+          "fach": "PH",
+          "wochenstunden": 1,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "KU",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": true
+        },
+        {
+          "fach": "MU",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "ER/KR/PP",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": false,
+          "kopplung": {
+            "art": "parallel",
+            "faecher": [
+              "ER",
+              "KR",
+              "PP"
+            ],
+            "klassengruppe": "Religionsband (je 2 Parallelklassen)",
+            "teilgruppen": 3,
+            "hinweis": "ER/KR/PP liegen gleichzeitig; 2 Klassen → 3 Lerngruppen"
+          }
+        },
+        {
+          "fach": "SP",
+          "wochenstunden": 3,
+          "doppelstunde_bevorzugt": true
+        },
+        {
+          "fach": "EKB",
+          "wochenstunden": 3,
+          "doppelstunde_bevorzugt": true,
+          "hinweis": "Erdkunde bilingual: 2 Kern- + 1 Ergänzungsstunde"
+        }
+      ],
+      "summe_wochenstunden": 32.0,
+      "quellen": [
+        "Q-ST-GY"
+      ],
+      "hinweis": "wie Regelzweig; Ergänzungsstunden für den bilingualen Zweig (Annahme)"
+    },
+    {
+      "id": "ST-GY-BILI-9",
+      "bildungsgang": "sek1-g9-bili",
+      "jahrgaenge": [
+        9
+      ],
+      "eintraege": [
+        {
+          "fach": "D",
+          "wochenstunden": 3,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "M",
+          "wochenstunden": 3,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "E",
+          "wochenstunden": 3,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "F/L",
+          "wochenstunden": 4,
+          "doppelstunde_bevorzugt": false,
+          "kopplung": {
+            "art": "parallel",
+            "faecher": [
+              "F",
+              "L"
+            ],
+            "klassengruppe": "Jahrgang (alle 4 Klassen)",
+            "teilgruppen": 5,
+            "hinweis": "2. Fremdsprache ab Kl. 7: Französisch (3 Gruppen) oder Latein (2 Gruppen) parallel"
+          }
+        },
+        {
+          "fach": "PW",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "EK",
+          "wochenstunden": 1,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "BI",
+          "wochenstunden": 1,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "CH",
+          "wochenstunden": 1,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "PH",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": true
+        },
+        {
+          "fach": "KU",
+          "wochenstunden": 1,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "MU",
+          "wochenstunden": 1,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "ER/KR/PP",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": false,
+          "kopplung": {
+            "art": "parallel",
+            "faecher": [
+              "ER",
+              "KR",
+              "PP"
+            ],
+            "klassengruppe": "Religionsband (je 2 Parallelklassen)",
+            "teilgruppen": 3,
+            "hinweis": "ER/KR/PP liegen gleichzeitig; 2 Klassen → 3 Lerngruppen"
+          }
+        },
+        {
+          "fach": "SP",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": true
+        },
+        {
+          "fach": "WP",
+          "wochenstunden": 3,
+          "doppelstunde_bevorzugt": true,
+          "art": "Wahlpflicht",
+          "kopplung": {
+            "art": "parallel",
+            "faecher": [
+              "S",
+              "IF",
+              "BC",
+              "DS"
+            ],
+            "klassengruppe": "Jahrgang (alle 4 Klassen)",
+            "teilgruppen": 5,
+            "hinweis": "Wahlpflichtbereich II Kl. 9/10: Spanisch (3. FS), Informatik (2 Gruppen), Biologie-Chemie, Darstellendes Spiel"
+          }
+        },
+        {
+          "fach": "GEB",
+          "wochenstunden": 3,
+          "doppelstunde_bevorzugt": true,
+          "hinweis": "Geschichte bilingual: 2 Kern- + 1 Ergänzungsstunde"
+        }
+      ],
+      "summe_wochenstunden": 32.0,
+      "quellen": [
+        "Q-ST-GY"
+      ],
+      "hinweis": "wie Regelzweig; Ergänzungsstunden für den bilingualen Zweig (Annahme)"
+    },
+    {
+      "id": "ST-GY-BILI-10",
+      "bildungsgang": "sek1-g9-bili",
+      "jahrgaenge": [
+        10
+      ],
+      "eintraege": [
+        {
+          "fach": "D",
+          "wochenstunden": 3,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "M",
+          "wochenstunden": 3,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "E",
+          "wochenstunden": 3,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "F/L",
+          "wochenstunden": 3,
+          "doppelstunde_bevorzugt": false,
+          "kopplung": {
+            "art": "parallel",
+            "faecher": [
+              "F",
+              "L"
+            ],
+            "klassengruppe": "Jahrgang (alle 4 Klassen)",
+            "teilgruppen": 5,
+            "hinweis": "2. Fremdsprache ab Kl. 7: Französisch (3 Gruppen) oder Latein (2 Gruppen) parallel"
+          }
+        },
+        {
+          "fach": "PW",
+          "wochenstunden": 1,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "EK",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "BI",
+          "wochenstunden": 1,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "CH",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": true
+        },
+        {
+          "fach": "PH",
+          "wochenstunden": 1,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "KU",
+          "wochenstunden": 1,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "MU",
+          "wochenstunden": 1,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "ER/KR/PP",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": false,
+          "kopplung": {
+            "art": "parallel",
+            "faecher": [
+              "ER",
+              "KR",
+              "PP"
+            ],
+            "klassengruppe": "Religionsband (je 2 Parallelklassen)",
+            "teilgruppen": 3,
+            "hinweis": "ER/KR/PP liegen gleichzeitig; 2 Klassen → 3 Lerngruppen"
+          }
+        },
+        {
+          "fach": "SP",
+          "wochenstunden": 3,
+          "doppelstunde_bevorzugt": true
+        },
+        {
+          "fach": "WP",
+          "wochenstunden": 3,
+          "doppelstunde_bevorzugt": true,
+          "art": "Wahlpflicht",
+          "kopplung": {
+            "art": "parallel",
+            "faecher": [
+              "S",
+              "IF",
+              "BC",
+              "DS"
+            ],
+            "klassengruppe": "Jahrgang (alle 4 Klassen)",
+            "teilgruppen": 5,
+            "hinweis": "Wahlpflichtbereich II Kl. 9/10: Spanisch (3. FS), Informatik (2 Gruppen), Biologie-Chemie, Darstellendes Spiel"
+          }
+        },
+        {
+          "fach": "GEB",
+          "wochenstunden": 3,
+          "doppelstunde_bevorzugt": true,
+          "hinweis": "Geschichte bilingual: 2 Kern- + 1 Ergänzungsstunde"
+        }
+      ],
+      "summe_wochenstunden": 32.0,
+      "quellen": [
+        "Q-ST-GY"
+      ],
+      "hinweis": "wie Regelzweig; Ergänzungsstunden für den bilingualen Zweig (Annahme)"
+    }
+  ],
+  "oberstufe": {
+    "kurssystem": {
+      "lk_wochenstunden": 5,
+      "gk_wochenstunden": 3,
+      "gk_neu_einsetzende_fremdsprache_wochenstunden": 4,
+      "vertiefungskurs_wochenstunden": 2,
+      "projektkurs_wochenstunden": 2,
+      "ef": "nur Grundkurse (+ Vertiefungskurse D/M/E)",
+      "q_phase": "2 Leistungskurse + mindestens 7 Grundkurse",
+      "pflichtstunden_ef_bis_q2": 102,
+      "durchschnitt_wochenstunden": 34,
+      "quellen": [
+        "Q-GOST",
+        "Q-GOST-ENTWURF"
+      ]
+    },
+    "jahrgangsstufen": [
+      {
+        "stufe": "EF",
+        "jahrgang": 11,
+        "schueler": 130,
+        "tutorgruppen": 5,
+        "anzahl_kurse": 55,
+        "kurse": [
+          {
+            "fach": "D",
+            "art": "GK",
+            "wochenstunden": 3,
+            "anzahl": 6
+          },
+          {
+            "fach": "M",
+            "art": "GK",
+            "wochenstunden": 3,
+            "anzahl": 6
+          },
+          {
+            "fach": "E",
+            "art": "GK",
+            "wochenstunden": 3,
+            "anzahl": 6
+          },
+          {
+            "fach": "F",
+            "art": "GK",
+            "wochenstunden": 3,
+            "anzahl": 2
+          },
+          {
+            "fach": "L",
+            "art": "GK",
+            "wochenstunden": 3,
+            "anzahl": 1
+          },
+          {
+            "fach": "S",
+            "art": "GK",
+            "wochenstunden": 4,
+            "anzahl": 1,
+            "hinweis": "neu einsetzende Fremdsprache: 4 Wochenstunden"
+          },
+          {
+            "fach": "GE",
+            "art": "GK",
+            "wochenstunden": 3,
+            "anzahl": 2
+          },
+          {
+            "fach": "EK",
+            "art": "GK",
+            "wochenstunden": 3,
+            "anzahl": 2
+          },
+          {
+            "fach": "SW",
+            "art": "GK",
+            "wochenstunden": 3,
+            "anzahl": 3
+          },
+          {
+            "fach": "PL",
+            "art": "GK",
+            "wochenstunden": 3,
+            "anzahl": 2
+          },
+          {
+            "fach": "ER",
+            "art": "GK",
+            "wochenstunden": 3,
+            "anzahl": 1
+          },
+          {
+            "fach": "KR",
+            "art": "GK",
+            "wochenstunden": 3,
+            "anzahl": 1
+          },
+          {
+            "fach": "BI",
+            "art": "GK",
+            "wochenstunden": 3,
+            "anzahl": 3
+          },
+          {
+            "fach": "CH",
+            "art": "GK",
+            "wochenstunden": 3,
+            "anzahl": 2
+          },
+          {
+            "fach": "PH",
+            "art": "GK",
+            "wochenstunden": 3,
+            "anzahl": 2
+          },
+          {
+            "fach": "IF",
+            "art": "GK",
+            "wochenstunden": 3,
+            "anzahl": 1
+          },
+          {
+            "fach": "KU",
+            "art": "GK",
+            "wochenstunden": 3,
+            "anzahl": 2
+          },
+          {
+            "fach": "MU",
+            "art": "GK",
+            "wochenstunden": 3,
+            "anzahl": 2
+          },
+          {
+            "fach": "SP",
+            "art": "GK",
+            "wochenstunden": 3,
+            "anzahl": 6
+          },
+          {
+            "fach": "VD",
+            "art": "Vertiefungskurs",
+            "wochenstunden": 2,
+            "anzahl": 1
+          },
+          {
+            "fach": "VM",
+            "art": "Vertiefungskurs",
+            "wochenstunden": 2,
+            "anzahl": 2
+          },
+          {
+            "fach": "VE",
+            "art": "Vertiefungskurs",
+            "wochenstunden": 2,
+            "anzahl": 1
+          }
+        ],
+        "unterrichtsstunden_gesamt": 162,
+        "schienen": [
+          {
+            "name": "GK-Schiene 1",
+            "wochenstunden": 3,
+            "kurse": [
+              "D-GK1",
+              "M-GK6",
+              "GE-GK1",
+              "BI-GK1",
+              "MU-GK2"
+            ]
+          },
+          {
+            "name": "GK-Schiene 2",
+            "wochenstunden": 3,
+            "kurse": [
+              "D-GK2",
+              "E-GK1",
+              "GE-GK2",
+              "BI-GK2",
+              "SP-GK1"
+            ]
+          },
+          {
+            "name": "GK-Schiene 3",
+            "wochenstunden": 3,
+            "kurse": [
+              "D-GK3",
+              "E-GK2",
+              "EK-GK1",
+              "BI-GK3",
+              "SP-GK2"
+            ]
+          },
+          {
+            "name": "GK-Schiene 4",
+            "wochenstunden": 3,
+            "kurse": [
+              "D-GK4",
+              "E-GK3",
+              "EK-GK2",
+              "CH-GK1",
+              "SP-GK3"
+            ]
+          },
+          {
+            "name": "GK-Schiene 5",
+            "wochenstunden": 3,
+            "kurse": [
+              "D-GK5",
+              "E-GK4",
+              "SW-GK1",
+              "CH-GK2",
+              "SP-GK4"
+            ]
+          },
+          {
+            "name": "GK-Schiene 6",
+            "wochenstunden": 3,
+            "kurse": [
+              "D-GK6",
+              "E-GK5",
+              "SW-GK2",
+              "PH-GK1",
+              "SP-GK5"
+            ]
+          },
+          {
+            "name": "GK-Schiene 7",
+            "wochenstunden": 3,
+            "kurse": [
+              "M-GK1",
+              "E-GK6",
+              "SW-GK3",
+              "PH-GK2",
+              "SP-GK6"
+            ]
+          },
+          {
+            "name": "GK-Schiene 8",
+            "wochenstunden": 3,
+            "kurse": [
+              "M-GK2",
+              "F-GK1",
+              "PL-GK1",
+              "IF-GK1"
+            ]
+          },
+          {
+            "name": "GK-Schiene 9",
+            "wochenstunden": 3,
+            "kurse": [
+              "M-GK3",
+              "F-GK2",
+              "PL-GK2",
+              "KU-GK1"
+            ]
+          },
+          {
+            "name": "GK-Schiene 10",
+            "wochenstunden": 3,
+            "kurse": [
+              "M-GK4",
+              "L-GK1",
+              "ER-GK1",
+              "KU-GK2"
+            ]
+          },
+          {
+            "name": "GK-Schiene 11",
+            "wochenstunden": 3,
+            "kurse": [
+              "M-GK5",
+              "S-GK1",
+              "KR-GK1",
+              "MU-GK1"
+            ]
+          }
+        ]
+      },
+      {
+        "stufe": "Q1",
+        "jahrgang": 12,
+        "schueler": 116,
+        "tutorgruppen": 5,
+        "anzahl_kurse": 49,
+        "kurse": [
+          {
+            "fach": "D",
+            "art": "LK",
+            "wochenstunden": 5,
+            "anzahl": 2
+          },
+          {
+            "fach": "M",
+            "art": "LK",
+            "wochenstunden": 5,
+            "anzahl": 2
+          },
+          {
+            "fach": "E",
+            "art": "LK",
+            "wochenstunden": 5,
+            "anzahl": 2
+          },
+          {
+            "fach": "BI",
+            "art": "LK",
+            "wochenstunden": 5,
+            "anzahl": 2
+          },
+          {
+            "fach": "GE",
+            "art": "LK",
+            "wochenstunden": 5,
+            "anzahl": 1
+          },
+          {
+            "fach": "SW",
+            "art": "LK",
+            "wochenstunden": 5,
+            "anzahl": 1
+          },
+          {
+            "fach": "PH",
+            "art": "LK",
+            "wochenstunden": 5,
+            "anzahl": 1
+          },
+          {
+            "fach": "KU",
+            "art": "LK",
+            "wochenstunden": 5,
+            "anzahl": 1
+          },
+          {
+            "fach": "D",
+            "art": "GK",
+            "wochenstunden": 3,
+            "anzahl": 3
+          },
+          {
+            "fach": "M",
+            "art": "GK",
+            "wochenstunden": 3,
+            "anzahl": 3
+          },
+          {
+            "fach": "E",
+            "art": "GK",
+            "wochenstunden": 3,
+            "anzahl": 3
+          },
+          {
+            "fach": "F",
+            "art": "GK",
+            "wochenstunden": 3,
+            "anzahl": 1
+          },
+          {
+            "fach": "L",
+            "art": "GK",
+            "wochenstunden": 3,
+            "anzahl": 1
+          },
+          {
+            "fach": "S",
+            "art": "GK",
+            "wochenstunden": 4,
+            "anzahl": 1,
+            "hinweis": "neu einsetzende Fremdsprache: 4 Wochenstunden"
+          },
+          {
+            "fach": "GE",
+            "art": "GK",
+            "wochenstunden": 3,
+            "anzahl": 2
+          },
+          {
+            "fach": "EK",
+            "art": "GK",
+            "wochenstunden": 3,
+            "anzahl": 2
+          },
+          {
+            "fach": "SW",
+            "art": "GK",
+            "wochenstunden": 3,
+            "anzahl": 2
+          },
+          {
+            "fach": "PL",
+            "art": "GK",
+            "wochenstunden": 3,
+            "anzahl": 2
+          },
+          {
+            "fach": "ER",
+            "art": "GK",
+            "wochenstunden": 3,
+            "anzahl": 1
+          },
+          {
+            "fach": "KR",
+            "art": "GK",
+            "wochenstunden": 3,
+            "anzahl": 1
+          },
+          {
+            "fach": "BI",
+            "art": "GK",
+            "wochenstunden": 3,
+            "anzahl": 2
+          },
+          {
+            "fach": "CH",
+            "art": "GK",
+            "wochenstunden": 3,
+            "anzahl": 2
+          },
+          {
+            "fach": "PH",
+            "art": "GK",
+            "wochenstunden": 3,
+            "anzahl": 1
+          },
+          {
+            "fach": "IF",
+            "art": "GK",
+            "wochenstunden": 3,
+            "anzahl": 1
+          },
+          {
+            "fach": "KU",
+            "art": "GK",
+            "wochenstunden": 3,
+            "anzahl": 1
+          },
+          {
+            "fach": "MU",
+            "art": "GK",
+            "wochenstunden": 3,
+            "anzahl": 1
+          },
+          {
+            "fach": "LI",
+            "art": "GK",
+            "wochenstunden": 3,
+            "anzahl": 1
+          },
+          {
+            "fach": "SP",
+            "art": "GK",
+            "wochenstunden": 3,
+            "anzahl": 5
+          },
+          {
+            "fach": "PJ",
+            "art": "Projektkurs",
+            "wochenstunden": 2,
+            "anzahl": 1
+          }
+        ],
+        "unterrichtsstunden_gesamt": 171,
+        "schienen": [
+          {
+            "name": "LK-Schiene A",
+            "wochenstunden": 5,
+            "kurse": [
+              "D-LK1",
+              "M-LK1",
+              "E-LK1",
+              "BI-LK1",
+              "GE-LK1",
+              "PH-LK1"
+            ]
+          },
+          {
+            "name": "LK-Schiene B",
+            "wochenstunden": 5,
+            "kurse": [
+              "D-LK2",
+              "M-LK2",
+              "E-LK2",
+              "BI-LK2",
+              "SW-LK1",
+              "KU-LK1"
+            ]
+          },
+          {
+            "name": "GK-Schiene 1",
+            "wochenstunden": 3,
+            "kurse": [
+              "D-GK1",
+              "F-GK1",
+              "PL-GK1",
+              "IF-GK1"
+            ]
+          },
+          {
+            "name": "GK-Schiene 2",
+            "wochenstunden": 3,
+            "kurse": [
+              "D-GK2",
+              "L-GK1",
+              "PL-GK2",
+              "KU-GK1"
+            ]
+          },
+          {
+            "name": "GK-Schiene 3",
+            "wochenstunden": 3,
+            "kurse": [
+              "D-GK3",
+              "S-GK1",
+              "ER-GK1",
+              "MU-GK1"
+            ]
+          },
+          {
+            "name": "GK-Schiene 4",
+            "wochenstunden": 3,
+            "kurse": [
+              "M-GK1",
+              "GE-GK1",
+              "KR-GK1",
+              "LI-GK1"
+            ]
+          },
+          {
+            "name": "GK-Schiene 5",
+            "wochenstunden": 3,
+            "kurse": [
+              "M-GK2",
+              "GE-GK2",
+              "BI-GK1",
+              "SP-GK1"
+            ]
+          },
+          {
+            "name": "GK-Schiene 6",
+            "wochenstunden": 3,
+            "kurse": [
+              "M-GK3",
+              "EK-GK1",
+              "BI-GK2",
+              "SP-GK2"
+            ]
+          },
+          {
+            "name": "GK-Schiene 7",
+            "wochenstunden": 3,
+            "kurse": [
+              "E-GK1",
+              "EK-GK2",
+              "CH-GK1",
+              "SP-GK3"
+            ]
+          },
+          {
+            "name": "GK-Schiene 8",
+            "wochenstunden": 3,
+            "kurse": [
+              "E-GK2",
+              "SW-GK1",
+              "CH-GK2",
+              "SP-GK4"
+            ]
+          },
+          {
+            "name": "GK-Schiene 9",
+            "wochenstunden": 3,
+            "kurse": [
+              "E-GK3",
+              "SW-GK2",
+              "PH-GK1",
+              "SP-GK5"
+            ]
+          }
+        ]
+      },
+      {
+        "stufe": "Q2",
+        "jahrgang": 13,
+        "schueler": 104,
+        "tutorgruppen": 4,
+        "anzahl_kurse": 43,
+        "kurse": [
+          {
+            "fach": "D",
+            "art": "LK",
+            "wochenstunden": 5,
+            "anzahl": 2
+          },
+          {
+            "fach": "M",
+            "art": "LK",
+            "wochenstunden": 5,
+            "anzahl": 2
+          },
+          {
+            "fach": "E",
+            "art": "LK",
+            "wochenstunden": 5,
+            "anzahl": 2
+          },
+          {
+            "fach": "BI",
+            "art": "LK",
+            "wochenstunden": 5,
+            "anzahl": 1
+          },
+          {
+            "fach": "GE",
+            "art": "LK",
+            "wochenstunden": 5,
+            "anzahl": 1
+          },
+          {
+            "fach": "SW",
+            "art": "LK",
+            "wochenstunden": 5,
+            "anzahl": 1
+          },
+          {
+            "fach": "CH",
+            "art": "LK",
+            "wochenstunden": 5,
+            "anzahl": 1
+          },
+          {
+            "fach": "EK",
+            "art": "LK",
+            "wochenstunden": 5,
+            "anzahl": 1
+          },
+          {
+            "fach": "D",
+            "art": "GK",
+            "wochenstunden": 3,
+            "anzahl": 3
+          },
+          {
+            "fach": "M",
+            "art": "GK",
+            "wochenstunden": 3,
+            "anzahl": 3
+          },
+          {
+            "fach": "E",
+            "art": "GK",
+            "wochenstunden": 3,
+            "anzahl": 3
+          },
+          {
+            "fach": "F",
+            "art": "GK",
+            "wochenstunden": 3,
+            "anzahl": 1
+          },
+          {
+            "fach": "L",
+            "art": "GK",
+            "wochenstunden": 3,
+            "anzahl": 1
+          },
+          {
+            "fach": "S",
+            "art": "GK",
+            "wochenstunden": 4,
+            "anzahl": 1,
+            "hinweis": "neu einsetzende Fremdsprache: 4 Wochenstunden"
+          },
+          {
+            "fach": "GE",
+            "art": "GK",
+            "wochenstunden": 3,
+            "anzahl": 2
+          },
+          {
+            "fach": "EK",
+            "art": "GK",
+            "wochenstunden": 3,
+            "anzahl": 1
+          },
+          {
+            "fach": "SW",
+            "art": "GK",
+            "wochenstunden": 3,
+            "anzahl": 2
+          },
+          {
+            "fach": "PL",
+            "art": "GK",
+            "wochenstunden": 3,
+            "anzahl": 2
+          },
+          {
+            "fach": "ER",
+            "art": "GK",
+            "wochenstunden": 3,
+            "anzahl": 1
+          },
+          {
+            "fach": "KR",
+            "art": "GK",
+            "wochenstunden": 3,
+            "anzahl": 1
+          },
+          {
+            "fach": "BI",
+            "art": "GK",
+            "wochenstunden": 3,
+            "anzahl": 2
+          },
+          {
+            "fach": "CH",
+            "art": "GK",
+            "wochenstunden": 3,
+            "anzahl": 1
+          },
+          {
+            "fach": "PH",
+            "art": "GK",
+            "wochenstunden": 3,
+            "anzahl": 1
+          },
+          {
+            "fach": "IF",
+            "art": "GK",
+            "wochenstunden": 3,
+            "anzahl": 1
+          },
+          {
+            "fach": "KU",
+            "art": "GK",
+            "wochenstunden": 3,
+            "anzahl": 1
+          },
+          {
+            "fach": "MU",
+            "art": "GK",
+            "wochenstunden": 3,
+            "anzahl": 1
+          },
+          {
+            "fach": "SP",
+            "art": "GK",
+            "wochenstunden": 3,
+            "anzahl": 4
+          }
+        ],
+        "unterrichtsstunden_gesamt": 152,
+        "schienen": [
+          {
+            "name": "LK-Schiene A",
+            "wochenstunden": 5,
+            "kurse": [
+              "D-LK1",
+              "M-LK1",
+              "E-LK1",
+              "BI-LK1",
+              "SW-LK1",
+              "EK-LK1"
+            ]
+          },
+          {
+            "name": "LK-Schiene B",
+            "wochenstunden": 5,
+            "kurse": [
+              "D-LK2",
+              "M-LK2",
+              "E-LK2",
+              "GE-LK1",
+              "CH-LK1"
+            ]
+          },
+          {
+            "name": "GK-Schiene 1",
+            "wochenstunden": 3,
+            "kurse": [
+              "D-GK1",
+              "E-GK3",
+              "SW-GK2",
+              "PH-GK1"
+            ]
+          },
+          {
+            "name": "GK-Schiene 2",
+            "wochenstunden": 3,
+            "kurse": [
+              "D-GK2",
+              "F-GK1",
+              "PL-GK1",
+              "IF-GK1"
+            ]
+          },
+          {
+            "name": "GK-Schiene 3",
+            "wochenstunden": 3,
+            "kurse": [
+              "D-GK3",
+              "L-GK1",
+              "PL-GK2",
+              "KU-GK1"
+            ]
+          },
+          {
+            "name": "GK-Schiene 4",
+            "wochenstunden": 3,
+            "kurse": [
+              "M-GK1",
+              "S-GK1",
+              "ER-GK1",
+              "MU-GK1"
+            ]
+          },
+          {
+            "name": "GK-Schiene 5",
+            "wochenstunden": 3,
+            "kurse": [
+              "M-GK2",
+              "GE-GK1",
+              "KR-GK1",
+              "SP-GK1"
+            ]
+          },
+          {
+            "name": "GK-Schiene 6",
+            "wochenstunden": 3,
+            "kurse": [
+              "M-GK3",
+              "GE-GK2",
+              "BI-GK1",
+              "SP-GK2"
+            ]
+          },
+          {
+            "name": "GK-Schiene 7",
+            "wochenstunden": 3,
+            "kurse": [
+              "E-GK1",
+              "EK-GK1",
+              "BI-GK2",
+              "SP-GK3"
+            ]
+          },
+          {
+            "name": "GK-Schiene 8",
+            "wochenstunden": 3,
+            "kurse": [
+              "E-GK2",
+              "SW-GK1",
+              "CH-GK1",
+              "SP-GK4"
+            ]
+          }
+        ],
+        "hinweis": "erster G9-Abiturjahrgang 2027 (Q-G9-ABI)"
+      }
+    ],
+    "hinweis": "Kursanzahlen und Schienen sind eine plausible Annahme für die fiktive Schule (Kursgrößen ca. 15–28). Vertiefungs-/Projektkurse liegen außerhalb der GK-Schienen (eigene 2-stündige Schiene)."
+  },
+  "lehrkraefte": {
+    "anzahl": 70,
+    "vollzeitaequivalente_geschaetzt": 61.6,
+    "deputat_vollzeit": 25.5,
+    "deputat_hinweis": "25,5 Pflichtstunden; im Schulmanager ganzzahlig → abwechselnd 25/26 bzw. Teilzeit anteilig",
+    "teilzeitquote_annahme": 0.3,
+    "stellenbedarf_nach_relation": {
+      "sek1": 32.7,
+      "sek2": 27.6,
+      "summe": 60.3,
+      "rechnung": "Sek I: Schüler/19,87; Sek II: Schüler/12,70 (Grundstellen ohne Zuschläge)",
+      "quellen": [
+        "Q-AVO"
+      ]
+    },
+    "unterrichtsbedarf_wochenstunden": 1279.0,
+    "bedarf_je_fach": {
+      "E": 145.0,
+      "D": 144.0,
+      "M": 144.0,
+      "SP": 117.0,
+      "BI": 68.0,
+      "F": 57.0,
+      "GE": 54.0,
+      "KU": 53.0,
+      "PH": 49.0,
+      "CH": 48.0,
+      "EK": 46.0,
+      "MU": 44.0,
+      "L": 39.0,
+      "ER": 33.0,
+      "KR": 33.0,
+      "PW": 32.0,
+      "SW": 31.0,
+      "IF": 29.0,
+      "PP": 24.0,
+      "S": 18.0,
+      "PL": 18.0,
+      "FÖ": 16.0,
+      "GEB": 9.0,
+      "BC": 6.0,
+      "DS": 6.0,
+      "VM": 4.0,
+      "EKB": 3.0,
+      "LI": 3.0,
+      "VD": 2.0,
+      "VE": 2.0,
+      "PJ": 2.0
+    },
+    "kapazitaet_wochenstunden_geschaetzt": 1445.1,
+    "ungedeckte_faecher": {},
+    "abdeckung_je_fach_geschaetzt": {
+      "D": {
+        "bedarf": 149.0,
+        "kapazitaet": 171.2
+      },
+      "M": {
+        "bedarf": 148.0,
+        "kapazitaet": 155.7
+      },
+      "E": {
+        "bedarf": 147.0,
+        "kapazitaet": 169.2
+      },
+      "SP": {
+        "bedarf": 117.0,
+        "kapazitaet": 124.9
+      },
+      "BI": {
+        "bedarf": 74.0,
+        "kapazitaet": 81.9
+      },
+      "GE": {
+        "bedarf": 63.0,
+        "kapazitaet": 85.3
+      },
+      "KU": {
+        "bedarf": 59.0,
+        "kapazitaet": 67.6
+      },
+      "F": {
+        "bedarf": 57.0,
+        "kapazitaet": 65.0
+      },
+      "PH": {
+        "bedarf": 49.0,
+        "kapazitaet": 56.8
+      },
+      "EK": {
+        "bedarf": 49.0,
+        "kapazitaet": 55.0
+      },
+      "CH": {
+        "bedarf": 48.0,
+        "kapazitaet": 55.8
+      },
+      "MU": {
+        "bedarf": 44.0,
+        "kapazitaet": 51.8
+      },
+      "L": {
+        "bedarf": 39.0,
+        "kapazitaet": 44.3
+      },
+      "ER": {
+        "bedarf": 33.0,
+        "kapazitaet": 38.5
+      },
+      "KR": {
+        "bedarf": 33.0,
+        "kapazitaet": 35.8
+      },
+      "PW": {
+        "bedarf": 32.0,
+        "kapazitaet": 37.8
+      },
+      "SW": {
+        "bedarf": 31.0,
+        "kapazitaet": 37.0
+      },
+      "IF": {
+        "bedarf": 29.0,
+        "kapazitaet": 36.7
+      },
+      "PP": {
+        "bedarf": 24.0,
+        "kapazitaet": 27.5
+      },
+      "S": {
+        "bedarf": 18.0,
+        "kapazitaet": 26.1
+      },
+      "PL": {
+        "bedarf": 18.0,
+        "kapazitaet": 21.5
+      }
+    },
+    "faecherkombinationen": [
+      {
+        "faecher": [
+          "D",
+          "E"
+        ],
+        "anzahl": 4
+      },
+      {
+        "faecher": [
+          "E",
+          "S"
+        ],
+        "anzahl": 1
+      },
+      {
+        "faecher": [
+          "D",
+          "GE"
+        ],
+        "anzahl": 4
+      },
+      {
+        "faecher": [
+          "D",
+          "PL"
+        ],
+        "anzahl": 2
+      },
+      {
+        "faecher": [
+          "D",
+          "KU"
+        ],
+        "anzahl": 2
+      },
+      {
+        "faecher": [
+          "D",
+          "LI"
+        ],
+        "anzahl": 1
+      },
+      {
+        "faecher": [
+          "M",
+          "PH"
+        ],
+        "anzahl": 4
+      },
+      {
+        "faecher": [
+          "M",
+          "IF"
+        ],
+        "anzahl": 3
+      },
+      {
+        "faecher": [
+          "M",
+          "BI"
+        ],
+        "anzahl": 2
+      },
+      {
+        "faecher": [
+          "M",
+          "CH"
+        ],
+        "anzahl": 2
+      },
+      {
+        "faecher": [
+          "M",
+          "SP"
+        ],
+        "anzahl": 2
+      },
+      {
+        "faecher": [
+          "E",
+          "F"
+        ],
+        "anzahl": 3
+      },
+      {
+        "faecher": [
+          "E",
+          "GE"
+        ],
+        "anzahl": 2
+      },
+      {
+        "faecher": [
+          "MU",
+          "E"
+        ],
+        "anzahl": 1
+      },
+      {
+        "faecher": [
+          "KR",
+          "GE"
+        ],
+        "anzahl": 1
+      },
+      {
+        "faecher": [
+          "E",
+          "SP"
+        ],
+        "anzahl": 2
+      },
+      {
+        "faecher": [
+          "E",
+          "GEB"
+        ],
+        "anzahl": 1
+      },
+      {
+        "faecher": [
+          "E",
+          "EKB"
+        ],
+        "anzahl": 1
+      },
+      {
+        "faecher": [
+          "F",
+          "S"
+        ],
+        "anzahl": 2
+      },
+      {
+        "faecher": [
+          "L",
+          "GE"
+        ],
+        "anzahl": 2
+      },
+      {
+        "faecher": [
+          "L",
+          "D"
+        ],
+        "anzahl": 1
+      },
+      {
+        "faecher": [
+          "BI",
+          "CH"
+        ],
+        "anzahl": 3
+      },
+      {
+        "faecher": [
+          "BI",
+          "SP"
+        ],
+        "anzahl": 2
+      },
+      {
+        "faecher": [
+          "CH",
+          "PH"
+        ],
+        "anzahl": 1
+      },
+      {
+        "faecher": [
+          "BI",
+          "EK"
+        ],
+        "anzahl": 1
+      },
+      {
+        "faecher": [
+          "EK",
+          "PW"
+        ],
+        "anzahl": 2
+      },
+      {
+        "faecher": [
+          "SW",
+          "PW"
+        ],
+        "anzahl": 2
+      },
+      {
+        "faecher": [
+          "SW",
+          "GE"
+        ],
+        "anzahl": 1
+      },
+      {
+        "faecher": [
+          "SW",
+          "EK"
+        ],
+        "anzahl": 1
+      },
+      {
+        "faecher": [
+          "KU",
+          "DS"
+        ],
+        "anzahl": 1
+      },
+      {
+        "faecher": [
+          "KU",
+          "GE"
+        ],
+        "anzahl": 1
+      },
+      {
+        "faecher": [
+          "MU",
+          "D"
+        ],
+        "anzahl": 1
+      },
+      {
+        "faecher": [
+          "MU",
+          "M"
+        ],
+        "anzahl": 2
+      },
+      {
+        "faecher": [
+          "ER",
+          "D"
+        ],
+        "anzahl": 2
+      },
+      {
+        "faecher": [
+          "ER",
+          "GE"
+        ],
+        "anzahl": 1
+      },
+      {
+        "faecher": [
+          "KR",
+          "E"
+        ],
+        "anzahl": 1
+      },
+      {
+        "faecher": [
+          "KR",
+          "M"
+        ],
+        "anzahl": 1
+      },
+      {
+        "faecher": [
+          "PP",
+          "PL"
+        ],
+        "anzahl": 1
+      },
+      {
+        "faecher": [
+          "PP",
+          "D"
+        ],
+        "anzahl": 1
+      },
+      {
+        "faecher": [
+          "SP",
+          "EK"
+        ],
+        "anzahl": 1
+      },
+      {
+        "faecher": [
+          "IF",
+          "PH"
+        ],
+        "anzahl": 1
+      }
+    ],
+    "quellen": [
+      "Q-VO93",
+      "Q-AVO",
+      "Q-N4T"
+    ],
+    "hinweis": "Keine Namen/Kürzel realer Personen. Beim Import fiktive Kürzel vergeben (z. B. L001 … L0xx)."
+  },
+  "raeume": {
+    "anzahl": 61,
+    "klassenraeume": 24,
+    "kursraeume_oberstufe": 18,
+    "fachraeume": [
+      {
+        "art": "Biologie",
+        "anzahl": 3
+      },
+      {
+        "art": "Chemie",
+        "anzahl": 3
+      },
+      {
+        "art": "Physik",
+        "anzahl": 2
+      },
+      {
+        "art": "Informatik",
+        "anzahl": 2
+      },
+      {
+        "art": "Kunst",
+        "anzahl": 2
+      },
+      {
+        "art": "Musik",
+        "anzahl": 2
+      },
+      {
+        "art": "Sporthalle",
+        "anzahl": 4
+      },
+      {
+        "art": "Aula/Bühne",
+        "anzahl": 1
+      }
+    ],
+    "auslastung_fachraeume": {
+      "Biologie": {
+        "bedarf_wochenstunden": 68.0,
+        "raeume": 3,
+        "auslastung_prozent": 50.4
+      },
+      "Chemie": {
+        "bedarf_wochenstunden": 54.0,
+        "raeume": 3,
+        "auslastung_prozent": 40.0
+      },
+      "Physik": {
+        "bedarf_wochenstunden": 49.0,
+        "raeume": 2,
+        "auslastung_prozent": 54.4
+      },
+      "Informatik": {
+        "bedarf_wochenstunden": 29.0,
+        "raeume": 2,
+        "auslastung_prozent": 32.2
+      },
+      "Kunst": {
+        "bedarf_wochenstunden": 53.0,
+        "raeume": 2,
+        "auslastung_prozent": 58.9
+      },
+      "Musik": {
+        "bedarf_wochenstunden": 44.0,
+        "raeume": 2,
+        "auslastung_prozent": 48.9
+      },
+      "Sporthalle": {
+        "bedarf_wochenstunden": 117.0,
+        "raeume": 4,
+        "auslastung_prozent": 65.0
+      },
+      "Aula/Bühne": {
+        "bedarf_wochenstunden": 6.0,
+        "raeume": 1,
+        "auslastung_prozent": 13.3
+      }
+    },
+    "hinweis": "Sporthalle = Hallenteile (Dreifachhalle + Gymnastikhalle). Auslastung bezogen auf 45 Stunden/Woche je Raum. Annahme."
+  },
+  "ferien_feiertage_2026_27": [
+    {
+      "name": "Sommerferien 2026",
+      "von": "2026-07-20",
+      "bis": "2026-09-01",
+      "art": "Ferien",
+      "quellen": [
+        "Q-FERIEN"
+      ]
+    },
+    {
+      "name": "Tag der Deutschen Einheit",
+      "von": "2026-10-03",
+      "bis": "2026-10-03",
+      "art": "gesetzlicher Feiertag (Samstag)",
+      "quellen": [
+        "Q-FEIERTAGE"
+      ]
+    },
+    {
+      "name": "Herbstferien",
+      "von": "2026-10-17",
+      "bis": "2026-10-31",
+      "art": "Ferien",
+      "quellen": [
+        "Q-FERIEN"
+      ]
+    },
+    {
+      "name": "Allerheiligen",
+      "von": "2026-11-01",
+      "bis": "2026-11-01",
+      "art": "gesetzlicher Feiertag (Sonntag)",
+      "quellen": [
+        "Q-FEIERTAGE"
+      ]
+    },
+    {
+      "name": "Weihnachtsferien",
+      "von": "2026-12-23",
+      "bis": "2027-01-06",
+      "art": "Ferien",
+      "quellen": [
+        "Q-FERIEN"
+      ]
+    },
+    {
+      "name": "1. Weihnachtstag",
+      "von": "2026-12-25",
+      "bis": "2026-12-25",
+      "art": "gesetzlicher Feiertag (in den Ferien)",
+      "quellen": [
+        "Q-FEIERTAGE"
+      ]
+    },
+    {
+      "name": "2. Weihnachtstag",
+      "von": "2026-12-26",
+      "bis": "2026-12-26",
+      "art": "gesetzlicher Feiertag (in den Ferien)",
+      "quellen": [
+        "Q-FEIERTAGE"
+      ]
+    },
+    {
+      "name": "Neujahr",
+      "von": "2027-01-01",
+      "bis": "2027-01-01",
+      "art": "gesetzlicher Feiertag (in den Ferien)",
+      "quellen": [
+        "Q-FEIERTAGE"
+      ]
+    },
+    {
+      "name": "Rosenmontag (beweglicher Ferientag – fiktiv gewählt)",
+      "von": "2027-02-08",
+      "bis": "2027-02-08",
+      "art": "beweglicher Ferientag (Annahme: Beschluss der fiktiven Schulkonferenz)",
+      "quellen": [
+        "Q-FERIEN-MSB"
+      ]
+    },
+    {
+      "name": "Osterferien",
+      "von": "2027-03-22",
+      "bis": "2027-04-03",
+      "art": "Ferien",
+      "quellen": [
+        "Q-FERIEN"
+      ]
+    },
+    {
+      "name": "Karfreitag",
+      "von": "2027-03-26",
+      "bis": "2027-03-26",
+      "art": "gesetzlicher Feiertag (in den Ferien)",
+      "quellen": [
+        "Q-FEIERTAGE"
+      ]
+    },
+    {
+      "name": "Ostermontag",
+      "von": "2027-03-29",
+      "bis": "2027-03-29",
+      "art": "gesetzlicher Feiertag (in den Ferien)",
+      "quellen": [
+        "Q-FEIERTAGE"
+      ]
+    },
+    {
+      "name": "Tag der Arbeit",
+      "von": "2027-05-01",
+      "bis": "2027-05-01",
+      "art": "gesetzlicher Feiertag (Samstag)",
+      "quellen": [
+        "Q-FEIERTAGE"
+      ]
+    },
+    {
+      "name": "Christi Himmelfahrt",
+      "von": "2027-05-06",
+      "bis": "2027-05-06",
+      "art": "gesetzlicher Feiertag",
+      "quellen": [
+        "Q-FEIERTAGE"
+      ]
+    },
+    {
+      "name": "Freitag nach Christi Himmelfahrt (beweglicher Ferientag – fiktiv gewählt)",
+      "von": "2027-05-07",
+      "bis": "2027-05-07",
+      "art": "beweglicher Ferientag (Annahme)",
+      "quellen": [
+        "Q-FERIEN-MSB"
+      ]
+    },
+    {
+      "name": "Pfingstmontag",
+      "von": "2027-05-17",
+      "bis": "2027-05-17",
+      "art": "gesetzlicher Feiertag",
+      "quellen": [
+        "Q-FEIERTAGE"
+      ]
+    },
+    {
+      "name": "Pfingstferien",
+      "von": "2027-05-18",
+      "bis": "2027-05-18",
+      "art": "Ferien (eintägig)",
+      "quellen": [
+        "Q-FERIEN"
+      ]
+    },
+    {
+      "name": "Fronleichnam",
+      "von": "2027-05-27",
+      "bis": "2027-05-27",
+      "art": "gesetzlicher Feiertag",
+      "quellen": [
+        "Q-FEIERTAGE"
+      ]
+    },
+    {
+      "name": "Freitag nach Fronleichnam (beweglicher Ferientag – fiktiv gewählt)",
+      "von": "2027-05-28",
+      "bis": "2027-05-28",
+      "art": "beweglicher Ferientag (Annahme)",
+      "quellen": [
+        "Q-FERIEN-MSB"
+      ]
+    },
+    {
+      "name": "Sommerferien 2027",
+      "von": "2027-07-19",
+      "bis": "2027-08-31",
+      "art": "Ferien",
+      "quellen": [
+        "Q-FERIEN",
+        "Q-FERIEN-MSB"
+      ]
+    }
+  ],
+  "schuljahr_2026_27": {
+    "erster_schultag": "2026-09-02",
+    "letzter_schultag_vor_sommerferien": "2027-07-16",
+    "schulwochen": 41,
+    "schuljahresbeginn": "2026-08-31",
+    "hinweis": "Schulwochen = Wochen mit mindestens einem Unterrichtstag (berechnet aus den Ferien)"
+  },
+  "annahmen": [
+    "Schul-, Orts- und Standortnamen sind frei erfunden (fiktiv).",
+    "Verteilung der Lernbereichsstunden (Anlage 3a) auf einzelne Jahrgänge und Fächer ist eine plausible Annahme; Lernbereichssummen, Kernstunden (59/123), Mindeststunden je Fach und Wochenstundenrahmen werden eingehalten (im Skript geprüft).",
+    "Ergänzungsstunden: 4 (Regelzweig, Förder-/Lernzeitband) bzw. 5 (bilingualer Zweig) – innerhalb 182–188.",
+    "Bilingualer Zweig (d-Klassen), Wahlpflichtangebot (S/IF/BC/DS) und 2. FS (F/L) sind schulspezifische Annahmen.",
+    "Klassengrößen 26–28 (Bandbreite 25–29); Oberstufe EF 130, Q1 116, Q2 104 – Summe genau 1000.",
+    "Oberstufen-Kursanzahlen, Kursgrößen und Schienen sind Annahmen; Kursstunden folgen APO-GOSt (LK 5, GK 3, neu einsetzende FS 4, VK/PK 2).",
+    "Zeitraster (07:50, 45 Min., 5 Min. Wechsel, Pausen 20/20/60) ist ein typisches Muster und mit BASS 12-63 Nr. 3 vereinbar (Annahme).",
+    "Bewegliche Ferientage (Rosenmontag, Freitag nach Himmelfahrt, Freitag nach Fronleichnam) sind fiktiv gewählt.",
+    "Betriebspraktikum EF (18.–29.01.2027) und Q2-Unterrichtsende (ab 12.04.2027) sind fiktive Beispieltermine.",
+    "Lehrkräfte: Teilzeitquote 30 % (Teilzeit ≈ 60 % Deputat), 8 % Anrechnungs-/Leitungsstunden; Fächerkombinationen typisch, nicht amtlich.",
+    "Raumzahlen geschätzt; Fachraum-Auslastung ≤ 90 % geprüft."
+  ]
+}

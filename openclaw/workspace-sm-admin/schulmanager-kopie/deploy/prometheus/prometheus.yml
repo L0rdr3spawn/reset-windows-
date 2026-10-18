@@ -1,0 +1,30 @@
+# Schulmanager – Prometheus-Konfiguration (Profil "monitoring" in docker-compose.yml)
+#
+# Prometheus scrapt /metrics direkt im internen Netz "monitoring" (Caddy blockt /metrics von außen).
+# Ohne Docker (systemd-Installation): Ziel auf 127.0.0.1:8000 ändern.
+
+global:
+  scrape_interval: 15s
+  scrape_timeout: 10s
+  evaluation_interval: 30s
+  external_labels:
+    deployment: schulmanager
+
+rule_files:
+  - /etc/prometheus/alerts.yml
+
+scrape_configs:
+  - job_name: schulmanager
+    metrics_path: /metrics
+    # Nur falls SM_METRICS_TOKEN gesetzt ist: Token in deploy/prometheus/metrics_token ablegen
+    # (chmod 640) und die beiden Zeilen aktivieren.
+    # authorization:
+    #   credentials_file: /etc/prometheus/metrics_token
+    static_configs:
+      - targets: ["app:8000"]
+        labels:
+          service: schulmanager
+
+  - job_name: prometheus
+    static_configs:
+      - targets: ["localhost:9090"]

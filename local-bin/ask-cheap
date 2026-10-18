@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Shim für Git Bash: im interaktiven Terminal stdin nicht lesen (sonst hängt es unter mintty).
+DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+if [ -t 0 ]; then exec python "$DIR/ask-cheap.py" --no-stdin "$@"; else exec python "$DIR/ask-cheap.py" "$@"; fi

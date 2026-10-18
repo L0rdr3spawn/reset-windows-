@@ -1,0 +1,602 @@
+{
+  "nodes": [
+    {
+      "id": "entry",
+      "type": "file",
+      "file": "Projekte/Schulmanager/Architektur/Schulmanager Architektur.md",
+      "x": 0,
+      "y": -140,
+      "width": 320,
+      "height": 90,
+      "color": "6"
+    },
+    {
+      "id": "fe",
+      "type": "file",
+      "file": "Projekte/Schulmanager/Architektur/Frontend/Frontend Übersicht.md",
+      "x": -900,
+      "y": -140,
+      "width": 260,
+      "height": 70,
+      "color": "4"
+    },
+    {
+      "id": "fe_app",
+      "type": "file",
+      "file": "Projekte/Schulmanager/Architektur/Frontend/Frontend App und Routing.md",
+      "x": -1260,
+      "y": -300,
+      "width": 260,
+      "height": 60,
+      "color": "4"
+    },
+    {
+      "id": "fe_api",
+      "type": "file",
+      "file": "Projekte/Schulmanager/Architektur/Frontend/Frontend API-Schicht.md",
+      "x": -900,
+      "y": 0,
+      "width": 260,
+      "height": 60,
+      "color": "4"
+    },
+    {
+      "id": "fe_basis",
+      "type": "file",
+      "file": "Projekte/Schulmanager/Architektur/Frontend/Frontend Basis.md",
+      "x": -1260,
+      "y": 0,
+      "width": 260,
+      "height": 60,
+      "color": "4"
+    },
+    {
+      "id": "fe_comp",
+      "type": "file",
+      "file": "Projekte/Schulmanager/Architektur/Frontend/Frontend Komponenten.md",
+      "x": -1260,
+      "y": -150,
+      "width": 260,
+      "height": 60,
+      "color": "4"
+    },
+    {
+      "id": "fe_tt",
+      "type": "file",
+      "file": "Projekte/Schulmanager/Architektur/Frontend/Seiten/Seite TimetablePage.md",
+      "x": -1260,
+      "y": 140,
+      "width": 260,
+      "height": 60,
+      "color": "4"
+    },
+    {
+      "id": "fe_sub",
+      "type": "file",
+      "file": "Projekte/Schulmanager/Architektur/Frontend/Seiten/Seite SubstitutionsPage.md",
+      "x": -900,
+      "y": 140,
+      "width": 260,
+      "height": 60,
+      "color": "4"
+    },
+    {
+      "id": "fe_ch",
+      "type": "file",
+      "file": "Projekte/Schulmanager/Architektur/Frontend/Features/Feature channels.md",
+      "x": -560,
+      "y": 140,
+      "width": 260,
+      "height": 60,
+      "color": "4"
+    },
+    {
+      "id": "routes",
+      "type": "file",
+      "file": "Projekte/Schulmanager/Architektur/Backend/Routen Übersicht.md",
+      "x": -420,
+      "y": -140,
+      "width": 280,
+      "height": 70,
+      "color": "5"
+    },
+    {
+      "id": "app",
+      "type": "file",
+      "file": "Projekte/Schulmanager/Architektur/Backend/Server/Server app.md",
+      "x": -420,
+      "y": 0,
+      "width": 260,
+      "height": 60,
+      "color": "5"
+    },
+    {
+      "id": "deps",
+      "type": "file",
+      "file": "Projekte/Schulmanager/Architektur/Backend/Server/Server deps.md",
+      "x": -120,
+      "y": 0,
+      "width": 260,
+      "height": 60,
+      "color": "5"
+    },
+    {
+      "id": "perm",
+      "type": "file",
+      "file": "Projekte/Schulmanager/Architektur/Backend/Server/Server permissions.md",
+      "x": 180,
+      "y": 0,
+      "width": 260,
+      "height": 60,
+      "color": "5"
+    },
+    {
+      "id": "rights_note",
+      "type": "file",
+      "file": "Projekte/Schulmanager/Architektur/Rollen und Rechte.md",
+      "x": 180,
+      "y": -140,
+      "width": 260,
+      "height": 60,
+      "color": "3"
+    },
+    {
+      "id": "store",
+      "type": "file",
+      "file": "Projekte/Schulmanager/Architektur/Backend/Server/Server store.md",
+      "x": -420,
+      "y": 160,
+      "width": 260,
+      "height": 60,
+      "color": "5"
+    },
+    {
+      "id": "events",
+      "type": "file",
+      "file": "Projekte/Schulmanager/Architektur/Backend/Server/Server events.md",
+      "x": -120,
+      "y": 160,
+      "width": 260,
+      "height": 60,
+      "color": "5"
+    },
+    {
+      "id": "jobs",
+      "type": "file",
+      "file": "Projekte/Schulmanager/Architektur/Backend/Server/Server jobs.md",
+      "x": 180,
+      "y": 160,
+      "width": 260,
+      "height": 60,
+      "color": "5"
+    },
+    {
+      "id": "runtime",
+      "type": "file",
+      "file": "Projekte/Schulmanager/Architektur/Backend/Server/Server runtime.md",
+      "x": -120,
+      "y": -300,
+      "width": 260,
+      "height": 60,
+      "color": "5"
+    },
+    {
+      "id": "be",
+      "type": "file",
+      "file": "Projekte/Schulmanager/Architektur/Backend/Backend Übersicht.md",
+      "x": 180,
+      "y": -300,
+      "width": 260,
+      "height": 60,
+      "color": "5"
+    },
+    {
+      "id": "models",
+      "type": "file",
+      "file": "Projekte/Schulmanager/Architektur/Backend/Fachlogik/Modul models.md",
+      "x": 620,
+      "y": -140,
+      "width": 260,
+      "height": 60,
+      "color": "2"
+    },
+    {
+      "id": "sched",
+      "type": "file",
+      "file": "Projekte/Schulmanager/Architektur/Backend/Fachlogik/Modul scheduler.md",
+      "x": 620,
+      "y": 0,
+      "width": 260,
+      "height": 60,
+      "color": "2"
+    },
+    {
+      "id": "subst",
+      "type": "file",
+      "file": "Projekte/Schulmanager/Architektur/Backend/Fachlogik/Modul substitution.md",
+      "x": 620,
+      "y": 140,
+      "width": 260,
+      "height": 60,
+      "color": "2"
+    },
+    {
+      "id": "tt",
+      "type": "file",
+      "file": "Projekte/Schulmanager/Architektur/Backend/Fachlogik/Modul timetable.md",
+      "x": 620,
+      "y": 280,
+      "width": 260,
+      "height": 60,
+      "color": "2"
+    },
+    {
+      "id": "weeks",
+      "type": "file",
+      "file": "Projekte/Schulmanager/Architektur/Backend/Fachlogik/Modul weeks.md",
+      "x": 620,
+      "y": -280,
+      "width": 260,
+      "height": 60,
+      "color": "2"
+    },
+    {
+      "id": "data",
+      "type": "file",
+      "file": "Projekte/Schulmanager/Architektur/Daten/Datenmodell.md",
+      "x": -120,
+      "y": 340,
+      "width": 260,
+      "height": 60,
+      "color": "1"
+    },
+    {
+      "id": "mig",
+      "type": "file",
+      "file": "Projekte/Schulmanager/Architektur/Daten/Migrationen.md",
+      "x": 180,
+      "y": 340,
+      "width": 260,
+      "height": 60,
+      "color": "1"
+    },
+    {
+      "id": "db",
+      "type": "file",
+      "file": "Projekte/Schulmanager/Architektur/Backend/Server/Server db.md",
+      "x": -420,
+      "y": 340,
+      "width": 260,
+      "height": 60,
+      "color": "1"
+    },
+    {
+      "id": "lic",
+      "type": "file",
+      "file": "Projekte/Schulmanager/Architektur/Backend/Server/Server licensing.md",
+      "x": -420,
+      "y": 500,
+      "width": 260,
+      "height": 60,
+      "color": "6"
+    },
+    {
+      "id": "lz",
+      "type": "file",
+      "file": "Projekte/Schulmanager/Architektur/Backend/Lizenzserver.md",
+      "x": -120,
+      "y": 500,
+      "width": 260,
+      "height": 60,
+      "color": "6"
+    },
+    {
+      "id": "ops",
+      "type": "file",
+      "file": "Projekte/Schulmanager/Architektur/Betrieb und Deploy.md",
+      "x": 180,
+      "y": 500,
+      "width": 260,
+      "height": 60,
+      "color": "6"
+    },
+    {
+      "id": "flows",
+      "type": "file",
+      "file": "Projekte/Schulmanager/Architektur/Abläufe.md",
+      "x": 620,
+      "y": 500,
+      "width": 260,
+      "height": 60,
+      "color": "3"
+    },
+    {
+      "id": "deps_note",
+      "type": "file",
+      "file": "Projekte/Schulmanager/Architektur/Abhängigkeiten.md",
+      "x": 620,
+      "y": 380,
+      "width": 260,
+      "height": 60,
+      "color": "3"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e0",
+      "fromNode": "entry",
+      "fromSide": "left",
+      "toNode": "fe",
+      "toSide": "right",
+      "label": "Oberfläche"
+    },
+    {
+      "id": "e1",
+      "fromNode": "entry",
+      "fromSide": "bottom",
+      "toNode": "routes",
+      "toSide": "top",
+      "label": "API"
+    },
+    {
+      "id": "e2",
+      "fromNode": "entry",
+      "fromSide": "right",
+      "toNode": "be",
+      "toSide": "left",
+      "label": "Backend"
+    },
+    {
+      "id": "e3",
+      "fromNode": "entry",
+      "fromSide": "right",
+      "toNode": "rights_note",
+      "toSide": "left"
+    },
+    {
+      "id": "e4",
+      "fromNode": "fe",
+      "fromSide": "left",
+      "toNode": "fe_app",
+      "toSide": "right"
+    },
+    {
+      "id": "e5",
+      "fromNode": "fe",
+      "fromSide": "left",
+      "toNode": "fe_comp",
+      "toSide": "right"
+    },
+    {
+      "id": "e6",
+      "fromNode": "fe",
+      "fromSide": "bottom",
+      "toNode": "fe_api",
+      "toSide": "top",
+      "label": "HTTP + SSE"
+    },
+    {
+      "id": "e7",
+      "fromNode": "fe",
+      "fromSide": "left",
+      "toNode": "fe_basis",
+      "toSide": "right"
+    },
+    {
+      "id": "e8",
+      "fromNode": "fe_api",
+      "fromSide": "right",
+      "toNode": "routes",
+      "toSide": "left",
+      "label": "/api/v1"
+    },
+    {
+      "id": "e9",
+      "fromNode": "fe_api",
+      "fromSide": "bottom",
+      "toNode": "events",
+      "toSide": "left",
+      "label": "SSE /events"
+    },
+    {
+      "id": "e10",
+      "fromNode": "fe_tt",
+      "fromSide": "right",
+      "toNode": "fe_api",
+      "toSide": "left"
+    },
+    {
+      "id": "e11",
+      "fromNode": "fe_sub",
+      "fromSide": "top",
+      "toNode": "fe_api",
+      "toSide": "bottom"
+    },
+    {
+      "id": "e12",
+      "fromNode": "fe_ch",
+      "fromSide": "top",
+      "toNode": "fe_api",
+      "toSide": "bottom"
+    },
+    {
+      "id": "e13",
+      "fromNode": "routes",
+      "fromSide": "bottom",
+      "toNode": "app",
+      "toSide": "top",
+      "label": "eingebunden von"
+    },
+    {
+      "id": "e14",
+      "fromNode": "app",
+      "fromSide": "right",
+      "toNode": "deps",
+      "toSide": "left",
+      "label": "Login/CSRF/Rechte"
+    },
+    {
+      "id": "e15",
+      "fromNode": "deps",
+      "fromSide": "right",
+      "toNode": "perm",
+      "toSide": "left",
+      "label": "effective_rights"
+    },
+    {
+      "id": "e16",
+      "fromNode": "app",
+      "fromSide": "top",
+      "toNode": "runtime",
+      "toSide": "bottom",
+      "label": "Lifespan"
+    },
+    {
+      "id": "e17",
+      "fromNode": "routes",
+      "fromSide": "bottom",
+      "toNode": "store",
+      "toSide": "top",
+      "label": "mutate/snapshot"
+    },
+    {
+      "id": "e18",
+      "fromNode": "store",
+      "fromSide": "right",
+      "toNode": "events",
+      "toSide": "left",
+      "label": "publish change"
+    },
+    {
+      "id": "e19",
+      "fromNode": "store",
+      "fromSide": "bottom",
+      "toNode": "db",
+      "toSide": "top",
+      "label": "school_versions"
+    },
+    {
+      "id": "e20",
+      "fromNode": "routes",
+      "fromSide": "top",
+      "toNode": "models",
+      "toSide": "left",
+      "label": "Dokument"
+    },
+    {
+      "id": "e21",
+      "fromNode": "routes",
+      "fromSide": "right",
+      "toNode": "subst",
+      "toSide": "left",
+      "label": "Tagesplan"
+    },
+    {
+      "id": "e22",
+      "fromNode": "routes",
+      "fromSide": "right",
+      "toNode": "tt",
+      "toSide": "left",
+      "label": "Ansichten"
+    },
+    {
+      "id": "e23",
+      "fromNode": "jobs",
+      "fromSide": "right",
+      "toNode": "sched",
+      "toSide": "left",
+      "label": "Generator"
+    },
+    {
+      "id": "e24",
+      "fromNode": "routes",
+      "fromSide": "right",
+      "toNode": "jobs",
+      "toSide": "top",
+      "label": "Job starten"
+    },
+    {
+      "id": "e25",
+      "fromNode": "jobs",
+      "fromSide": "left",
+      "toNode": "events",
+      "toSide": "right",
+      "label": "Fortschritt"
+    },
+    {
+      "id": "e26",
+      "fromNode": "sched",
+      "fromSide": "top",
+      "toNode": "models",
+      "toSide": "bottom"
+    },
+    {
+      "id": "e27",
+      "fromNode": "subst",
+      "fromSide": "bottom",
+      "toNode": "tt",
+      "toSide": "top"
+    },
+    {
+      "id": "e28",
+      "fromNode": "sched",
+      "fromSide": "top",
+      "toNode": "weeks",
+      "toSide": "left"
+    },
+    {
+      "id": "e29",
+      "fromNode": "db",
+      "fromSide": "right",
+      "toNode": "data",
+      "toSide": "left",
+      "label": "Tabellen"
+    },
+    {
+      "id": "e30",
+      "fromNode": "data",
+      "fromSide": "right",
+      "toNode": "mig",
+      "toSide": "left",
+      "label": "Alembic"
+    },
+    {
+      "id": "e31",
+      "fromNode": "deps",
+      "fromSide": "bottom",
+      "toNode": "lic",
+      "toSide": "right",
+      "label": "_guard_license"
+    },
+    {
+      "id": "e32",
+      "fromNode": "lic",
+      "fromSide": "right",
+      "toNode": "lz",
+      "toSide": "left",
+      "label": "POST /check"
+    },
+    {
+      "id": "e33",
+      "fromNode": "lz",
+      "fromSide": "right",
+      "toNode": "ops",
+      "toSide": "left",
+      "label": "Betrieb"
+    },
+    {
+      "id": "e34",
+      "fromNode": "ops",
+      "fromSide": "right",
+      "toNode": "flows",
+      "toSide": "left"
+    },
+    {
+      "id": "e35",
+      "fromNode": "ops",
+      "fromSide": "right",
+      "toNode": "deps_note",
+      "toSide": "bottom"
+    }
+  ]
+}

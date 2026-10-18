@@ -1,0 +1,15 @@
+{
+	"schemaVersion": 1,
+	"id": "botlink-gametest",
+	"version": "1.0.0",
+	"name": "Botlink game tests",
+	"environment": "client",
+	"entrypoints": {
+		"fabric-client-gametest": [
+			"de.reiss.botlink.gametest.BotLinkGameTest"
+		]
+	},
+	"depends": {
+		"botlink": "*"
+	}
+}

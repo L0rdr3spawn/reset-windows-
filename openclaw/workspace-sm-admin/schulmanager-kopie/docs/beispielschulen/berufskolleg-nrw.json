@@ -1,0 +1,2488 @@
+{
+  "meta": {
+    "id": "berufskolleg-nrw",
+    "name": "Berufskolleg Lindenhain Wesselbrück (fiktiv)",
+    "fiktiv": true,
+    "datenschutz": "Alle Schul-, Orts- und Personenangaben sind frei erfunden. Es sind keine personenbezogenen Daten realer Schüler/innen oder Lehrkräfte enthalten; verwendet wurden nur amtliche Rahmendaten (Verordnungen, Erlasse, Bildungspläne, Ferienordnung, aggregierte Statistik).",
+    "schulform": "Berufskolleg",
+    "bundesland": "Nordrhein-Westfalen",
+    "schuljahr": "2026/27",
+    "erster_schultag": "2026-09-02",
+    "letzter_schultag": "2027-07-16",
+    "stand": "2026-10-10",
+    "schueler_gesamt": 543,
+    "anzahl_klassen": 24,
+    "statistik_quelle": ["Q31", "Q32", "Q33"],
+    "rechtsstand": {
+      "text": "APO-BK in der Fassung BASS 2026/2027; die geplante 8. Änderungsverordnung (Zusammenführung der Anlage-A-Stundentafeln ab 2027/28) ist für 2026/27 nicht berücksichtigt.",
+      "quelle": ["Q01", "Q30"]
+    },
+    "schueler_hinweis": "Bewusst kleiner Ausschnitt (24 Klassen) für schnelle Generator-Tests; reale Berufskollegs haben häufig 2.000–4.000 Schüler/innen (vgl. Q33), landesweit rund 490.000 (Q31).",
+    "standorte": [
+      {
+        "id": "HS",
+        "name": "Hauptstandort Lindenhain (fiktiv)",
+        "adresse": "Lindenhain 1, 99999 Wesselbrück (fiktiv)",
+        "bildungsgaenge": ["fi", "ita", "fos-inf", "bg-inf", "av"]
+      },
+      {
+        "id": "BZ",
+        "name": "Bautechnik-Zentrum Kanalstraße (fiktiv)",
+        "adresse": "Kanalstraße 40, 99999 Wesselbrück (fiktiv)",
+        "bildungsgaenge": ["bau", "av"]
+      }
+    ],
+    "wegezeiten": [
+      {
+        "von": "HS",
+        "nach": "BZ",
+        "minuten": 20,
+        "hinweis": "ANNAHME: Wechsel nur in großen Pausen bzw. Mittagspause möglich (Lehrkräfte)"
+      }
+    ],
+    "klassenfrequenz": {
+      "fachklassen_duales_system": {
+        "hoechstwert": 31,
+        "mindestwert": 16,
+        "quelle": ["Q19"],
+        "hinweis": "Mindestwert 16 = 50 % des Höchstwerts 31 (laut Erlass-Auszug); Richtwert nicht ermittelt"
+      },
+      "ausbildungsvorbereitung": {
+        "richtwert": 26,
+        "hoechstwert": 29,
+        "richtwert_fpu": 13,
+        "hoechstwert_fpu": 15,
+        "quelle": ["Q18"]
+      },
+      "berufsfachschule": {
+        "richtwert": 28,
+        "hoechstwert": 31,
+        "richtwert_fpu": 14,
+        "hoechstwert_fpu": 16,
+        "quelle": ["Q18"]
+      },
+      "schueler_lehrer_relation_vollzeit": {
+        "wert": 16.43,
+        "quelle": ["Q18"],
+        "hinweis": "Angabe aus Eingabe an das MSB; Stand nicht verifiziert"
+      }
+    },
+    "quellen": [
+      {
+        "id": "Q01",
+        "titel": "APO-BK NRW (BASS 13-33 Nr. 1.1), Ausgabe BASS 2026/2027 – Struktur Anlagen A–D, Anlage A 1.1 (Fachklassen), A 2.1/A 2.2 (Ausbildungsvorbereitung)",
+        "url": "https://bass.schule.nrw/3129.htm",
+        "stand": "BASS 2026/2027, abgerufen 2026-10-10 (nur über Websuche-Auszug, Volltext nicht direkt abrufbar)"
+      },
+      {
+        "id": "Q02",
+        "titel": "Bildungsplan Fachklassen, Politik/Gesellschaftslehre (Fachbereich Wirtschaft und Verwaltung) – Rahmenstundentafel APO-BK Anlage A 1.1: Deutsch/Kommunikation, Religionslehre, Sport/Gesundheitsförderung, Politik/Gesellschaftslehre je 40/40/40 (=120), berufsübergreifend 160 je Jahr, Gesamtstundenzahl 480 je Jahr / 1440 gesamt",
+        "url": "https://www.qua-lis.nrw.de/system/files/media/document/file/bp_fachklassen_wuv_politik-gesellschaftslehre.pdf",
+        "stand": "Bildungsplan, abgerufen 2026-10-10"
+      },
+      {
+        "id": "Q03",
+        "titel": "Bildungsplan Fachklassen Politik/Gesellschaftslehre, Fachbereich Gestaltung (BP 2023) – bestätigt Gesamtstundenzahl 480 je Ausbildungsjahr",
+        "url": "https://berufsbildung.nrw.de/system/files/media/document/file/fachklassen_gest_politik-gesellschaftslehre_bp2023.pdf",
+        "stand": "2023, abgerufen 2026-10-10"
+      },
+      {
+        "id": "Q04",
+        "titel": "KMK-Rahmenlehrplan Fachinformatiker/Fachinformatikerin (Beschluss 13.12.2019) – Lernfelder 1–12, 880 Std. (320/280/280)",
+        "url": "https://www.kmk.org/fileadmin/Dateien/pdf/Bildung/BeruflicheBildung/rlp/Fachinformatiker_19-12-13_EL.pdf",
+        "stand": "Beschluss 13.12.2019, gültig seit 01.08.2020"
+      },
+      {
+        "id": "Q05",
+        "titel": "Lernfeldübersicht Fachinformatiker/in (Anwendungsentwicklung) mit Zeitrichtwerten (LF7–LF9 je 80 Std., Summe 880 = 320/280/280)",
+        "url": "https://kstl.de/wp-content/uploads/2020/04/Lernfelder-FI-AwE.pdf",
+        "stand": "2020, abgerufen 2026-10-10"
+      },
+      {
+        "id": "Q06",
+        "titel": "Bildungsplan NRW Fachinformatikerin/Fachinformatiker (RdErl. MSB vom 27.08.2021, Amtsblatt 09/2021)",
+        "url": "https://www.berufsbildung.nrw.de/cms/upload/_lehrplaene/a/fachinformatiker.pdf",
+        "stand": "2021, abgerufen 2026-10-10"
+      },
+      {
+        "id": "Q07",
+        "titel": "QUA-LiS/MSB: Umsetzung des Rahmenlehrplans in den Bildungsplan NRW (IT-Berufe) – 3 bis 5 Bündelungsfächer, jedes Lernfeld genau einem Bündelungsfach zugeordnet",
+        "url": "https://berufsbildung.nrw.de/system/files/media/document/file/6_umsetzung_rlp_in_bpl_frau_strate.pdf",
+        "stand": "März 2020"
+      },
+      {
+        "id": "Q08",
+        "titel": "BIBB Berufesuche: Maurer/Maurerin – neu geordnet, Ausbildungsordnung in Kraft ab 01.08.2026",
+        "url": "https://www.bibb.de/dienst/berufesuche/en/index_berufesuche.php/profile/apprenticeship/maurer26",
+        "stand": "abgerufen 2026-10-10"
+      },
+      {
+        "id": "Q09",
+        "titel": "Vorläufiger Bildungsplan NRW Maurerin/Maurer und Hochbaufacharbeiter/in (Schwerpunkt Maurerarbeiten), in Kraft 01.08.2026",
+        "url": "https://berufsbildung.nrw.de/system/files/media/document/file/bau-hoch_maurer_vbp2026.pdf",
+        "stand": "vbp 2026, abgerufen 2026-10-10"
+      },
+      {
+        "id": "Q10",
+        "titel": "Baulinks: Neue Ausbildungsordnungen für Bauberufe treten in Kraft (gestreckte Abschlussprüfung, mind. 30 Wochen überbetriebliche Ausbildung bei 3-jährigen Berufen)",
+        "url": "https://www.baulinks.de/webplugin/2026/1123.php4",
+        "stand": "2026, abgerufen 2026-10-10"
+      },
+      {
+        "id": "Q11",
+        "titel": "BASS 12-61 Nr. 1.4 Blockunterricht an Berufskollegs; Zeiteinteilung für die Schuljahre 2025/26 bis 2029/30 (u. a. Stufenausbildung Bauwirtschaft), inkl. Änderung vom 26.06.2026",
+        "url": "https://bass.schule.nrw/20199.htm",
+        "stand": "BASS 2026/2027, abgerufen 2026-10-10"
+      },
+      {
+        "id": "Q12",
+        "titel": "BASS 12-61 Nr. 1.4 Blockunterricht an Berufskollegs (Neufassung, PDF-Fassung) – enthält abweichende Blockzeiten 2026/27 (2-Block-Modell)",
+        "url": "https://bass.schule.nrw/pdf/3623.pdf",
+        "stand": "abgerufen 2026-10-10"
+      },
+      {
+        "id": "Q13",
+        "titel": "Öffentlicher Blockplan Bau/Maurer 2026/27 eines Berufskollegs (nur zum Abgleich der Erlass-Blockzeiten; enthält keine personenbezogenen Daten)",
+        "url": "https://bk-beckum.kreis-warendorf.de/fileadmin/bkbeckum-2021/bkbeckum/downloads/Blockpl%C3%A4ne/Blockplan_Bau_Maurer_26_27_.pdf",
+        "stand": "Schuljahr 2026/27, abgerufen 2026-10-10"
+      },
+      {
+        "id": "Q14",
+        "titel": "MSB NRW: Ferienordnung für Nordrhein-Westfalen für die Schuljahre bis 2029/30",
+        "url": "https://www.schulministerium.nrw/ferienordnung-fuer-nordrhein-westfalen-fuer-die-schuljahre-bis-202930",
+        "stand": "abgerufen 2026-10-10"
+      },
+      {
+        "id": "Q15",
+        "titel": "BASS 12-65 Nr. 1 Ferienordnung (RdErl. 19.05.2022) – Ferientermine 2026/27, Pfingstferientag 18.05.2027, drei bewegliche Ferientage 2026/27",
+        "url": "https://bass.schule.nrw/191.htm",
+        "stand": "abgerufen 2026-10-10"
+      },
+      {
+        "id": "Q16",
+        "titel": "Gesetzliche Feiertage NRW 2027 (Sekundärquelle; Abgleich mit eigener Osterrechnung: Ostersonntag 28.03.2027)",
+        "url": "https://www.schnelle-online.info/NRW/Feiertage-NRW-2027.html",
+        "stand": "abgerufen 2026-10-10"
+      },
+      {
+        "id": "Q17",
+        "titel": "Gesetzliche Feiertage NRW 2026 (Sekundärquelle)",
+        "url": "https://www.kalenderpedia.de/feiertage/feiertage-nrw-2026.html",
+        "stand": "abgerufen 2026-10-10"
+      },
+      {
+        "id": "Q18",
+        "titel": "MSB NRW: Eingabe/Antwort ‚Klassenrichtwerte der vollzeitschulischen Angebote der Berufskollegs reduzieren‘ – AV: Richtwert 26 (FPU 13), Höchstwert 29 (FPU 15); Berufsfachschule: Richtwert 28 (FPU 14), Höchstwert 31 (FPU 16); Schüler-Lehrer-Relation Vollzeit 16,43",
+        "url": "https://www.schulministerium.nrw/node/26629",
+        "stand": "Datum der Antwort nicht ermittelt, abgerufen 2026-10-10"
+      },
+      {
+        "id": "Q19",
+        "titel": "Verordnung zur Ausführung des § 93 Abs. 2 SchulG (VO zu § 93 Abs. 2 SchulG), Fassung ab 01.08.2026 – § 2 Pflichtstunden (Berufskolleg 25,5), § 6 Klassenbildungswerte (Mindestwert = 50 % des Höchstwerts)",
+        "url": "https://recht.nrw.de/lrgv/rechtsverordnung/01082026-verordnung-zur-ausfuehrung-des-ss-93-abs-2-schulgesetz-vo-zu-ss-93/",
+        "stand": "Fassung 01.08.2026, abgerufen 2026-10-10"
+      },
+      {
+        "id": "Q20",
+        "titel": "MSB NRW: Nebenberufliche Lehrkräfte am Berufskolleg – FAQ (Vollzeit = 25,5 Unterrichtsstunden; Altersermäßigung ab 55)",
+        "url": "https://www.schulministerium.nrw/lehrkraefte/ich-moechte-lehrerin-werden/nebenberufliche-lehrkraefte-am-berufskolleg/fragen-und",
+        "stand": "abgerufen 2026-10-10"
+      },
+      {
+        "id": "Q21",
+        "titel": "MSB NRW: Fachoberschule (FHR/AHR) – Klasse 11: Praktikum (i. d. R. 3–4 Tage/Woche) + 12 Wochenstunden Teilzeitunterricht (480 Std./Jahr); Klasse 12 Vollzeit",
+        "url": "https://www.schulministerium.nrw/fachoberschule-fhrahr",
+        "stand": "abgerufen 2026-10-10"
+      },
+      {
+        "id": "Q22",
+        "titel": "BASS 13-31 Nr. 1 Praktikum-Ausbildungsordnung – Praktikum in Klasse 11 der Fachoberschule nicht in Teilzeitform",
+        "url": "https://bass.schule.nrw/6911.htm",
+        "stand": "BASS 2026/2027, abgerufen 2026-10-10"
+      },
+      {
+        "id": "Q23",
+        "titel": "BASS 15-3x: Fachoberschule Fachbereich Informatik (Anlage C APO-BK), vorläufige Bildungspläne in Kraft 01.08.2025 – Fächer u. a. Betriebssysteme/Netzwerke, Datenbanken, Softwareentwicklung und -engineering, Mathematik, Physik",
+        "url": "https://bass.schule.nrw/20154.htm",
+        "stand": "2025, abgerufen 2026-10-10"
+      },
+      {
+        "id": "Q24",
+        "titel": "BASS 15-37: Bildungsgänge Berufsabschluss nach Landesrecht + FHR, Fachbereich Gestaltung und Informatik (Anlage C 1); Bildungspläne 2024 – Staatl. gepr. informationstechnische/r Assistent/in einschl. FHR, dreijährig",
+        "url": "https://bass.schule.nrw/20049.htm",
+        "stand": "Bildungspläne Juli 2024, abgerufen 2026-10-10"
+      },
+      {
+        "id": "Q25",
+        "titel": "Bildungsplan Anlage C 1, Informationstechnische/r Assistent/in, Fach Datenbanken (2024) – Beispiel für Fächerstruktur (weitere Fachpläne: Software, Englisch, Praktische Philosophie, Sport)",
+        "url": "https://www.berufsbildung.nrw.de/cms/upload/_lehrplaene/c/informatik/bfsc1_ita_datenbank_2024.pdf",
+        "stand": "2024, abgerufen 2026-10-10"
+      },
+      {
+        "id": "Q26",
+        "titel": "MSB NRW Standardsicherung: Zentralabitur Berufliches Gymnasium, Bildungsgang APO-BK Anlage D 21 – AHR (Mathematik, Informatik), Schwerpunkt Informatik; LK Informatik (profilbildend) + LK Mathematik, GK Deutsch und Englisch",
+        "url": "https://www.standardsicherung.schulministerium.nrw.de/cms/zentralabitur-berufliches-gymnasium/bildungsgaenge/bildungsgang.php?id=21",
+        "stand": "abgerufen 2026-10-10"
+      },
+      {
+        "id": "Q27",
+        "titel": "Berufsbildung NRW: Bildungspläne Berufliches Gymnasium (Anlage D 21) – Fachbereich Informatik",
+        "url": "https://berufsbildung.nrw.de/bildungsgaenge-bildungsplaene/bildungsplaene-berufliches-gymnasium-und-fachoberschule-anlage-d-10",
+        "stand": "abgerufen 2026-10-10"
+      },
+      {
+        "id": "Q28",
+        "titel": "APO-BK Anlage D (ältere Fassung, recht.nrw.de) – Stundentafel-Muster Leistungskursfach Mathematik 3/3/5/5/5/5 Wochenstunden je Halbjahr",
+        "url": "https://recht.nrw.de/system/files/BHA/23439-31143-sgv_223_19990526_2_anlage4.pdf",
+        "stand": "ältere Fassung (Basis 1999), nur als Muster"
+      },
+      {
+        "id": "Q29",
+        "titel": "APO-BK Anlage A 2.1 (recht.nrw.de) – Ausbildungsvorbereitung Teilzeit: 480–560 Std./Jahr, berufsbezogener Lernbereich 240–320, 12 Wochenstunden; Vollzeit: 12–36 Wochenstunden je nach Praktikumsumfang, Praktikum i. d. R. 3 Tage/Woche",
+        "url": "https://recht.nrw.de/system/files/BA/4634-51588-sgv_223_19990526_2_anlagea21.pdf",
+        "stand": "abgerufen 2026-10-10 (über Websuche-Auszug)"
+      },
+      {
+        "id": "Q30",
+        "titel": "MSB NRW: 8. Änderungsverordnung zur APO-BK (Anhörung Juni 2026) – Stundentafeln Anlage A sollen ab 2027/28 zusammengeführt werden (Stundenzahl unverändert)",
+        "url": "https://www.schulministerium.nrw/25062026-8-aenderungsverordnung-zur-ausbildungs-und-pruefungsordnung-bk",
+        "stand": "25.06.2026 (Entwurf, noch nicht in Kraft)"
+      },
+      {
+        "id": "Q31",
+        "titel": "MSB NRW: Das Schulwesen in NRW aus quantitativer Sicht 2024/25 (Statistische Übersicht Nr. 430, 19.09.2025) – Berufskolleg ca. 491.600 Schüler/innen (Spaltenzuordnung im Auszug unsicher)",
+        "url": "https://www.schulministerium.nrw/system/files/media/document/file/quantita_2024.pdf",
+        "stand": "19.09.2025"
+      },
+      {
+        "id": "Q32",
+        "titel": "MSB NRW: Statistische Daten zum Schuljahr 2025/2026 (22.08.2025)",
+        "url": "https://www.schulministerium.nrw/system/files/media/document/file/statistische_daten_2025-26_250822.pdf",
+        "stand": "22.08.2025"
+      },
+      {
+        "id": "Q33",
+        "titel": "Kommunale Schuldatenbank (Stadt Münster): aggregierte Schülerzahlen einzelner Berufskollegs 2025/26 (Größenordnung ca. 2.300–3.900 je Berufskolleg; keine personenbezogenen Daten)",
+        "url": "https://www.stadt-muenster.de/schulamt/schule-in-muenster/schuldatenbank/schulen/detailansicht/schule/95",
+        "stand": "2025/26, abgerufen 2026-10-10"
+      }
+    ],
+    "feldhinweise": {
+      "klassen[].unterrichtstage": "Wochentag -> [erste, letzte Stunde] des Unterrichts; bei Rhythmus je Wochenmuster (z. B. jede_2_woche_ab_woche_1); bei Blockklassen siehe bildungsgaenge[bau].rhythmus.bloecke (Tagesmuster im Block)",
+      "klassen[].betriebstage": "Praktikums-/Betriebstage ohne Unterricht",
+      "stundentafeln[].eintraege[].teilung": "Anzahl paralleler Lerngruppen (Lehrkräfte/Räume) bei geteiltem Unterricht",
+      "stundentafeln[].eintraege[].alternativ": "parallel angebotenes Ersatzfach (Religionslehre/Praktische Philosophie)",
+      "*.quelle": "Verweis auf meta.quellen[].id; Werte ohne Quellenverweis oder mit 'annahme' sind Annahmen"
+    }
+  },
+  "zeitraster": {
+    "beginn": "07:30",
+    "stundenlaenge_min": 45,
+    "wechselzeit_min": 0,
+    "stunden_pro_tag": 10,
+    "pausen": [
+      {
+        "nach_stunde": 2,
+        "minuten": 15,
+        "name": "1. große Pause"
+      },
+      {
+        "nach_stunde": 4,
+        "minuten": 15,
+        "name": "2. große Pause"
+      },
+      {
+        "nach_stunde": 6,
+        "minuten": 30,
+        "name": "Mittagspause"
+      },
+      {
+        "nach_stunde": 8,
+        "minuten": 10,
+        "name": "Nachmittagspause"
+      }
+    ],
+    "stunden": [
+      {
+        "stunde": 1,
+        "von": "07:30",
+        "bis": "08:15"
+      },
+      {
+        "stunde": 2,
+        "von": "08:15",
+        "bis": "09:00"
+      },
+      {
+        "stunde": 3,
+        "von": "09:15",
+        "bis": "10:00"
+      },
+      {
+        "stunde": 4,
+        "von": "10:00",
+        "bis": "10:45"
+      },
+      {
+        "stunde": 5,
+        "von": "11:00",
+        "bis": "11:45"
+      },
+      {
+        "stunde": 6,
+        "von": "11:45",
+        "bis": "12:30"
+      },
+      {
+        "stunde": 7,
+        "von": "13:00",
+        "bis": "13:45"
+      },
+      {
+        "stunde": 8,
+        "von": "13:45",
+        "bis": "14:30"
+      },
+      {
+        "stunde": 9,
+        "von": "14:40",
+        "bis": "15:25"
+      },
+      {
+        "stunde": 10,
+        "von": "15:25",
+        "bis": "16:10"
+      }
+    ],
+    "doppelstunden": [
+      [1, 2],
+      [3, 4],
+      [5, 6],
+      [7, 8],
+      [9, 10]
+    ],
+    "hinweis": "Typisches BK-Muster mit Doppelstunden zwischen den Pausen (ANNAHME, kein amtliches Raster; Zeitraster legt jede Schule selbst fest)."
+  },
+  "tage_pro_woche": 5,
+  "faecher": [
+    {
+      "kuerzel": "D",
+      "name": "Deutsch/Kommunikation",
+      "lernbereich": "berufsübergreifend"
+    },
+    {
+      "kuerzel": "REL",
+      "name": "Religionslehre (ev./kath., nach Konfession geteilt)",
+      "lernbereich": "berufsübergreifend"
+    },
+    {
+      "kuerzel": "PP",
+      "name": "Praktische Philosophie (Ersatzfach für Religionslehre)",
+      "lernbereich": "berufsübergreifend"
+    },
+    {
+      "kuerzel": "SP",
+      "name": "Sport/Gesundheitsförderung",
+      "fachraum": "Sporthalle",
+      "lernbereich": "berufsübergreifend"
+    },
+    {
+      "kuerzel": "PG",
+      "name": "Politik/Gesellschaftslehre",
+      "lernbereich": "berufsübergreifend"
+    },
+    {
+      "kuerzel": "E",
+      "name": "Englisch",
+      "lernbereich": "berufsbezogen/allgemein"
+    },
+    {
+      "kuerzel": "M",
+      "name": "Mathematik",
+      "lernbereich": "berufsbezogen/allgemein"
+    },
+    {
+      "kuerzel": "PH",
+      "name": "Physik",
+      "fachraum": "Physik-/Elektrotechniklabor"
+    },
+    {
+      "kuerzel": "WBL",
+      "name": "Wirtschafts- und Betriebslehre"
+    },
+    {
+      "kuerzel": "WL",
+      "name": "Wirtschaftslehre"
+    },
+    {
+      "kuerzel": "GG",
+      "name": "Gesellschaftslehre mit Geschichte"
+    },
+    {
+      "kuerzel": "S",
+      "name": "Spanisch (neu einsetzende Fremdsprache)"
+    },
+    {
+      "kuerzel": "INF",
+      "name": "Informatik",
+      "fachraum": "IT-Labor"
+    },
+    {
+      "kuerzel": "VK",
+      "name": "Vertiefungskurs (Mathematik/Deutsch/Englisch)"
+    },
+    {
+      "kuerzel": "DIF",
+      "name": "Differenzierungsbereich (Förderunterricht / Zusatzangebote)"
+    },
+    {
+      "kuerzel": "FI-GP",
+      "name": "Geschäftsprozesse und IT-Service (LF 1, LF 6)",
+      "lernbereich": "berufsbezogen",
+      "annahme": true
+    },
+    {
+      "kuerzel": "FI-SYS",
+      "name": "IT-Systeme und Netzwerke (LF 2, LF 3, LF 9)",
+      "fachraum": "Netzwerklabor",
+      "lernbereich": "berufsbezogen",
+      "annahme": true
+    },
+    {
+      "kuerzel": "FI-SEC",
+      "name": "IT-Sicherheit (LF 4)",
+      "fachraum": "IT-Labor",
+      "lernbereich": "berufsbezogen",
+      "annahme": true
+    },
+    {
+      "kuerzel": "FI-AE",
+      "name": "Anwendungsentwicklung und Daten (LF 5, LF 8)",
+      "fachraum": "IT-Labor",
+      "lernbereich": "berufsbezogen",
+      "annahme": true
+    },
+    {
+      "kuerzel": "FI-CPS",
+      "name": "Cyber-physische Systeme (LF 7)",
+      "fachraum": "Physik-/Elektrotechniklabor",
+      "lernbereich": "berufsbezogen",
+      "annahme": true
+    },
+    {
+      "kuerzel": "FI-FRA",
+      "name": "Fachrichtung Anwendungsentwicklung (LF 10a–12a)",
+      "fachraum": "IT-Labor",
+      "lernbereich": "berufsbezogen",
+      "annahme": true
+    },
+    {
+      "kuerzel": "FI-FRS",
+      "name": "Fachrichtung Systemintegration (LF 10b–12b)",
+      "fachraum": "Netzwerklabor",
+      "lernbereich": "berufsbezogen",
+      "annahme": true
+    },
+    {
+      "kuerzel": "BAU-KON",
+      "name": "Baukonstruktion (Mauerwerk, Beton, Holz)",
+      "lernbereich": "berufsbezogen",
+      "annahme": true
+    },
+    {
+      "kuerzel": "BAU-TEC",
+      "name": "Bautechnologie und Baustoffe",
+      "fachraum": "Baustofflabor",
+      "lernbereich": "berufsbezogen",
+      "annahme": true
+    },
+    {
+      "kuerzel": "BAU-TZ",
+      "name": "Technische Kommunikation / CAD / BIM",
+      "fachraum": "CAD-Raum",
+      "lernbereich": "berufsbezogen",
+      "annahme": true
+    },
+    {
+      "kuerzel": "BAU-PRA",
+      "name": "Fachpraxis Bau (Lehrbauhalle, Gruppenteilung)",
+      "fachraum": "Lehrbauhalle",
+      "lernbereich": "berufsbezogen",
+      "annahme": true
+    },
+    {
+      "kuerzel": "BSN",
+      "name": "Betriebssysteme/Netzwerke",
+      "fachraum": "Netzwerklabor",
+      "lernbereich": "berufsbezogen"
+    },
+    {
+      "kuerzel": "SWE",
+      "name": "Softwareentwicklung und -engineering",
+      "fachraum": "IT-Labor",
+      "lernbereich": "berufsbezogen"
+    },
+    {
+      "kuerzel": "DB",
+      "name": "Datenbanken",
+      "fachraum": "IT-Labor",
+      "lernbereich": "berufsbezogen"
+    },
+    {
+      "kuerzel": "ITH",
+      "name": "IT-Systeme und Hardware",
+      "fachraum": "Physik-/Elektrotechniklabor",
+      "lernbereich": "berufsbezogen",
+      "annahme": true
+    },
+    {
+      "kuerzel": "PRJ",
+      "name": "Projektarbeit (Assistentenprüfung)",
+      "fachraum": "IT-Labor",
+      "lernbereich": "berufsbezogen",
+      "annahme": true
+    },
+    {
+      "kuerzel": "AV-FT",
+      "name": "Fachtheorie Berufsfeld (Technik/IT bzw. Bau)",
+      "lernbereich": "berufsbezogen",
+      "annahme": true
+    },
+    {
+      "kuerzel": "AV-FP",
+      "name": "Fachpraxis Berufsfeld (Werkstatt bzw. Lehrbauhalle)",
+      "fachraum": "Werkstatt",
+      "lernbereich": "berufsbezogen",
+      "annahme": true
+    }
+  ],
+  "bildungsgaenge": [
+    {
+      "id": "fi",
+      "name": "Fachklassen Fachinformatiker/in (FR Anwendungsentwicklung, Systemintegration)",
+      "beschreibung": "Duale Berufsausbildung (BBiG), Berufsschule in Teilzeit, 3 Ausbildungsjahre. Lernfelder 1–9 gemeinsam, 10–12 fachrichtungsspezifisch (3. Jahr). Unterstufe/Mittelstufe fachrichtungsgemischt, Oberstufe nach Fachrichtung getrennt.",
+      "apo_bk_anlage": "A 1.1",
+      "abschluss": "Berufsschulabschluss; Berufsabschluss IHK (Prüfung extern); FHR über Zusatzunterricht möglich (hier nicht modelliert)",
+      "form": "Teilzeit",
+      "jahrgaenge": [11, 12, 13],
+      "jahrgang_bezeichnung": {
+        "11": "Unterstufe (1. Ausbildungsjahr)",
+        "12": "Mittelstufe (2. Ausbildungsjahr)",
+        "13": "Oberstufe (3. Ausbildungsjahr)"
+      },
+      "jahresstunden": 480,
+      "rhythmus": {
+        "typ": "wöchentlich",
+        "beschreibung": "12 Wochenstunden = 480 Jahresstunden bei ca. 40 Schulwochen; als 1 langer Tag (8 Std.) + 1 kurzer Tag (4 Std., 1.–4. Stunde). Unterrichtstage je Klasse siehe klassen[].unterrichtstage.",
+        "varianten": [
+          {
+            "klasse": "FI11c",
+            "typ": "Wochenmuster",
+            "rhythmus": {
+              "alle_wochen": 2
+            },
+            "muster": {
+              "jede_2_woche_ab_woche_2": {
+                "Mi": [1, 8],
+                "Do": [1, 8]
+              },
+              "jede_2_woche_ab_woche_1": {
+                "Mi": [1, 8]
+              }
+            },
+            "beschreibung": "Rhythmus: jede 2. Woche ab Woche 2 zwei Schultage (16 Std.), jede 2. Woche ab Woche 1 ein Schultag (8 Std.) – Mittel 12 Std. (ANNAHME, zulässiges Organisationsmodell; Testfall für Rhythmen)"
+          }
+        ]
+      },
+      "standort": "HS",
+      "quelle": ["Q01", "Q02", "Q04", "Q05", "Q06"]
+    },
+    {
+      "id": "bau",
+      "name": "Fachklassen Bauberufe Hochbau (Maurer/in, Beton- und Stahlbetonbauer/in, Hochbaufacharbeiter/in)",
+      "beschreibung": "Stufenausbildung Bauwirtschaft, Berufsschule im Blockunterricht nach Landeserlass. Unterstufe 2026/27 erstmals nach neuer Ausbildungsordnung (in Kraft 01.08.2026, gestreckte Abschlussprüfung); Mittel- und Oberstufe laufen nach bisheriger Ordnung aus.",
+      "apo_bk_anlage": "A 1.1",
+      "abschluss": "Berufsschulabschluss; Berufsabschluss (Kammerprüfung extern)",
+      "form": "Teilzeit (Blockunterricht)",
+      "jahrgaenge": [11, 12, 13],
+      "jahrgang_bezeichnung": {
+        "11": "Unterstufe",
+        "12": "Mittelstufe",
+        "13": "Oberstufe"
+      },
+      "jahresstunden": 480,
+      "rhythmus": {
+        "typ": "Blockunterricht",
+        "beschreibung": "Vollzeitunterricht in Blockwochen (38 Std./Blockwoche: Mo–Do 1.–8., Fr 1.–6. Stunde), dazwischen Betrieb/überbetriebliche Ausbildung. Blockzeiten nach Erlass BASS 12-61 Nr. 1.4 (Stand Änderung 26.06.2026).",
+        "wochenstunden_im_block": 38,
+        "tagesmuster_im_block": {
+          "Mo": [1, 8],
+          "Di": [1, 8],
+          "Mi": [1, 8],
+          "Do": [1, 8],
+          "Fr": [1, 6]
+        },
+        "bloecke": {
+          "11": [
+            {
+              "von": "2026-11-02",
+              "bis": "2026-11-20"
+            },
+            {
+              "von": "2027-01-11",
+              "bis": "2027-01-29"
+            },
+            {
+              "von": "2027-03-01",
+              "bis": "2027-03-19"
+            },
+            {
+              "von": "2027-06-07",
+              "bis": "2027-07-02"
+            }
+          ],
+          "12": [
+            {
+              "von": "2026-09-28",
+              "bis": "2026-10-16"
+            },
+            {
+              "von": "2027-02-01",
+              "bis": "2027-02-26"
+            },
+            {
+              "von": "2027-04-05",
+              "bis": "2027-04-23"
+            },
+            {
+              "von": "2027-05-19",
+              "bis": "2027-06-04"
+            }
+          ],
+          "13": [
+            {
+              "von": "2026-09-07",
+              "bis": "2026-09-25"
+            },
+            {
+              "von": "2026-11-23",
+              "bis": "2026-12-22"
+            },
+            {
+              "von": "2027-04-26",
+              "bis": "2027-05-14"
+            }
+          ]
+        },
+        "auswertung_2026_27": {
+          "11": {
+            "unterrichtstage": 65,
+            "jahresstunden_rechnerisch": 494,
+            "blockwochen_aequivalent": 13.0
+          },
+          "12": {
+            "unterrichtstage": 60,
+            "jahresstunden_rechnerisch": 456,
+            "blockwochen_aequivalent": 12.0
+          },
+          "13": {
+            "unterrichtstage": 50,
+            "jahresstunden_rechnerisch": 382,
+            "blockwochen_aequivalent": 10.0
+          }
+        }
+      },
+      "standort": "BZ",
+      "quelle": ["Q01", "Q02", "Q08", "Q09", "Q10", "Q11", "Q12", "Q13"]
+    },
+    {
+      "id": "ita",
+      "name": "Berufsfachschule – Staatlich geprüfte/r informationstechnische/r Assistent/in mit Fachhochschulreife",
+      "beschreibung": "Vollzeitschulische Berufsausbildung nach Landesrecht, dreijährig, einschließlich Fachhochschulreife (Anlage C 1). Laborunterricht in geteilten Gruppen.",
+      "apo_bk_anlage": "C 1",
+      "abschluss": "Berufsabschluss nach Landesrecht + Fachhochschulreife",
+      "form": "Vollzeit",
+      "jahrgaenge": [11, 12, 13],
+      "jahrgang_bezeichnung": {
+        "11": "Unterstufe",
+        "12": "Mittelstufe",
+        "13": "Oberstufe"
+      },
+      "rhythmus": {
+        "typ": "wöchentlich",
+        "beschreibung": "Vollzeit 34 Wochenstunden (Mo–Do 1.–7., Fr 1.–6.). ITA12 mit 4-wöchigem Betriebspraktikum.",
+        "praktikum": [
+          {
+            "klasse": "ITA12",
+            "von": "2027-02-01",
+            "bis": "2027-02-26",
+            "annahme": true
+          }
+        ]
+      },
+      "standort": "HS",
+      "quelle": ["Q01", "Q24", "Q25"]
+    },
+    {
+      "id": "fos-inf",
+      "name": "Fachoberschule Klassen 11 und 12, Fachbereich Informatik (Fachhochschulreife)",
+      "beschreibung": "Klasse 11: einjähriges gelenktes Praktikum im Betrieb + Teilzeitunterricht (12 Wochenstunden an 2 Schultagen). Klasse 12: Vollzeitunterricht, Abschluss Fachhochschulreife.",
+      "apo_bk_anlage": "C (genaue Nummer nicht verifiziert)",
+      "abschluss": "Fachhochschulreife",
+      "form": "Kl. 11 Teilzeit + Praktikum, Kl. 12 Vollzeit",
+      "jahrgaenge": [11, 12],
+      "jahrgang_bezeichnung": {
+        "11": "Klasse 11 (Praktikumsjahr)",
+        "12": "Klasse 12"
+      },
+      "rhythmus": {
+        "typ": "Praktikum + Teilzeitunterricht (Kl. 11) / wöchentlich Vollzeit (Kl. 12)",
+        "beschreibung": "Kl. 11: 3 Betriebstage + 2 Schultage je Woche (8 + 4 Std. = 12 Std.; Praktikum nicht in Teilzeit zulässig). Kl. 12: 32 Wochenstunden.",
+        "betriebstage_klasse_11": 3
+      },
+      "standort": "HS",
+      "quelle": ["Q21", "Q22", "Q23"]
+    },
+    {
+      "id": "bg-inf",
+      "name": "Berufliches Gymnasium – Allgemeine Hochschulreife (Mathematik, Informatik), Schwerpunkt Informatik",
+      "beschreibung": "Gymnasiale Oberstufe am Berufskolleg: Einführungsphase (Kl. 11) im Klassenverband, Qualifikationsphase (Kl. 12/13) im Kurssystem mit LK Informatik (profilbildend) und LK Mathematik.",
+      "apo_bk_anlage": "D 21",
+      "abschluss": "Allgemeine Hochschulreife",
+      "form": "Vollzeit",
+      "jahrgaenge": [11, 12, 13],
+      "jahrgang_bezeichnung": {
+        "11": "Einführungsphase (EF)",
+        "12": "Qualifikationsphase 1 (Q1)",
+        "13": "Qualifikationsphase 2 (Q2)"
+      },
+      "rhythmus": {
+        "typ": "wöchentlich",
+        "beschreibung": "Vollzeit 32–33 Wochenstunden, Kurse teils in der 9./10. Stunde. Q2: Unterrichtsende vor den Abiturprüfungen.",
+        "unterrichtsende": [
+          {
+            "klasse": "GI13",
+            "letzter_unterrichtstag": "2027-03-19",
+            "annahme": true
+          }
+        ]
+      },
+      "standort": "HS",
+      "quelle": ["Q01", "Q26", "Q27", "Q28"]
+    },
+    {
+      "id": "av",
+      "name": "Ausbildungsvorbereitung (Vollzeit mit Praktikum bzw. Teilzeit)",
+      "beschreibung": "Einjähriger Bildungsgang für Jugendliche ohne Ausbildungsverhältnis; Ziel: Ausbildungsreife, ggf. Erster Schulabschluss (ESA). Vollzeitform mit schulisch begleitetem Praktikum (i. d. R. 3 Tage/Woche) oder Teilzeitform (12 Std./Woche).",
+      "apo_bk_anlage": "A 2.1 (Teilzeit) / A 2.2 (Vollzeit)",
+      "abschluss": "berufliche Kenntnisse; ggf. Erster Schulabschluss",
+      "form": "Vollzeit mit Praktikum / Teilzeit",
+      "jahrgaenge": [11],
+      "jahrgang_bezeichnung": {
+        "11": "AV (einjährig)"
+      },
+      "rhythmus": {
+        "typ": "Praktikum + Unterrichtstage",
+        "beschreibung": "Vollzeit: 2 Schultage à 8 Std. (16 Std.) + 3 Praktikumstage; Teilzeit: 12 Std. an 1,5 Tagen."
+      },
+      "standort": "HS und BZ",
+      "quelle": ["Q01", "Q18", "Q29"]
+    }
+  ],
+  "klassengruppen": [
+    {
+      "id": "it-zweig",
+      "name": "IT-Zweig",
+      "klassen": ["FI11a", "FI11b", "FI11c", "FI12a", "FI12b", "FIA13", "FIS13", "ITA11", "ITA12", "ITA13", "FOS11a", "FOS11b", "FOS12", "GI11a", "GI11b", "GI12", "GI13"]
+    },
+    {
+      "id": "bau",
+      "name": "Bau",
+      "klassen": ["BAU11a", "BAU11b", "MAU12", "MAU13", "AV11b"]
+    },
+    {
+      "id": "abitur-klassen",
+      "name": "Abitur-Klassen",
+      "klassen": ["GI11a", "GI11b", "GI12", "GI13"]
+    },
+    {
+      "id": "fachabi-klassen",
+      "name": "Fachabi-Klassen (FHR)",
+      "klassen": ["ITA11", "ITA12", "ITA13", "FOS11a", "FOS11b", "FOS12"]
+    },
+    {
+      "id": "duale-fachklassen",
+      "name": "Duale Fachklassen (Berufsschule)",
+      "klassen": ["FI11a", "FI11b", "FI11c", "FI12a", "FI12b", "FIA13", "FIS13", "BAU11a", "BAU11b", "MAU12", "MAU13"]
+    },
+    {
+      "id": "blockklassen",
+      "name": "Blockklassen",
+      "klassen": ["BAU11a", "BAU11b", "MAU12", "MAU13"]
+    },
+    {
+      "id": "vollzeit",
+      "name": "Vollzeitklassen",
+      "klassen": ["ITA11", "ITA12", "ITA13", "GI11a", "GI11b", "GI12", "GI13", "FOS12", "AV11a", "AV11b"]
+    },
+    {
+      "id": "klasse-11",
+      "name": "Klasse 11 / Unterstufe (alle Bildungsgänge)",
+      "klassen": ["FI11a", "FI11b", "FI11c", "BAU11a", "BAU11b", "ITA11", "FOS11a", "FOS11b", "GI11a", "GI11b", "AV11a", "AV11b", "AVT11"]
+    },
+    {
+      "id": "standort-bz",
+      "name": "Standort Bautechnik-Zentrum",
+      "klassen": ["BAU11a", "BAU11b", "MAU12", "MAU13", "AV11b"]
+    }
+  ],
+  "klassen": [
+    {
+      "id": "FI11a",
+      "name": "FI 11a – Fachinformatik Unterstufe",
+      "bildungsgang": "fi",
+      "jahrgang": 11,
+      "schueler": 27,
+      "standort": "HS",
+      "unterrichtstage": {
+        "Mo": [1, 8],
+        "Do": [1, 4]
+      }
+    },
+    {
+      "id": "FI11b",
+      "name": "FI 11b – Fachinformatik Unterstufe",
+      "bildungsgang": "fi",
+      "jahrgang": 11,
+      "schueler": 26,
+      "standort": "HS",
+      "unterrichtstage": {
+        "Di": [1, 8],
+        "Fr": [1, 4]
+      }
+    },
+    {
+      "id": "FI11c",
+      "name": "FI 11c – Fachinformatik Unterstufe (Rhythmus: alle 2 Wochen)",
+      "bildungsgang": "fi",
+      "jahrgang": 11,
+      "schueler": 24,
+      "standort": "HS",
+      "unterrichtstage": {
+        "1": {
+          "Mi": [1, 8],
+          "Do": [1, 8]
+        },
+        "2": {
+          "Mi": [1, 8]
+        }
+      },
+      "wochenmuster": true
+    },
+    {
+      "id": "FI12a",
+      "name": "FI 12a – Fachinformatik Mittelstufe",
+      "bildungsgang": "fi",
+      "jahrgang": 12,
+      "schueler": 25,
+      "standort": "HS",
+      "unterrichtstage": {
+        "Di": [1, 8],
+        "Do": [1, 4]
+      }
+    },
+    {
+      "id": "FI12b",
+      "name": "FI 12b – Fachinformatik Mittelstufe",
+      "bildungsgang": "fi",
+      "jahrgang": 12,
+      "schueler": 23,
+      "standort": "HS",
+      "unterrichtstage": {
+        "Mi": [1, 8],
+        "Fr": [1, 4]
+      }
+    },
+    {
+      "id": "FIA13",
+      "name": "FIA 13 – Fachinformatik Oberstufe, FR Anwendungsentwicklung",
+      "bildungsgang": "fi",
+      "jahrgang": 13,
+      "schueler": 22,
+      "standort": "HS",
+      "unterrichtstage": {
+        "Mo": [1, 8],
+        "Mi": [1, 4]
+      },
+      "fachrichtung": "Anwendungsentwicklung"
+    },
+    {
+      "id": "FIS13",
+      "name": "FIS 13 – Fachinformatik Oberstufe, FR Systemintegration",
+      "bildungsgang": "fi",
+      "jahrgang": 13,
+      "schueler": 21,
+      "standort": "HS",
+      "unterrichtstage": {
+        "Do": [1, 8],
+        "Fr": [1, 4]
+      },
+      "fachrichtung": "Systemintegration"
+    },
+    {
+      "id": "BAU11a",
+      "name": "BAU 11a – Hochbau Unterstufe (Maurer/in, Hochbaufacharbeiter/in) – neue Ordnung 2026",
+      "bildungsgang": "bau",
+      "jahrgang": 11,
+      "schueler": 20,
+      "standort": "BZ",
+      "unterrichtstage": "siehe bildungsgaenge[bau].rhythmus.bloecke['11']",
+      "ausbildungsordnung": "2026"
+    },
+    {
+      "id": "BAU11b",
+      "name": "BAU 11b – Hochbau Unterstufe (Beton- und Stahlbetonbauer/in, Maurer/in) – neue Ordnung 2026",
+      "bildungsgang": "bau",
+      "jahrgang": 11,
+      "schueler": 18,
+      "standort": "BZ",
+      "unterrichtstage": "siehe bildungsgaenge[bau].rhythmus.bloecke['11']",
+      "ausbildungsordnung": "2026"
+    },
+    {
+      "id": "MAU12",
+      "name": "MAU 12 – Maurer/in Mittelstufe (bisherige Ordnung)",
+      "bildungsgang": "bau",
+      "jahrgang": 12,
+      "schueler": 19,
+      "standort": "BZ",
+      "unterrichtstage": "siehe bildungsgaenge[bau].rhythmus.bloecke['12']",
+      "ausbildungsordnung": "1999 (auslaufend)"
+    },
+    {
+      "id": "MAU13",
+      "name": "MAU 13 – Maurer/in Oberstufe (bisherige Ordnung)",
+      "bildungsgang": "bau",
+      "jahrgang": 13,
+      "schueler": 16,
+      "standort": "BZ",
+      "unterrichtstage": "siehe bildungsgaenge[bau].rhythmus.bloecke['13']",
+      "ausbildungsordnung": "1999 (auslaufend)",
+      "testhinweis": "liegt genau auf dem Klassenfrequenzmindestwert 16 der Fachklassen"
+    },
+    {
+      "id": "ITA11",
+      "name": "ITA 11 – Informationstechnische Assistenz Unterstufe",
+      "bildungsgang": "ita",
+      "jahrgang": 11,
+      "schueler": 28,
+      "standort": "HS",
+      "unterrichtstage": {
+        "Mo": [1, 7],
+        "Di": [1, 7],
+        "Mi": [1, 7],
+        "Do": [1, 7],
+        "Fr": [1, 6]
+      }
+    },
+    {
+      "id": "ITA12",
+      "name": "ITA 12 – Informationstechnische Assistenz Mittelstufe",
+      "bildungsgang": "ita",
+      "jahrgang": 12,
+      "schueler": 25,
+      "standort": "HS",
+      "unterrichtstage": {
+        "Mo": [1, 7],
+        "Di": [1, 7],
+        "Mi": [1, 7],
+        "Do": [1, 7],
+        "Fr": [1, 6]
+      },
+      "praktikum": {
+        "von": "2027-02-01",
+        "bis": "2027-02-26"
+      }
+    },
+    {
+      "id": "ITA13",
+      "name": "ITA 13 – Informationstechnische Assistenz Oberstufe",
+      "bildungsgang": "ita",
+      "jahrgang": 13,
+      "schueler": 22,
+      "standort": "HS",
+      "unterrichtstage": {
+        "Mo": [1, 7],
+        "Di": [1, 7],
+        "Mi": [1, 7],
+        "Do": [1, 7],
+        "Fr": [1, 6]
+      }
+    },
+    {
+      "id": "FOS11a",
+      "name": "FOS 11a – Fachoberschule Informatik (Praktikumsjahr)",
+      "bildungsgang": "fos-inf",
+      "jahrgang": 11,
+      "schueler": 26,
+      "standort": "HS",
+      "unterrichtstage": {
+        "Mo": [1, 8],
+        "Di": [1, 4]
+      },
+      "betriebstage": ["Mi", "Do", "Fr"]
+    },
+    {
+      "id": "FOS11b",
+      "name": "FOS 11b – Fachoberschule Informatik (Praktikumsjahr)",
+      "bildungsgang": "fos-inf",
+      "jahrgang": 11,
+      "schueler": 25,
+      "standort": "HS",
+      "unterrichtstage": {
+        "Do": [1, 8],
+        "Fr": [1, 4]
+      },
+      "betriebstage": ["Mo", "Di", "Mi"]
+    },
+    {
+      "id": "FOS12",
+      "name": "FOS 12 – Fachoberschule Informatik",
+      "bildungsgang": "fos-inf",
+      "jahrgang": 12,
+      "schueler": 27,
+      "standort": "HS",
+      "unterrichtstage": {
+        "Mo": [1, 7],
+        "Di": [1, 7],
+        "Mi": [1, 6],
+        "Do": [1, 6],
+        "Fr": [1, 6]
+      }
+    },
+    {
+      "id": "GI11a",
+      "name": "GI 11a – Berufliches Gymnasium Informatik, Einführungsphase",
+      "bildungsgang": "bg-inf",
+      "jahrgang": 11,
+      "schueler": 26,
+      "standort": "HS",
+      "unterrichtstage": {
+        "Mo": [1, 8],
+        "Di": [1, 6],
+        "Mi": [1, 7],
+        "Do": [1, 6],
+        "Fr": [1, 6]
+      }
+    },
+    {
+      "id": "GI11b",
+      "name": "GI 11b – Berufliches Gymnasium Informatik, Einführungsphase",
+      "bildungsgang": "bg-inf",
+      "jahrgang": 11,
+      "schueler": 25,
+      "standort": "HS",
+      "unterrichtstage": {
+        "Mo": [1, 6],
+        "Di": [1, 8],
+        "Mi": [1, 6],
+        "Do": [1, 7],
+        "Fr": [1, 6]
+      }
+    },
+    {
+      "id": "GI12",
+      "name": "GI 12 – Berufliches Gymnasium Informatik, Q1",
+      "bildungsgang": "bg-inf",
+      "jahrgang": 12,
+      "schueler": 27,
+      "standort": "HS",
+      "unterrichtstage": {
+        "Mo": [1, 10],
+        "Di": [1, 6],
+        "Mi": [1, 6],
+        "Do": [1, 4],
+        "Fr": [1, 6]
+      }
+    },
+    {
+      "id": "GI13",
+      "name": "GI 13 – Berufliches Gymnasium Informatik, Q2",
+      "bildungsgang": "bg-inf",
+      "jahrgang": 13,
+      "schueler": 23,
+      "standort": "HS",
+      "unterrichtstage": {
+        "Mo": [1, 6],
+        "Di": [1, 10],
+        "Mi": [1, 6],
+        "Do": [1, 4],
+        "Fr": [1, 6]
+      },
+      "letzter_unterrichtstag": "2027-03-19"
+    },
+    {
+      "id": "AV11a",
+      "name": "AV 11a – Ausbildungsvorbereitung Vollzeit, Berufsfeld Technik/IT",
+      "bildungsgang": "av",
+      "jahrgang": 11,
+      "schueler": 18,
+      "standort": "HS",
+      "unterrichtstage": {
+        "Mo": [1, 8],
+        "Fr": [1, 8]
+      },
+      "betriebstage": ["Di", "Mi", "Do"],
+      "form": "Vollzeit"
+    },
+    {
+      "id": "AV11b",
+      "name": "AV 11b – Ausbildungsvorbereitung Vollzeit, Berufsfeld Bau",
+      "bildungsgang": "av",
+      "jahrgang": 11,
+      "schueler": 16,
+      "standort": "BZ",
+      "unterrichtstage": {
+        "Di": [1, 8],
+        "Do": [1, 8]
+      },
+      "betriebstage": ["Mo", "Mi", "Fr"],
+      "form": "Vollzeit"
+    },
+    {
+      "id": "AVT11",
+      "name": "AVT 11 – Ausbildungsvorbereitung Teilzeit",
+      "bildungsgang": "av",
+      "jahrgang": 11,
+      "schueler": 14,
+      "standort": "HS",
+      "unterrichtstage": {
+        "Mi": [1, 8],
+        "Fr": [1, 4]
+      },
+      "form": "Teilzeit",
+      "testhinweis": "unterschreitet den Mindestwert (50 % von 29 ≈ 15) – Testfall minderfrequente Klasse"
+    }
+  ],
+  "stundentafeln": [
+    {
+      "bildungsgang": "fi",
+      "jahrgaenge": [11],
+      "bezug": "Wochenstunden (40 Schulwochen)",
+      "summe": 12,
+      "jahresstunden": 480,
+      "quelle": ["Q02", "Q03", "Q04", "Q05", "Q07"],
+      "annahme": "Bündelung der Lernfelder in Fächer und Verteilung auf Wochenstunden ist ANNAHME; Jahressummen nach KMK-RLP (LF1 40, LF2 80, LF3 80, LF4 40, LF5 80 = 320) und Anlage A 1.1 (berufsübergreifend 160).",
+      "eintraege": [
+        {
+          "fach": "FI-GP",
+          "wochenstunden": 1,
+          "doppelstunde_bevorzugt": false,
+          "lernfelder": ["LF1"]
+        },
+        {
+          "fach": "FI-SYS",
+          "wochenstunden": 4,
+          "doppelstunde_bevorzugt": true,
+          "lernfelder": ["LF2", "LF3"]
+        },
+        {
+          "fach": "FI-SEC",
+          "wochenstunden": 1,
+          "doppelstunde_bevorzugt": false,
+          "lernfelder": ["LF4"]
+        },
+        {
+          "fach": "FI-AE",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": true,
+          "lernfelder": ["LF5"]
+        },
+        {
+          "fach": "D",
+          "wochenstunden": 1,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "REL",
+          "wochenstunden": 1,
+          "doppelstunde_bevorzugt": false,
+          "alternativ": "PP"
+        },
+        {
+          "fach": "SP",
+          "wochenstunden": 1,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "PG",
+          "wochenstunden": 1,
+          "doppelstunde_bevorzugt": false
+        }
+      ]
+    },
+    {
+      "bildungsgang": "fi",
+      "jahrgaenge": [12],
+      "bezug": "Wochenstunden (40 Schulwochen)",
+      "summe": 12,
+      "jahresstunden": 480,
+      "quelle": ["Q02", "Q04", "Q05"],
+      "annahme": "LF6 40, LF7 80, LF8 80, LF9 80 = 280; Differenzierungsbereich 1 Std. (40) ANNAHME.",
+      "eintraege": [
+        {
+          "fach": "FI-GP",
+          "wochenstunden": 1,
+          "doppelstunde_bevorzugt": false,
+          "lernfelder": ["LF6"]
+        },
+        {
+          "fach": "FI-CPS",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": true,
+          "lernfelder": ["LF7"]
+        },
+        {
+          "fach": "FI-AE",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": true,
+          "lernfelder": ["LF8"]
+        },
+        {
+          "fach": "FI-SYS",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": true,
+          "lernfelder": ["LF9"]
+        },
+        {
+          "fach": "D",
+          "wochenstunden": 1,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "REL",
+          "wochenstunden": 1,
+          "doppelstunde_bevorzugt": false,
+          "alternativ": "PP"
+        },
+        {
+          "fach": "SP",
+          "wochenstunden": 1,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "PG",
+          "wochenstunden": 1,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "DIF",
+          "wochenstunden": 1,
+          "doppelstunde_bevorzugt": false,
+          "inhalt": "Englisch für IT-Berufe"
+        }
+      ]
+    },
+    {
+      "bildungsgang": "fi",
+      "jahrgaenge": [13],
+      "fachrichtung": "Anwendungsentwicklung (FIA13)",
+      "bezug": "Wochenstunden (40 Schulwochen)",
+      "summe": 12,
+      "jahresstunden": 480,
+      "quelle": ["Q04", "Q05"],
+      "annahme": "LF10a 80, LF11a 80, LF12a 120 = 280 (in einem Bündelungsfach zusammengefasst – ANNAHME).",
+      "eintraege": [
+        {
+          "fach": "FI-FRA",
+          "wochenstunden": 7,
+          "doppelstunde_bevorzugt": true,
+          "lernfelder": ["LF10a", "LF11a", "LF12a"]
+        },
+        {
+          "fach": "D",
+          "wochenstunden": 1,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "REL",
+          "wochenstunden": 1,
+          "doppelstunde_bevorzugt": false,
+          "alternativ": "PP"
+        },
+        {
+          "fach": "SP",
+          "wochenstunden": 1,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "PG",
+          "wochenstunden": 1,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "DIF",
+          "wochenstunden": 1,
+          "doppelstunde_bevorzugt": false,
+          "inhalt": "Prüfungsvorbereitung"
+        }
+      ]
+    },
+    {
+      "bildungsgang": "fi",
+      "jahrgaenge": [13],
+      "fachrichtung": "Systemintegration (FIS13)",
+      "bezug": "Wochenstunden (40 Schulwochen)",
+      "summe": 12,
+      "jahresstunden": 480,
+      "quelle": ["Q04", "Q05"],
+      "annahme": "LF10b 80, LF11b 80, LF12b 120 = 280 (ANNAHME Bündelung).",
+      "eintraege": [
+        {
+          "fach": "FI-FRS",
+          "wochenstunden": 7,
+          "doppelstunde_bevorzugt": true,
+          "lernfelder": ["LF10b", "LF11b", "LF12b"]
+        },
+        {
+          "fach": "D",
+          "wochenstunden": 1,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "REL",
+          "wochenstunden": 1,
+          "doppelstunde_bevorzugt": false,
+          "alternativ": "PP"
+        },
+        {
+          "fach": "SP",
+          "wochenstunden": 1,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "PG",
+          "wochenstunden": 1,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "DIF",
+          "wochenstunden": 1,
+          "doppelstunde_bevorzugt": false,
+          "inhalt": "Prüfungsvorbereitung"
+        }
+      ]
+    },
+    {
+      "bildungsgang": "bau",
+      "jahrgaenge": [11],
+      "bezug": "Wochenstunden je Blockwoche (13 Blockwochen = 65 Unterrichtstage, rechnerisch 494 Jahresstunden)",
+      "summe": 38,
+      "quelle": ["Q02", "Q09", "Q11"],
+      "annahme": "Bündelungsfächer und Stunden je Blockwoche ANNAHME (vorläufiger Bildungsplan 2026 nicht im Volltext geprüft).",
+      "eintraege": [
+        {
+          "fach": "BAU-KON",
+          "wochenstunden": 10,
+          "doppelstunde_bevorzugt": true
+        },
+        {
+          "fach": "BAU-TEC",
+          "wochenstunden": 5,
+          "doppelstunde_bevorzugt": true
+        },
+        {
+          "fach": "BAU-TZ",
+          "wochenstunden": 4,
+          "doppelstunde_bevorzugt": true
+        },
+        {
+          "fach": "BAU-PRA",
+          "wochenstunden": 5,
+          "doppelstunde_bevorzugt": true,
+          "teilung": 2
+        },
+        {
+          "fach": "WBL",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "D",
+          "wochenstunden": 3,
+          "doppelstunde_bevorzugt": true
+        },
+        {
+          "fach": "REL",
+          "wochenstunden": 3,
+          "doppelstunde_bevorzugt": false,
+          "alternativ": "PP"
+        },
+        {
+          "fach": "SP",
+          "wochenstunden": 3,
+          "doppelstunde_bevorzugt": true
+        },
+        {
+          "fach": "PG",
+          "wochenstunden": 3,
+          "doppelstunde_bevorzugt": false
+        }
+      ]
+    },
+    {
+      "bildungsgang": "bau",
+      "jahrgaenge": [12],
+      "bezug": "Wochenstunden je Blockwoche (60 Unterrichtstage nach Abzug von Feier-/Ferientagen, rechnerisch 456 Jahresstunden)",
+      "summe": 38,
+      "quelle": ["Q02", "Q11"],
+      "annahme": "ANNAHME wie Unterstufe; bisherige Ordnung (auslaufend). Rechnerisch 456 statt 480 Jahresstunden (berufsübergreifend je Fach 36 statt 40) – Testfall Soll/Ist.",
+      "eintraege": [
+        {
+          "fach": "BAU-KON",
+          "wochenstunden": 11,
+          "doppelstunde_bevorzugt": true
+        },
+        {
+          "fach": "BAU-TEC",
+          "wochenstunden": 5,
+          "doppelstunde_bevorzugt": true
+        },
+        {
+          "fach": "BAU-TZ",
+          "wochenstunden": 4,
+          "doppelstunde_bevorzugt": true
+        },
+        {
+          "fach": "BAU-PRA",
+          "wochenstunden": 4,
+          "doppelstunde_bevorzugt": true,
+          "teilung": 2
+        },
+        {
+          "fach": "WBL",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "D",
+          "wochenstunden": 3,
+          "doppelstunde_bevorzugt": true
+        },
+        {
+          "fach": "REL",
+          "wochenstunden": 3,
+          "doppelstunde_bevorzugt": false,
+          "alternativ": "PP"
+        },
+        {
+          "fach": "SP",
+          "wochenstunden": 3,
+          "doppelstunde_bevorzugt": true
+        },
+        {
+          "fach": "PG",
+          "wochenstunden": 3,
+          "doppelstunde_bevorzugt": false
+        }
+      ]
+    },
+    {
+      "bildungsgang": "bau",
+      "jahrgaenge": [13],
+      "bezug": "Wochenstunden je Blockwoche (50 Unterrichtstage nach Abzug von Feier-/Ferientagen, rechnerisch 382 Jahresstunden)",
+      "summe": 38,
+      "quelle": ["Q02", "Q11"],
+      "annahme": "ANNAHME; rechnerisch 382 statt 480 Jahresstunden (berufsübergreifend je Fach 30 statt 40) – bewusster Testfall für Soll/Ist-Prüfung.",
+      "eintraege": [
+        {
+          "fach": "BAU-KON",
+          "wochenstunden": 12,
+          "doppelstunde_bevorzugt": true
+        },
+        {
+          "fach": "BAU-TEC",
+          "wochenstunden": 4,
+          "doppelstunde_bevorzugt": true
+        },
+        {
+          "fach": "BAU-TZ",
+          "wochenstunden": 4,
+          "doppelstunde_bevorzugt": true
+        },
+        {
+          "fach": "BAU-PRA",
+          "wochenstunden": 4,
+          "doppelstunde_bevorzugt": true,
+          "teilung": 2
+        },
+        {
+          "fach": "WBL",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "D",
+          "wochenstunden": 3,
+          "doppelstunde_bevorzugt": true
+        },
+        {
+          "fach": "REL",
+          "wochenstunden": 3,
+          "doppelstunde_bevorzugt": false,
+          "alternativ": "PP"
+        },
+        {
+          "fach": "SP",
+          "wochenstunden": 3,
+          "doppelstunde_bevorzugt": true
+        },
+        {
+          "fach": "PG",
+          "wochenstunden": 3,
+          "doppelstunde_bevorzugt": false
+        }
+      ]
+    },
+    {
+      "bildungsgang": "ita",
+      "jahrgaenge": [11],
+      "bezug": "Wochenstunden",
+      "summe": 34,
+      "quelle": ["Q24", "Q25"],
+      "annahme": "Fächer nach Bildungsplänen 2024, Stunden ANNAHME (Stundentafel C 1 nicht im Volltext geprüft).",
+      "eintraege": [
+        {
+          "fach": "BSN",
+          "wochenstunden": 4,
+          "doppelstunde_bevorzugt": true,
+          "teilung": 2
+        },
+        {
+          "fach": "SWE",
+          "wochenstunden": 5,
+          "doppelstunde_bevorzugt": true,
+          "teilung": 2
+        },
+        {
+          "fach": "DB",
+          "wochenstunden": 3,
+          "doppelstunde_bevorzugt": true
+        },
+        {
+          "fach": "ITH",
+          "wochenstunden": 3,
+          "doppelstunde_bevorzugt": true
+        },
+        {
+          "fach": "M",
+          "wochenstunden": 4,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "PH",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": true
+        },
+        {
+          "fach": "E",
+          "wochenstunden": 3,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "D",
+          "wochenstunden": 3,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "WL",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "PG",
+          "wochenstunden": 1,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "REL",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": false,
+          "alternativ": "PP"
+        },
+        {
+          "fach": "SP",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": true
+        }
+      ]
+    },
+    {
+      "bildungsgang": "ita",
+      "jahrgaenge": [12],
+      "bezug": "Wochenstunden",
+      "summe": 34,
+      "quelle": ["Q24", "Q25"],
+      "annahme": "ANNAHME",
+      "eintraege": [
+        {
+          "fach": "BSN",
+          "wochenstunden": 4,
+          "doppelstunde_bevorzugt": true,
+          "teilung": 2
+        },
+        {
+          "fach": "SWE",
+          "wochenstunden": 5,
+          "doppelstunde_bevorzugt": true,
+          "teilung": 2
+        },
+        {
+          "fach": "DB",
+          "wochenstunden": 4,
+          "doppelstunde_bevorzugt": true
+        },
+        {
+          "fach": "ITH",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": true
+        },
+        {
+          "fach": "M",
+          "wochenstunden": 4,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "PH",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": true
+        },
+        {
+          "fach": "E",
+          "wochenstunden": 3,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "D",
+          "wochenstunden": 3,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "WL",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "PG",
+          "wochenstunden": 1,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "REL",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": false,
+          "alternativ": "PP"
+        },
+        {
+          "fach": "SP",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": true
+        }
+      ]
+    },
+    {
+      "bildungsgang": "ita",
+      "jahrgaenge": [13],
+      "bezug": "Wochenstunden",
+      "summe": 34,
+      "quelle": ["Q24", "Q25"],
+      "annahme": "ANNAHME",
+      "eintraege": [
+        {
+          "fach": "BSN",
+          "wochenstunden": 4,
+          "doppelstunde_bevorzugt": true,
+          "teilung": 2
+        },
+        {
+          "fach": "SWE",
+          "wochenstunden": 6,
+          "doppelstunde_bevorzugt": true,
+          "teilung": 2
+        },
+        {
+          "fach": "DB",
+          "wochenstunden": 4,
+          "doppelstunde_bevorzugt": true
+        },
+        {
+          "fach": "PRJ",
+          "wochenstunden": 3,
+          "doppelstunde_bevorzugt": true
+        },
+        {
+          "fach": "M",
+          "wochenstunden": 4,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "E",
+          "wochenstunden": 3,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "D",
+          "wochenstunden": 3,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "WL",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "PG",
+          "wochenstunden": 1,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "REL",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": false,
+          "alternativ": "PP"
+        },
+        {
+          "fach": "SP",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": true
+        }
+      ]
+    },
+    {
+      "bildungsgang": "fos-inf",
+      "jahrgaenge": [11],
+      "bezug": "Wochenstunden (Teilzeitunterricht neben Praktikum)",
+      "summe": 12,
+      "jahresstunden": 480,
+      "quelle": ["Q21", "Q23"],
+      "annahme": "Summe 12 Std./480 Jahresstunden belegt; Verteilung auf Fächer ANNAHME.",
+      "eintraege": [
+        {
+          "fach": "D",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "E",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "M",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "SWE",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": true
+        },
+        {
+          "fach": "BSN",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": true
+        },
+        {
+          "fach": "PG",
+          "wochenstunden": 1,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "REL",
+          "wochenstunden": 1,
+          "doppelstunde_bevorzugt": false,
+          "alternativ": "PP"
+        }
+      ]
+    },
+    {
+      "bildungsgang": "fos-inf",
+      "jahrgaenge": [12],
+      "bezug": "Wochenstunden",
+      "summe": 32,
+      "quelle": ["Q23"],
+      "annahme": "ANNAHME",
+      "eintraege": [
+        {
+          "fach": "D",
+          "wochenstunden": 4,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "E",
+          "wochenstunden": 4,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "M",
+          "wochenstunden": 4,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "PH",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": true
+        },
+        {
+          "fach": "SWE",
+          "wochenstunden": 4,
+          "doppelstunde_bevorzugt": true
+        },
+        {
+          "fach": "BSN",
+          "wochenstunden": 3,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "DB",
+          "wochenstunden": 3,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "WL",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "PG",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "REL",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": false,
+          "alternativ": "PP"
+        },
+        {
+          "fach": "SP",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": true
+        }
+      ]
+    },
+    {
+      "bildungsgang": "bg-inf",
+      "jahrgaenge": [11],
+      "bezug": "Wochenstunden (Einführungsphase, Klassenverband)",
+      "summe": 33,
+      "quelle": ["Q26", "Q28"],
+      "annahme": "ANNAHME (Muster: LK-Fach Mathematik 3/3/5/5/5/5 laut älterer Anlage D; hier EF M 4, INF 5).",
+      "eintraege": [
+        {
+          "fach": "INF",
+          "wochenstunden": 5,
+          "doppelstunde_bevorzugt": true
+        },
+        {
+          "fach": "M",
+          "wochenstunden": 4,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "D",
+          "wochenstunden": 3,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "E",
+          "wochenstunden": 3,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "S",
+          "wochenstunden": 4,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "PH",
+          "wochenstunden": 3,
+          "doppelstunde_bevorzugt": true
+        },
+        {
+          "fach": "WL",
+          "wochenstunden": 3,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "GG",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "REL",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": false,
+          "alternativ": "PP"
+        },
+        {
+          "fach": "SP",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": true
+        },
+        {
+          "fach": "VK",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": false
+        }
+      ]
+    },
+    {
+      "bildungsgang": "bg-inf",
+      "jahrgaenge": [12, 13],
+      "bezug": "Wochenstunden (Qualifikationsphase, Kurse)",
+      "summe": 32,
+      "quelle": ["Q26", "Q28"],
+      "annahme": "LK 5 / GK 3 Std. nach Muster Q28; GK Spanisch (neu einsetzend) 4 Std. ANNAHME.",
+      "eintraege": [
+        {
+          "fach": "INF",
+          "wochenstunden": 5,
+          "doppelstunde_bevorzugt": true,
+          "kurs": "LK"
+        },
+        {
+          "fach": "M",
+          "wochenstunden": 5,
+          "doppelstunde_bevorzugt": true,
+          "kurs": "LK"
+        },
+        {
+          "fach": "D",
+          "wochenstunden": 3,
+          "doppelstunde_bevorzugt": false,
+          "kurs": "GK"
+        },
+        {
+          "fach": "E",
+          "wochenstunden": 3,
+          "doppelstunde_bevorzugt": false,
+          "kurs": "GK"
+        },
+        {
+          "fach": "S",
+          "wochenstunden": 4,
+          "doppelstunde_bevorzugt": false,
+          "kurs": "GK"
+        },
+        {
+          "fach": "PH",
+          "wochenstunden": 3,
+          "doppelstunde_bevorzugt": true,
+          "kurs": "GK"
+        },
+        {
+          "fach": "WL",
+          "wochenstunden": 3,
+          "doppelstunde_bevorzugt": false,
+          "kurs": "GK"
+        },
+        {
+          "fach": "GG",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": false,
+          "kurs": "GK"
+        },
+        {
+          "fach": "REL",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": false,
+          "kurs": "GK",
+          "alternativ": "PP"
+        },
+        {
+          "fach": "SP",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": true,
+          "kurs": "GK"
+        }
+      ]
+    },
+    {
+      "bildungsgang": "av",
+      "jahrgaenge": [11],
+      "form": "Vollzeit (AV11a, AV11b)",
+      "bezug": "Wochenstunden an 2 Schultagen",
+      "summe": 16,
+      "quelle": ["Q29"],
+      "annahme": "16 Std. liegt im Rahmen 12–36 (Anlage A 2.2); Fächerverteilung ANNAHME.",
+      "eintraege": [
+        {
+          "fach": "AV-FP",
+          "wochenstunden": 4,
+          "doppelstunde_bevorzugt": true,
+          "teilung": 2
+        },
+        {
+          "fach": "AV-FT",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "M",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "E",
+          "wochenstunden": 1,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "WBL",
+          "wochenstunden": 1,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "D",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "REL",
+          "wochenstunden": 1,
+          "doppelstunde_bevorzugt": false,
+          "alternativ": "PP"
+        },
+        {
+          "fach": "SP",
+          "wochenstunden": 1,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "PG",
+          "wochenstunden": 1,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "DIF",
+          "wochenstunden": 1,
+          "doppelstunde_bevorzugt": false,
+          "inhalt": "ESA-Förderung"
+        }
+      ]
+    },
+    {
+      "bildungsgang": "av",
+      "jahrgaenge": [11],
+      "form": "Teilzeit (AVT11)",
+      "bezug": "Wochenstunden (40 Schulwochen)",
+      "summe": 12,
+      "jahresstunden": 480,
+      "quelle": ["Q29"],
+      "annahme": "berufsbezogen 6 Std. = 240 Jahresstunden (Rahmen 240–320); Verteilung ANNAHME.",
+      "eintraege": [
+        {
+          "fach": "AV-FT",
+          "wochenstunden": 3,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "M",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "E",
+          "wochenstunden": 1,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "D",
+          "wochenstunden": 2,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "REL",
+          "wochenstunden": 1,
+          "doppelstunde_bevorzugt": false,
+          "alternativ": "PP"
+        },
+        {
+          "fach": "SP",
+          "wochenstunden": 1,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "PG",
+          "wochenstunden": 1,
+          "doppelstunde_bevorzugt": false
+        },
+        {
+          "fach": "DIF",
+          "wochenstunden": 1,
+          "doppelstunde_bevorzugt": false,
+          "inhalt": "ESA-Förderung"
+        }
+      ]
+    }
+  ],
+  "oberstufe": {
+    "bildungsgang": "bg-inf",
+    "kurssystem": {
+      "lk_wochenstunden": 5,
+      "gk_wochenstunden": 3,
+      "gk_neu_einsetzende_fremdsprache_wochenstunden": 4,
+      "einfuehrungsphase": 11,
+      "qualifikationsphase": [12, 13]
+    },
+    "leistungskurse": ["INF", "M"],
+    "abiturfaecher": {
+      "LK": ["INF", "M"],
+      "GK": ["D", "E"]
+    },
+    "anzahl_kurse": {
+      "11": 26,
+      "12": 12,
+      "13": 12
+    },
+    "kopplungen": [
+      {
+        "name": "Religion/Philosophie-Band",
+        "jahrgaenge": [11, 12, 13],
+        "parallel": ["REL ev.", "REL kath.", "PP"],
+        "wochenstunden": 2
+      }
+    ],
+    "quelle": ["Q26", "Q28"],
+    "annahme": "LK/GK-Stunden nach Muster der älteren Anlage-D-Stundentafel; Kurszahlen ergeben sich aus den Beispielklassen (EF: 2 Klassen × 13 Lerngruppen; Q1/Q2: 10 Fächer + 2 zusätzliche Religions-/PP-Gruppen)."
+  },
+  "lehrkraefte": {
+    "anzahl": 28,
+    "davon_vollzeit": 22,
+    "deputat_vollzeit": 25.5,
+    "faecherkombinationen": [
+      {
+        "bezeichnung": "Informatik / Mathematik",
+        "faecher": ["INF", "SWE", "DB", "BSN", "PRJ", "FI-AE", "FI-FRA", "FI-SEC", "M"],
+        "anzahl": 5
+      },
+      {
+        "bezeichnung": "Informatik / Wirtschaftsinformatik",
+        "faecher": ["INF", "FI-GP", "FI-AE", "FI-FRA", "SWE", "DB", "WL", "WBL"],
+        "anzahl": 3
+      },
+      {
+        "bezeichnung": "Informations-/Elektrotechnik / Physik",
+        "faecher": ["ITH", "FI-CPS", "FI-SYS", "FI-FRS", "BSN", "PH", "AV-FT"],
+        "anzahl": 2
+      },
+      {
+        "bezeichnung": "Bautechnik / Mathematik",
+        "faecher": ["BAU-KON", "BAU-TEC", "BAU-TZ", "M", "AV-FT"],
+        "anzahl": 2,
+        "standort_bevorzugt": "BZ"
+      },
+      {
+        "bezeichnung": "Bautechnik / Deutsch",
+        "faecher": ["BAU-KON", "BAU-TEC", "BAU-TZ", "D"],
+        "anzahl": 1,
+        "standort_bevorzugt": "BZ"
+      },
+      {
+        "bezeichnung": "Lehrkraft für Fachpraxis (Bau/Werkstatt)",
+        "faecher": ["BAU-PRA", "AV-FP"],
+        "anzahl": 2,
+        "standort_bevorzugt": "BZ"
+      },
+      {
+        "bezeichnung": "Deutsch / Englisch",
+        "faecher": ["D", "E", "VK", "DIF"],
+        "anzahl": 3
+      },
+      {
+        "bezeichnung": "Englisch / Spanisch",
+        "faecher": ["E", "S"],
+        "anzahl": 1
+      },
+      {
+        "bezeichnung": "Mathematik / Physik",
+        "faecher": ["M", "PH", "VK"],
+        "anzahl": 1
+      },
+      {
+        "bezeichnung": "Religionslehre ev. / Praktische Philosophie / Deutsch",
+        "faecher": ["REL", "PP", "D"],
+        "anzahl": 1
+      },
+      {
+        "bezeichnung": "Religionslehre kath. / Politik",
+        "faecher": ["REL", "PG", "GG"],
+        "anzahl": 1
+      },
+      {
+        "bezeichnung": "Religionslehre kath. / Sport",
+        "faecher": ["REL", "SP"],
+        "anzahl": 1
+      },
+      {
+        "bezeichnung": "Praktische Philosophie / Politik",
+        "faecher": ["PP", "PG", "GG"],
+        "anzahl": 1
+      },
+      {
+        "bezeichnung": "Sport / Politik",
+        "faecher": ["SP", "PG"],
+        "anzahl": 2
+      },
+      {
+        "bezeichnung": "Wirtschaftswissenschaften / Politik",
+        "faecher": ["WL", "WBL", "PG", "GG"],
+        "anzahl": 1
+      },
+      {
+        "bezeichnung": "Sonderpädagogik / Deutsch (Ausbildungsvorbereitung)",
+        "faecher": ["D", "AV-FT", "DIF"],
+        "anzahl": 1
+      }
+    ],
+    "unterrichtsbedarf_wochenstunden_rechnerisch": 532.4,
+    "kapazitaet_wochenstunden": 658.5,
+    "vollzeitaequivalente_rechnerisch": 20.9,
+    "teilzeit": {
+      "anzahl": 6,
+      "deputat": [12.75, 12.75, 15, 18, 19, 20],
+      "annahme": true
+    },
+    "standortbindung": {
+      "BZ": "Bau- und Fachpraxis-Lehrkräfte überwiegend am BZ; Wechsel nur mit Wegezeit (siehe meta.wegezeiten)"
+    },
+    "quelle": ["Q19", "Q20"],
+    "annahme": "Bedarf aus den Stundentafeln der Beispielklassen berechnet (Teilungen und parallele Religions-/PP-Gruppen eingerechnet; Blockklassen auf 39 Schulwochen gemittelt). Anzahl und Fächerkombinationen frei erfunden; Anrechnungs-/Leitungsstunden und Altersermäßigung sind nicht einzeln modelliert – die Differenz Kapazität minus Bedarf (ca. 19 %) steht dafür und als Vertretungsreserve."
+  },
+  "raeume": {
+    "anzahl": 34,
+    "fachraeume": [
+      {
+        "art": "Klassenraum",
+        "anzahl": 14,
+        "standort": "HS"
+      },
+      {
+        "art": "IT-Labor",
+        "anzahl": 6,
+        "standort": "HS",
+        "plaetze": 28
+      },
+      {
+        "art": "Netzwerklabor",
+        "anzahl": 1,
+        "standort": "HS",
+        "plaetze": 16
+      },
+      {
+        "art": "Physik-/Elektrotechniklabor",
+        "anzahl": 1,
+        "standort": "HS"
+      },
+      {
+        "art": "Werkstatt",
+        "anzahl": 1,
+        "standort": "HS",
+        "plaetze": 16
+      },
+      {
+        "art": "Sporthalle",
+        "anzahl": 2,
+        "standort": "HS",
+        "hinweis": "Zweifachhalle = 2 Hallenteile"
+      },
+      {
+        "art": "Klassenraum",
+        "anzahl": 4,
+        "standort": "BZ"
+      },
+      {
+        "art": "CAD-Raum",
+        "anzahl": 1,
+        "standort": "BZ",
+        "plaetze": 20
+      },
+      {
+        "art": "Lehrbauhalle",
+        "anzahl": 2,
+        "standort": "BZ",
+        "plaetze": 12
+      },
+      {
+        "art": "Baustofflabor",
+        "anzahl": 1,
+        "standort": "BZ"
+      },
+      {
+        "art": "Sporthalle",
+        "anzahl": 1,
+        "standort": "BZ",
+        "hinweis": "städtische Halle (fiktiv), nur Mo–Mi 1.–8. Stunde verfügbar (ANNAHME, Testfall eingeschränkte Raumverfügbarkeit)"
+      }
+    ],
+    "annahme": "Raumbestand frei erfunden, an Klassenzahl und Teilungsbedarf angepasst."
+  },
+  "ferien_feiertage_2026_27": [
+    {
+      "name": "Sommerferien 2026 (Ende; 1. Schultag Mi 02.09.2026)",
+      "von": "2026-07-20",
+      "bis": "2026-09-01",
+      "art": "Ferien",
+      "quelle": ["Q14", "Q15"]
+    },
+    {
+      "name": "Tag der Deutschen Einheit (Samstag)",
+      "von": "2026-10-03",
+      "bis": "2026-10-03",
+      "art": "Feiertag",
+      "quelle": ["Q17"]
+    },
+    {
+      "name": "Herbstferien",
+      "von": "2026-10-17",
+      "bis": "2026-10-31",
+      "art": "Ferien",
+      "quelle": ["Q14", "Q15"]
+    },
+    {
+      "name": "Allerheiligen (Sonntag)",
+      "von": "2026-11-01",
+      "bis": "2026-11-01",
+      "art": "Feiertag",
+      "quelle": ["Q17"]
+    },
+    {
+      "name": "Weihnachtsferien",
+      "von": "2026-12-23",
+      "bis": "2027-01-06",
+      "art": "Ferien",
+      "quelle": ["Q14", "Q15"]
+    },
+    {
+      "name": "1. und 2. Weihnachtstag (in den Ferien)",
+      "von": "2026-12-25",
+      "bis": "2026-12-26",
+      "art": "Feiertag",
+      "quelle": ["Q17"]
+    },
+    {
+      "name": "Neujahr (in den Ferien)",
+      "von": "2027-01-01",
+      "bis": "2027-01-01",
+      "art": "Feiertag",
+      "quelle": ["Q16"]
+    },
+    {
+      "name": "Rosenmontag – beweglicher Ferientag (schulintern, FIKTIV gewählt)",
+      "von": "2027-02-08",
+      "bis": "2027-02-08",
+      "art": "beweglicher Ferientag",
+      "quelle": ["Q15"],
+      "annahme": true
+    },
+    {
+      "name": "Osterferien",
+      "von": "2027-03-22",
+      "bis": "2027-04-03",
+      "art": "Ferien",
+      "quelle": ["Q14", "Q15"]
+    },
+    {
+      "name": "Karfreitag (in den Ferien)",
+      "von": "2027-03-26",
+      "bis": "2027-03-26",
+      "art": "Feiertag",
+      "quelle": ["Q16"]
+    },
+    {
+      "name": "Ostermontag (in den Ferien)",
+      "von": "2027-03-29",
+      "bis": "2027-03-29",
+      "art": "Feiertag",
+      "quelle": ["Q16"]
+    },
+    {
+      "name": "Tag der Arbeit (Samstag)",
+      "von": "2027-05-01",
+      "bis": "2027-05-01",
+      "art": "Feiertag",
+      "quelle": ["Q16"]
+    },
+    {
+      "name": "Christi Himmelfahrt",
+      "von": "2027-05-06",
+      "bis": "2027-05-06",
+      "art": "Feiertag",
+      "quelle": ["Q16"]
+    },
+    {
+      "name": "Freitag nach Christi Himmelfahrt – beweglicher Ferientag (schulintern, FIKTIV gewählt)",
+      "von": "2027-05-07",
+      "bis": "2027-05-07",
+      "art": "beweglicher Ferientag",
+      "quelle": ["Q15"],
+      "annahme": true
+    },
+    {
+      "name": "Pfingstmontag",
+      "von": "2027-05-17",
+      "bis": "2027-05-17",
+      "art": "Feiertag",
+      "quelle": ["Q16"]
+    },
+    {
+      "name": "Pfingstferien (ein Ferientag)",
+      "von": "2027-05-18",
+      "bis": "2027-05-18",
+      "art": "Ferien",
+      "quelle": ["Q15"]
+    },
+    {
+      "name": "Fronleichnam",
+      "von": "2027-05-27",
+      "bis": "2027-05-27",
+      "art": "Feiertag",
+      "quelle": ["Q16"]
+    },
+    {
+      "name": "Freitag nach Fronleichnam – beweglicher Ferientag (schulintern, FIKTIV gewählt)",
+      "von": "2027-05-28",
+      "bis": "2027-05-28",
+      "art": "beweglicher Ferientag",
+      "quelle": ["Q15"],
+      "annahme": true
+    },
+    {
+      "name": "Sommerferien 2027",
+      "von": "2027-07-19",
+      "bis": "2027-08-31",
+      "art": "Ferien",
+      "quelle": ["Q14"]
+    }
+  ],
+  "annahmen": [
+    "Schule, Standorte, Adressen, Klassennamen und alle Zahlen zu Schüler/innen, Lehrkräften und Räumen sind frei erfunden (fiktiv).",
+    "Zeitraster (07:30, 45 Min., Doppelstunden, Pausen 15/15/30/10) ist ein typisches Muster, keine amtliche Vorgabe.",
+    "Fachinformatiker: Jahressummen aus KMK-RLP (320/280/280) und APO-BK A 1.1 (480/Jahr); die Zusammenfassung der Lernfelder zu Bündelungsfächern (FI-GP, FI-SYS, FI-SEC, FI-AE, FI-CPS, FI-FRA, FI-FRS) ist erfunden. Titel LF3–LF6 aus Fachwissen, Stunden LF3–LF6 aus den belegten Summen abgeleitet.",
+    "Fachinformatiker-Unterricht als 1 langer (8 Std.) + 1 kurzer Tag (4 Std.); FI11c im Wochenmuster (Woche 1/2) – beides zulässige Organisationsformen, aber hier frei gewählt.",
+    "Bau: Blockzeiten 2026/27 nach BASS 12-61 Nr. 1.4 (Q11, Änderung 26.06.2026) und abgeglichen mit einem öffentlichen Blockplan (Q13). Die PDF-Fassung Q12 nennt abweichende 2-Block-Zeiten (Unterstufe 08.02.–19.03.2027 und 31.05.–16.07.2027; Mittelstufe 02.11.–04.12.2026 und 05.04.–28.05.2027; Oberstufe 02.09.–16.10.2026 und 07.12.2026–05.02.2027) – vermutlich ältere Fassung; vor Echtbetrieb im Erlass prüfen.",
+    "Bau: 38 Std. je Blockwoche, Bündelungsfächer (BAU-KON, BAU-TEC, BAU-TZ, BAU-PRA) und Stundenverteilung sind ANNAHMEN; der vorläufige Bildungsplan 2026 (Q09) wurde nicht im Volltext geprüft.",
+    "Bau: Mit 38 Std./Blockwoche ergeben die Blockzeiten 2026/27 rechnerisch 494 (Unterstufe), 456 (Mittelstufe) und 382 (Oberstufe) Jahresstunden; Mittel- und Oberstufe liegen unter dem Soll von 480 (Anlage A 1.1) – bewusst belassen als Testfall für eine Soll/Ist-Prüfung. Real verteilen Schulen die Gesamtstunden ggf. ungleich über die Ausbildungsjahre.",
+    "ITA (Anlage C 1): Fächer nach den Bildungsplänen 2024; Wochenstunden (34) und Verteilung ANNAHME. Betriebspraktikum ITA12 vom 01.02. bis 26.02.2027 frei gewählt.",
+    "FOS Informatik: 12 Std./Woche und 480 Std./Jahr in Kl. 11 belegt (Q21); Fächerverteilung Kl. 11 und Stundentafel Kl. 12 (32 Std.) ANNAHME. Genaue Anlage-C-Nummer nicht verifiziert.",
+    "Berufliches Gymnasium D 21: LK Informatik + LK Mathematik, GK Deutsch + Englisch belegt (Q26); Stundenzahlen (LK 5, GK 3, neu einsetzende Fremdsprache 4) nach älterem Muster (Q28) bzw. ANNAHME. Letzter Unterrichtstag Q2 (19.03.2027) ANNAHME, Abiturtermine 2027 nicht recherchiert.",
+    "Ausbildungsvorbereitung: Vollzeit 16 Std. an 2 Schultagen + 3 Praktikumstagen (im Rahmen 12–36 Std., Q29); Teilzeit 12 Std. (belegt). Fächerverteilung ANNAHME.",
+    "Bewegliche Ferientage: Anzahl 3 für 2026/27 laut Ferienordnung (Q15); die konkreten Tage (08.02., 07.05., 28.05.2027) sind schulintern FIKTIV gewählt.",
+    "Feiertage nach Sekundärquellen (Q16, Q17) und eigener Osterrechnung (Ostersonntag 28.03.2027).",
+    "Klassenfrequenzwerte: AV und BFS laut MSB-Antwort (Q18), Fachklassen-Mindestwert 16/Höchstwert 31 laut Erlass-Auszug; Richtwert Fachklassen und Werte für FOS/Berufliches Gymnasium nicht ermittelt.",
+    "Lehrkräfte: Pflichtstunden 25,5 belegt (Q19, Q20); Anzahl (28), Fächerkombinationen, Teilzeitquote und Standortbindung frei erfunden; Lehrkräfte für Fachpraxis vereinfachend ebenfalls mit 25,5 Std.",
+    "Primärquellen auf recht.nrw.de, bass.schule.nrw, schulministerium.nrw und berufsbildung.nrw.de konnten in dieser Umgebung nicht direkt geöffnet werden; Zahlen stammen aus Websuche-Auszügen dieser Seiten. Werte mit 'quelle' sind belegt, alle übrigen sind als ANNAHME markiert.",
+    "Geplante Änderung: 8. Änderungsverordnung APO-BK (Entwurf 06/2026, Q30) will die Stundentafeln der Anlage A ab 2027/28 zusammenführen – für 2026/27 noch nicht relevant."
+  ]
+}

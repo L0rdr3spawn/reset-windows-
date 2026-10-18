@@ -1,0 +1,18 @@
+{
+  "license": {
+    "id": "L-2026-0001",
+    "licensee": "Testschule (saubere Instanz)",
+    "valid_from": "2026-10-12",
+    "valid_until": "2027-07-31",
+    "max_students": 1500,
+    "max_users": 4000,
+    "features": [
+      "demo"
+    ],
+    "check_url": "https://lizenz.l0rdr3spawn.duckdns.org:10489/api/v1/check",
+    "check_every_hours": 24,
+    "grace_days": 30,
+    "issued_at": "2026-10-12T15:00:51Z"
+  },
+  "signature": "lFPipQNa/d2JstL006PO+2sQKpleJQ0VZbdyWir0nTPRXfJQ9WBhxuovoY7X2wv5/4NWxjpTQWe3FXqOiKC+AQ=="
+}

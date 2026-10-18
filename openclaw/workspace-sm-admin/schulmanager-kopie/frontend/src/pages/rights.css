@@ -1,0 +1,13 @@
+/* Rollen & Rechte: Matrix mit fester erster Spalte, horizontal scrollbar */
+.rights-wrap { overflow: auto; max-height: 75vh; border: 1px solid var(--border); border-radius: var(--radius); }
+.rights-table { border-collapse: separate; border-spacing: 0; font-size: var(--fs-sm); min-width: 100%; }
+.rights-table th, .rights-table td { border-bottom: 1px solid var(--border); padding: 6px 8px; text-align: center; vertical-align: middle; background: var(--surface); }
+.rights-table thead th { position: sticky; top: 0; z-index: 2; background: var(--surface-2); min-width: 112px; }
+.rights-table .rights-sticky { position: sticky; left: 0; z-index: 1; text-align: left; min-width: 230px; font-weight: 500; background: var(--surface-2); }
+.rights-table thead .rights-sticky { z-index: 3; }
+.rights-table .rights-area th { text-align: left; background: var(--surface-3); position: static; }
+.rights-cell.on { background: var(--success-soft); }
+.rights-cell.locked { color: var(--text-muted); }
+.rights-cell.locked.on { background: var(--surface-3); }
+.rights-cell.changed { outline: 2px solid var(--warning); outline-offset: -2px; }
+.rights-cell select { display: block; margin: 4px auto 0; max-width: 130px; font-size: var(--fs-xs); }

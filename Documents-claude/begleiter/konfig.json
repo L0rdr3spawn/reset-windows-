@@ -1,0 +1,103 @@
+{
+  "api": {
+    "port": 47811
+  },
+  "accounts": [
+    "L0rdr3spawn",
+    "NotL0rdr3spawn"
+  ],
+  "ich": "L0rdr3spawn",
+  "server": {
+    "eigen": {
+      "host": "server.fritz.box",
+      "port": 25565,
+      "typ": "eigen",
+      "weg": "direkt"
+    },
+    "kampf": {
+      "host": "127.0.0.1",
+      "port": 25520,
+      "typ": "eigen",
+      "weg": "direkt",
+      "offline": true
+    },
+    "labor": {
+      "host": "127.0.0.1",
+      "port": 25530,
+      "typ": "eigen",
+      "weg": "direkt",
+      "offline": true,
+      "hinweis": "Test-Flachwelt (nur zum Testen)"
+    },
+    "test": {
+      "host": "127.0.0.1",
+      "port": 25566,
+      "typ": "eigen",
+      "weg": "direkt",
+      "offline": true
+    },
+    "singleplayer": {
+      "typ": "eigen",
+      "weg": "viaproxy",
+      "lan": true,
+      "offline": true,
+      "hinweis": "Pausenmenue 'Bot holen' oeffnet die Welt im LAN ohne Anmeldung"
+    },
+    "beispiel-fremd": {
+      "host": "play.beispiel.net",
+      "port": 25565,
+      "typ": "fremd",
+      "weg": "viaproxy"
+    },
+    "survival": {
+      "host": "127.0.0.1",
+      "port": 25540,
+      "typ": "eigen",
+      "weg": "direkt",
+      "offline": true,
+      "hinweis": "Lokaler Survival-Server mc-survival (normale Welt)"
+    }
+  },
+  "verhalten": {
+    "eigen": {
+      "oeffentlicheBefehle": true,
+      "jevImChat": true,
+      "reichweite": 3,
+      "maxDrehungProTick": 180,
+      "reaktionMs": 0,
+      "mace": true,
+      "speer": true,
+      "elytra": true
+    },
+    "fremd": {
+      "oeffentlicheBefehle": false,
+      "jevImChat": false,
+      "reichweite": 2.85,
+      "maxDrehungProTick": 40,
+      "reaktionMs": 150,
+      "mace": true,
+      "speer": true,
+      "elytra": true
+    }
+  },
+  "standard": {
+    "modus": "folgen",
+    "kampf": true,
+    "pvp": false,
+    "loot": false,
+    "freunde": [],
+    "folgeAbstand": 3,
+    "kampfRadius": 12,
+    "lootRadius": 16,
+    "logoutLeben": 8,
+    "logoutHunger": 3,
+    "logoutBeiTodBesitzer": true,
+    "logoutBeiUebermacht": 3,
+    "notfallLebenBesitzer": 8,
+    "freundSperreMinuten": 5,
+    "elytraFolgenAb": 48,
+    "speerSprungAb": 16,
+    "reconnectSekunden": 15
+  },
+  "debug": false
+}

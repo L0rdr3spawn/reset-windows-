@@ -1,0 +1,19 @@
+Aufgabe 2 Fehlertoleranz
+
+a) Soll man Texte so schreiben wie oben gezeigt weil man sie doch versteht?
+
+Nein. Man kann den Text zwar irgendwie lesen wenn man sich Mühe gibt aber es dauert viel länger
+und man muss bei vielen Wörtern raten. Manche Wörter kann man auch falsch verstehen weil ohne
+Vokale mehrere Wörter gleich aussehen können. Außerdem ist es unhöflich gegenüber dem Leser
+weil er die ganze Arbeit machen muss. Bei wichtigen Texten wie dem Grundgesetz darf es keine
+Missverständnisse geben.
+
+b) Soll man HTML Quelltexte so salopp schreiben weil der Browser sie doch versteht?
+
+Auch nein. Der Browser muss bei Fehlern raten was gemeint ist und das kann jeder Browser anders
+machen. Dann sieht die Seite in Chrome vielleicht anders aus als in Firefox oder auf dem Handy.
+Wenn der Code später größer wird mit CSS oder JavaScript können durch die Fehler Probleme
+entstehen die man schwer findet. Suchmaschinen und Screenreader für blinde Menschen brauchen
+auch eine saubere Struktur damit sie die Seite richtig verstehen. Und wenn jemand anderes den
+Code lesen oder weiterbearbeiten soll ist sauberer Code viel übersichtlicher. Deshalb sollte man
+HTML immer richtig mit der kompletten Grundstruktur schreiben.

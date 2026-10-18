@@ -1,0 +1,31 @@
+# Schulmanager – Backup (ohne Docker), ausgelöst durch schulmanager-backup.timer
+#   cp deploy/systemd/schulmanager-backup.{service,timer} /etc/systemd/system/
+#   systemctl daemon-reload && systemctl enable --now schulmanager-backup.timer
+#   Manuell: systemctl start schulmanager-backup.service ; Logs: journalctl -u schulmanager-backup
+# Benötigt postgresql-client in passender Major-Version (pg_dump 16) bzw. sqlite3; optional gpg, rclone.
+
+[Unit]
+Description=Schulmanager – Datenbank-Backup mit Rotation
+After=network-online.target postgresql.service
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=schulmanager
+Group=schulmanager
+WorkingDirectory=/opt/schulmanager
+EnvironmentFile=/etc/schulmanager/schulmanager.env
+# BACKUP_DIR liegt im gesicherten Datenverzeichnis – backup.sh schließt es beim Datei-Archiv aus (sonst wüchse
+# jedes Archiv um alle früheren Sicherungen)
+Environment=BACKUP_DIR=/var/lib/schulmanager/backups-db
+Environment=BACKUP_DATA_DIR=/var/lib/schulmanager
+Environment=SM_APP_DIR=/opt/schulmanager
+ExecStart=/opt/schulmanager/scripts/backup.sh
+Nice=10
+IOSchedulingClass=idle
+NoNewPrivileges=yes
+PrivateTmp=yes
+ProtectSystem=strict
+ProtectHome=yes
+ReadWritePaths=/var/lib/schulmanager
+UMask=0077

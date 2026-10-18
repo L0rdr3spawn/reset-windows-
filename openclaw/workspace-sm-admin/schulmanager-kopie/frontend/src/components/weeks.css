@@ -1,0 +1,139 @@
+/* Bausteine für Wochen (R3): WeekNav, WeekPatternInput, Tages-Chips. Nur Tokens aus styles/tokens.css. */
+
+.week-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+  min-width: 0;
+}
+.week-nav-main {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex: 0 1 auto;
+  min-width: 0;
+  max-width: 100%;
+}
+.week-nav select {
+  width: auto;
+  max-width: 100%;
+  min-width: 0;
+  flex: 1 1 auto;
+}
+.week-nav .week-text {
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+.week-nav .week-badges {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+}
+/* Handy: Pfeile und Wochenwahl in einer Zeile, Auswahl nimmt den Restplatz */
+@media (max-width: 599.98px) {
+  .week-nav-main {
+    flex: 1 1 100%;
+  }
+  .week-nav select {
+    flex: 1 1 8rem;
+  }
+}
+
+.week-pattern {
+  display: grid;
+  gap: var(--space-2);
+  min-width: 0;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+.week-pattern > legend {
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  padding: 0;
+  margin-bottom: var(--space-1);
+}
+.week-pattern .btn-group {
+  flex-wrap: wrap;
+}
+.week-pattern .btn-group .btn {
+  flex: 1 1 auto;
+}
+.week-pattern .week-rhythm {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  align-items: flex-end;
+}
+.week-pattern .week-rhythm .field {
+  flex: 1 1 7rem;
+  min-width: 0;
+}
+.week-pattern .week-rhythm input {
+  width: 100%;
+}
+.week-pattern .week-preview {
+  font-size: var(--fs-sm);
+  color: var(--text-muted);
+}
+
+.week-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  min-width: 0;
+}
+.week-chips .toggle {
+  min-width: 2.4rem;
+}
+.week-chips .toggle.off-day {
+  border-style: dashed;
+}
+
+.week-table th,
+.week-table td {
+  white-space: nowrap;
+}
+.week-table td.num,
+.week-table th.num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+.week-table tr.holiday td {
+  background: var(--surface-2);
+}
+.week-table tr.current td {
+  font-weight: 600;
+}
+
+.change-list {
+  margin: 0;
+  padding-left: 1.2rem;
+  max-height: 50vh;
+  overflow: auto;
+  overflow-wrap: anywhere;
+}
+
+/* Stundenplan: Tage ohne Unterricht schmal und abgeblendet (§16 E2) */
+.tt-head .tt-day-date,
+.tt-head .tt-day-holiday {
+  display: block;
+  font-size: var(--fs-xs);
+  font-weight: 400;
+  color: var(--text-muted);
+  overflow-wrap: anywhere;
+}
+.tt-head.off-day {
+  color: var(--text-faint);
+  font-weight: 500;
+}
+.tt-slot.off-day {
+  background: var(--surface-2);
+}
+.tt-daylist section.off-day h3 {
+  color: var(--text-faint);
+}
+.tt-daylist h3 .badge {
+  margin-left: var(--space-2);
+}

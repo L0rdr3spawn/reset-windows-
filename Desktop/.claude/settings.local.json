@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ssh server *)",
+      "PowerShell($zip = \"C:\\\\Users\\\\reiss\\\\AppData\\\\Roaming\\\\PrismLauncher\\\\instances\\\\26.2\\\\minecraft\\\\schematics\\\\FreeLLMAPI-0.13.10-win.zip\"; $dst = \"C:\\\\Users\\\\reiss\\\\Programme\\\\FreeLLMAPI\"; New-Item -ItemType Directory -Force $dst | Out-Null; Expand-Archive -Path $zip -DestinationPath $dst -Force; Test-Path \"$dst\\\\FreeLLMAPI.exe\"; $s = \\(New-Object -ComObject WScript.Shell\\).CreateShortcut\\(\"C:\\\\Users\\\\reiss\\\\Desktop\\\\FreeLLMAPI.lnk\"\\); $s.TargetPath = \"$dst\\\\FreeLLMAPI.exe\"; $s.WorkingDirectory = $dst; $s.Save\\(\\); Test-Path \"C:\\\\Users\\\\reiss\\\\Desktop\\\\FreeLLMAPI.lnk\")",
+      "Bash(strix --version)",
+      "Bash(docker info *)",
+      "Read(//c/Users/reiss/.claude/skills/**)",
+      "Read(//c/Users/reiss/.claude/skills/synced/**)",
+      "Bash(pip show *)",
+      "Bash(ls -la ~/.claude/skills/synced 2>&1 | head; echo \"--- is synced a symlink/dir? ---\"; readlink -f ~/.claude/skills/synced 2>&1; echo \"--- strix skill sample ---\"; head -20 ~/.agents/skills/penetration-testing-with-strix/SKILL.md 2>&1)",
+      "Read(//c/Users/reiss/.agents/skills/**)",
+      "Read(//c/Users/reiss/**)",
+      "Bash(python -m pip show agent-reach)",
+      "Bash(npx -y skills add Panniantong/Agent-Reach)",
+      "Bash(python -m pip install --upgrade \"https://github.com/Panniantong/Agent-Reach/archive/refs/heads/main.zip\")"
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+# Schulmanager – standortspezifische Caddy-Ergänzungen
+#
+# Alle *.caddy-Dateien in diesem Verzeichnis werden INNERHALB des Site-Blocks von
+# deploy/Caddyfile eingebunden (import /etc/caddy/conf.d/*.caddy). Beispiele:
+#
+#   # Verwaltungsoberfläche nur aus dem Schulnetz erreichbar machen:
+#   # @extern_admin {
+#   #     path /api/v1/admin/*
+#   #     not remote_ip 192.0.2.0/24 2001:db8::/48
+#   # }
+#   # handle @extern_admin {
+#   #     respond "Nur aus dem Schulnetz erreichbar" 403
+#   # }
+#
+# Rate-Limit für den Login per Caddy-Plugin: siehe ratelimit.caddy.example und docs/BETRIEB.md.

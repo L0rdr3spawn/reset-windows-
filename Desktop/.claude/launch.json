@@ -1,0 +1,38 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "schulmanager-vorschau",
+      "runtimeExecutable": "C:/Users/reiss/Documents/claude/Claude.Code/.venv/Scripts/python.exe",
+      "runtimeArgs": [
+        "C:/Users/reiss/AppData/Local/Temp/claude/C--Users-reiss-Desktop/da397a22-9891-46f3-a3ae-94186b69fe15/scratchpad/run_preview.py"
+      ],
+      "port": 8765
+    },
+    {
+      "name": "schulmanager-merge-dev",
+      "runtimeExecutable": "C:/Users/reiss/Documents/claude/Claude.Code/.venv/Scripts/python.exe",
+      "runtimeArgs": [
+        "C:/Users/reiss/AppData/Local/Temp/claude/C--Users-reiss-Desktop/da397a22-9891-46f3-a3ae-94186b69fe15/scratchpad/preview_dev.py"
+      ],
+      "port": 5173
+    },
+    {
+      "name": "ui-klon",
+      "runtimeExecutable": "C:/Users/reiss/Documents/claude/Claude.Code/.venv/Scripts/python.exe",
+      "runtimeArgs": [
+        "C:/Users/reiss/AppData/Local/Temp/claude/C--Users-reiss-Desktop/5d13ace9-ab7f-40f9-8db5-5dc0cc015ca9/scratchpad/preview_klon.py"
+      ],
+      "port": 5180
+    },
+    {
+      "name": "w1-09-chatkeys",
+      "runtimeExecutable": "C:/Users/reiss/Documents/claude/Claude.Code/.venv/Scripts/python.exe",
+      "runtimeArgs": [
+        "C:/Users/reiss/AppData/Local/Temp/claude/C--Users-reiss-Desktop/da397a22-9891-46f3-a3ae-94186b69fe15/scratchpad/w109_preview.py"
+      ],
+      "port": 5989,
+      "url": "http://w1-09.localhost:5989"
+    }
+  ]
+}

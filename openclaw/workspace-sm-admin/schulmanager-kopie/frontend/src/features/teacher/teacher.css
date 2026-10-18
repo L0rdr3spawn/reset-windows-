@@ -1,0 +1,135 @@
+/* Lehrer-Selbstverwaltung (§9.3) – nutzt nur Design-Tokens aus styles/tokens.css (hell/dunkel). */
+
+/* Konflikte & Vergleich */
+.tp-conflicts ul {
+  margin: var(--space-1) 0 0;
+  padding-left: 1.2rem;
+}
+.tp-diff {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--fs-sm);
+}
+.tp-diff th,
+.tp-diff td {
+  text-align: left;
+  vertical-align: top;
+  padding: var(--space-2);
+  border-bottom: 1px solid var(--border);
+  overflow-wrap: anywhere;
+}
+.tp-diff td.new {
+  font-weight: 600;
+  color: var(--text);
+}
+.tp-diff td.old {
+  color: var(--text-muted);
+}
+@media (max-width: 600px) {
+  .tp-diff thead {
+    display: none;
+  }
+  .tp-diff tr {
+    display: grid;
+    grid-template-columns: 1fr;
+    border-bottom: 1px solid var(--border);
+    padding: var(--space-2) 0;
+  }
+  .tp-diff th,
+  .tp-diff td {
+    border: 0;
+    padding: 2px 0;
+  }
+  .tp-diff td.old::before {
+    content: 'bisher: ';
+    font-weight: 600;
+  }
+  .tp-diff td.new::before {
+    content: 'neu: ';
+  }
+}
+
+/* Antragsliste – Grundform (Rand, Abstand, Akzent) aus styles/app.css „Listen gleicher Art“ */
+.tp-req {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: var(--space-1) var(--space-3);
+  align-items: center;
+  width: 100%;
+  text-align: left;
+  font: inherit;
+  cursor: pointer;
+}
+.tp-req:hover {
+  border-color: var(--border-strong);
+}
+.tp-req[aria-current='true'] {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px var(--primary-soft);
+}
+.tp-req .meta {
+  font-size: var(--fs-xs);
+  color: var(--text-muted);
+}
+.tp-layout {
+  display: grid;
+  gap: var(--space-4);
+  grid-template-columns: minmax(0, 1fr);
+}
+@media (min-width: 1100px) {
+  .tp-layout {
+    grid-template-columns: minmax(280px, 380px) minmax(0, 1fr);
+    align-items: start;
+  }
+}
+.tp-history li + li {
+  margin-top: var(--space-2);
+}
+.tp-note {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  background: var(--surface-2);
+  border-left: 3px solid var(--primary);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-sm);
+  margin: var(--space-1) 0 0;
+}
+.tp-changes li {
+  overflow-wrap: anywhere;
+}
+.tp-widget-count {
+  font-size: var(--fs-2xl);
+  font-weight: 700;
+  line-height: 1;
+}
+textarea.tp-text {
+  width: 100%;
+  min-height: 4.5rem;
+  resize: vertical;
+}
+
+/* Arbeitszeiten festlegen (WorkGrid.tsx) */
+.wg-bar { display: flex; flex-wrap: wrap; gap: var(--space-2); align-items: center; }
+.wg-week { display: inline-flex; align-items: center; gap: 6px; }
+.wg-count {
+  min-width: 1.4em;
+  padding: 0 5px;
+  border-radius: var(--radius-pill);
+  background: var(--danger);
+  color: var(--on-status);
+  font-size: var(--fs-xs);
+  line-height: 1.5;
+}
+.wg-n { display: inline-flex; align-items: center; gap: 6px; }
+.wg-n input { width: 4.5rem; }
+.wg-sub { display: block; font-weight: 400; font-size: var(--fs-xs); color: var(--text-muted); }
+.tt-head-btn[aria-pressed='true'] .wg-sub { color: var(--danger); }
+.wg-free { opacity: 0.75; font-size: var(--fs-xs); }
+.wg-hints { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; font-size: var(--fs-sm); }
+.wg-hints li { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+.wg-hints li.warn { color: var(--danger); font-weight: 600; }
+.wg-day-sum { margin-right: var(--space-3); }
+
+/* Verfügbarkeit: Blöcke (Sperrzeit / Wunsch) */
+.wg-block { border-left: 4px solid var(--danger); }
+.wg-block.wish { border-left-color: var(--warning); }

@@ -1,0 +1,15 @@
+{
+	"schemaVersion": 1,
+	"id": "autocart-gametest",
+	"version": "1.0.0",
+	"name": "Auto Cart game tests",
+	"environment": "client",
+	"entrypoints": {
+		"fabric-client-gametest": [
+			"de.reiss.autocart.gametest.AutoCartGameTest"
+		]
+	},
+	"depends": {
+		"autocart": "*"
+	}
+}

@@ -1,0 +1,20 @@
+# Ultralytics-Datensatz-Konfiguration für Fine-Tuning auf eigene DayZ-Screenshots.
+#
+# Ordnerstruktur (bereits angelegt):
+#   dataset/images/train/*.jpg   <- deine Trainingsbilder
+#   dataset/images/val/*.jpg     <- deine Validierungsbilder
+#   dataset/labels/train/*.txt   <- YOLO-Labels (eine .txt pro Bild, gleicher Dateiname)
+#   dataset/labels/val/*.txt
+#
+# Label-Format pro Zeile (YOLO):
+#   <class_id> <x_center> <y_center> <width> <height>   (alle Werte 0-1, relativ zur Bildgröße)
+#
+# Tools zum Labeln: LabelImg, CVAT, Roboflow oder label-studio - erzeugen
+# genau dieses Format (bzw. exportieren als "YOLO").
+
+path: dataset
+train: images/train
+val: images/val
+
+names:
+  0: player

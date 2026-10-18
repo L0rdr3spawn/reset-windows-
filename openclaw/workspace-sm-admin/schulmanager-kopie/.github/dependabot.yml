@@ -1,0 +1,69 @@
+# Schulmanager – automatische Abhängigkeits-Updates (wöchentlich, gebündelt)
+version: 2
+
+updates:
+  - package-ecosystem: pip
+    directory: "/"
+    schedule:
+      interval: weekly
+      day: monday
+      time: "05:00"
+      timezone: Europe/Berlin
+    open-pull-requests-limit: 5
+    labels: [dependencies, backend]
+    groups:
+      python-minor:
+        update-types: [minor, patch]
+
+  - package-ecosystem: npm
+    directory: "/frontend"
+    schedule:
+      interval: weekly
+      day: monday
+      time: "05:00"
+      timezone: Europe/Berlin
+    open-pull-requests-limit: 5
+    labels: [dependencies, frontend]
+    groups:
+      npm-minor:
+        update-types: [minor, patch]
+
+  - package-ecosystem: github-actions
+    directory: "/"
+    schedule:
+      interval: weekly
+      day: monday
+      timezone: Europe/Berlin
+    labels: [dependencies, ci]
+    groups:
+      actions:
+        patterns: ["*"]
+
+  # Basis-Images der Dockerfiles (python, node, postgres, caddy)
+  - package-ecosystem: docker
+    directories: ["/", "/deploy/backup", "/deploy/caddy"]
+    schedule:
+      interval: weekly
+      day: monday
+      timezone: Europe/Berlin
+    labels: [dependencies, docker]
+    ignore:
+      # Major-Wechsel von Python/Node/PostgreSQL bewusst manuell (Migration, Dump/Restore)
+      - dependency-name: python
+        update-types: [version-update:semver-major, version-update:semver-minor]
+      - dependency-name: node
+        update-types: [version-update:semver-major]
+      - dependency-name: postgres
+        update-types: [version-update:semver-major]
+
+  # Images in docker-compose*.yml (Caddy, Prometheus, Grafana, Uptime-Kuma, Mailpit)
+  - package-ecosystem: docker-compose
+    directory: "/"
+    schedule:
+      interval: weekly
+      day: monday
+      timezone: Europe/Berlin
+    labels: [dependencies, docker]
+    ignore:
+      - dependency-name: postgres
+        update-types: [version-update:semver-major]

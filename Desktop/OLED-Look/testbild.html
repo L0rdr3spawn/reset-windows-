@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="de"><head><meta charset="utf-8"><title>OLED Vergleich</title>
+<style>
+  :root { color-scheme: dark; }
+  body { margin:0; background:#000; color:#888; font:14px system-ui, sans-serif; }
+  .wrap { padding:24px; display:grid; gap:28px; }
+  h2 { margin:0 0 8px; font-weight:500; font-size:13px; color:#666; letter-spacing:.05em; text-transform:uppercase; }
+  .row { display:flex; height:90px; }
+  .row div { flex:1; display:flex; align-items:end; justify-content:center; padding-bottom:4px; font-size:11px; color:#555; }
+  .ramp { height:60px; background:linear-gradient(90deg,#000,#fff); }
+  .colors .row div { color:#000c; font-weight:600; }
+  .split { display:flex; height:160px; }
+  .split > div { flex:1; }
+  .hint { color:#555; font-size:13px; line-height:1.5; max-width:900px; }
+</style></head>
+<body><div class="wrap">
+  <div class="hint">Fenster so ziehen, dass es über beide Monitore reicht (oder je eins pro Monitor öffnen). Hintergrund ist reines Schwarz (0,0,0).</div>
+
+  <div><h2>Near-Black (0 – 12)</h2><div class="row" id="nb"></div></div>
+  <div><h2>Dunkle Graustufen (0 – 64)</h2><div class="row" id="dk"></div></div>
+  <div><h2>Graustufen (0 – 255)</h2><div class="row" id="gs"></div></div>
+  <div><h2>Verlauf</h2><div class="ramp"></div></div>
+  <div class="colors"><h2>Farben</h2><div class="row" id="cl"></div></div>
+  <div><h2>Weiß / Schwarz Kontrast</h2><div class="split"><div style="background:#fff"></div><div style="background:#000"></div><div style="background:#fff"></div><div style="background:#000"></div></div></div>
+</div>
+<script>
+  const add = (id, vals, fn) => vals.forEach(v => { const d = document.createElement('div'); d.style.background = fn(v); d.textContent = Array.isArray(v) ? '' : v; document.getElementById(id).appendChild(d); });
+  add('nb', [0,1,2,3,4,5,6,7,8,9,10,11,12], v => `rgb(${v},${v},${v})`);
+  add('dk', [0,8,16,24,32,40,48,56,64], v => `rgb(${v},${v},${v})`);
+  add('gs', [0,32,64,96,128,160,192,224,255], v => `rgb(${v},${v},${v})`);
+  add('cl', ['#ff0000','#00ff00','#0000ff','#00ffff','#ff00ff','#ffff00','#ff8800','#e0ac8c','#2b6cb0','#1a7f3c'], v => v);
+</script></body></html>

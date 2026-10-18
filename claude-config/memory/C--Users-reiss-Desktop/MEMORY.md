@@ -1,0 +1,30 @@
+﻿- [Jeff & Claude-Leiste locations](jeff-voice-assistant.md) — which folder is 'Jeff', overlay file, backup convention
+- [Geofinder location](geofinder-ort.md) — "GeoGuessr-Ding" lives in Documents\claude\geofinder, details in that project's memory
+- [Keine eigenen Screenshots als Test](keine-eigenen-screenshots-als-test.md) — Geofinder nie mit Aufnahmen/Fernsteuerung seines PCs testen
+- [MSIX virtualization](msix-registry-virtualization.md) — HKCU + AppData writes from Claude land in private copy; launch GUI apps/scripts only via one-off scheduled task
+- [Handy setup](handy-setup.md) — Ctrl+Win dictation + local Qwen cleanup on RTX 3050; repair script; 2026-10-17 slowdown = LM Studio on the 3050, fix = restart both
+- [Groq models](groq-modelle.md) — what the user's Groq account offers (gpt-oss-120b/20b, qwen3.8-27b, whisper, …)
+- [ask-cheap](ask-cheap.md) — cheap-LLM CLI in ~/.local/bin, keys in Credential Manager; CLAUDE.md rule only after quality test
+- [Audio/Mikro setup](audio-mikro-setup.md) — mic = Torch only via Sonar (API recipe), Bose earbud drop script; 2026-10-17 empty Handy dictations = Torch's PHYSICAL gain knob turned down; check that first
+- [Home server = deploy target](homeserver-admin.md) — never run servers on the PC; admin rights granted; Minecraft may go if needed
+- [Obsidian architecture notes](obsidian-architektur.md) — vault path, regen.py generator + watch mode in Documents\claude\tools
+- [Weniger Checks](feedback-weniger-checks.md) — only test changed areas; full suite only once before deploy
+- [Schulmanager Nachrichten](schulmanager-nachrichten.md) — Postfach + Chats = ONE "Nachrichten" entry, messenger-style input
+- [Ein Raster für alles](feedback-ein-raster.md) — every day×lesson view reuses TimetableGrid, never a new grid type
+- [Schulpuls siezt](schulpuls-siezen.md) — all app texts use "Sie", also for students
+- [Schulpuls-Atlas](schulpuls-atlas.md) — external code atlas + Graphify code graph + skill; look up there first, update after changes, never ship
+- [Schulmanager deploy](schulmanager-deploy.md) — repo, local copy + merge worktree Claude.Code-merge (merge with cloud branch half done), test server :8100, deploy recipes
+- [Heimserver-MCP](homeserver-mcp.md) — remote MCP w/ GitHub login + local rights file; install steps open; evening internet loss was FritzBox Kindersicherung, fixed 2026-10-12
+- [Mail-Stil kurz](mail-stil-kurz.md) — user writes very short replies; drafts must be compact
+- [Skills FreeLLM/Strix/AgentReach](skills-freellm-strix-agentreach.md) — install paths + state of the 3 tools, cloud still open
+- [Web-Skills installiert](web-skills-installiert.md) — 20 design/security/DSGVO/a11y skills in ~/.claude/skills; user still picks always-on ones
+- [Seelen UI braucht WebView2](seelen-ui-webview2.md) — Shell-Mod auf der Win-Taste; Edge/WebView2 nie killen; Neustart aus Claude nur via Aufgabenplaner
+- [OpenClaw lokal](openclaw-heimserver.md) — PC + Gemma on RTX 5070 via LM Studio; Desktop start/stop/Telegram scripts; CLI only via Task-Scheduler runner
+- [Kein Fable](feedback-kein-fable.md) — Fable too expensive; subagents on Sonnet (complex) / Haiku (simple)
+- [3050 reserviert](feedback-3050-reserviert.md) — RTX 3050 = Handy/Jeff/Geofinder; LM Studio loads disabledGpus:[1], except OpenClaw's 27B via 'OpenClaw starten' (user-approved, Handy slow meanwhile, restart after stop)
+- [Schulpuls Betatest (OpenClaw)](schulpuls-betatest-openclaw.md) — admin + 2 tester agents, cross-review, patches in Documents\Schulpuls-Betatest, skill schulpuls-nutzercheck
+- [Minecraft AWR Alaska](mc-alaska-awr.md) — AWR v3.8 (Forge 1.20.1) server mc-alaska on home server :10479 + Prism instance "AWR Alaska", main account L0rdr3spawn, client-only pitfalls
+- [Discord + BetterDiscord](discord-betterdiscord.md) — BD v1.14.3 injected 2026-10-17; reinject watcher + read-only chat bridge blocked, ask user first
+- [Plan Max 5x + Limits](plan-max5x-limits.md) — get_usage zeigt "Pro" (falsch); 15 parallele Sonnet-Agents leerten das 5-h-Fenster → Agenten in Wellen à 3–5, Teildateien speichern
+- [Schulpuls Neubau-Paket](schulpuls-neubau-paket.md) — Spezifikationspaket für Neubau ohne Altcode: Desktop + Atlas, Einstieg 00_MASTER_PROMPT.md, Entscheidungsliste
+- [Forge Labs Arctic](mc-arctic-forgelabs.md) — 1.12.2 pack: server mc-arctic :10480, Prism "Arctic 100 Days", OTG world Far From Home 6, removed WildNature+Mo Villages

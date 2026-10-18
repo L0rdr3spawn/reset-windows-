@@ -1,0 +1,251 @@
+"""Tastatureingaben per SendInput: Tastenkürzel, Medientasten und Unicode-Text."""
+
+import ctypes
+import time
+from ctypes import wintypes
+
+user32 = ctypes.WinDLL("user32", use_last_error=True)
+kernel32 = ctypes.WinDLL("kernel32", use_last_error=True)
+
+INPUT_KEYBOARD = 1
+KEYEVENTF_KEYUP = 0x0002
+KEYEVENTF_UNICODE = 0x0004
+
+TASTEN = {
+    "ctrl": 0x11, "shift": 0x10, "alt": 0x12, "win": 0x5B,
+    "enter": 0x0D, "backspace": 0x08, "esc": 0x1B, "tab": 0x09, "space": 0x20,
+    "lauter": 0xAF, "leiser": 0xAE, "stumm": 0xAD,
+    "play_pause": 0xB3, "naechstes": 0xB0, "vorheriges": 0xB1,
+    **{f"f{n}": 0x6F + n for n in range(1, 13)},
+}
+
+
+class KEYBDINPUT(ctypes.Structure):
+    _fields_ = [("wVk", wintypes.WORD), ("wScan", wintypes.WORD), ("dwFlags", wintypes.DWORD),
+                ("time", wintypes.DWORD), ("dwExtraInfo", ctypes.c_size_t)]
+
+
+class MOUSEINPUT(ctypes.Structure):
+    _fields_ = [("dx", wintypes.LONG), ("dy", wintypes.LONG), ("mouseData", wintypes.DWORD),
+                ("dwFlags", wintypes.DWORD), ("time", wintypes.DWORD), ("dwExtraInfo", ctypes.c_size_t)]
+
+
+class _EINGABE(ctypes.Union):
+    _fields_ = [("ki", KEYBDINPUT), ("mi", MOUSEINPUT)]
+
+
+class INPUT(ctypes.Structure):
+    _fields_ = [("type", wintypes.DWORD), ("u", _EINGABE)]
+
+
+def _senden(eingaben):
+    feld = (INPUT * len(eingaben))(*eingaben)
+    user32.SendInput(len(eingaben), feld, ctypes.sizeof(INPUT))
+
+
+def _taste(vk=0, scan=0, flags=0):
+    return INPUT(type=INPUT_KEYBOARD, u=_EINGABE(ki=KEYBDINPUT(wVk=vk, wScan=scan, dwFlags=flags)))
+
+
+def _vk(name):
+    name = name.strip().lower()
+    if name in TASTEN:
+        return TASTEN[name]
+    if len(name) == 1 and name.isalnum():
+        return ord(name.upper())
+    raise ValueError(f"Unbekannte Taste: {name}")
+
+
+def _scan(vk):
+    """Hardware-Scancode zur Taste. WinUI-Programme (Notepad, Einstellungen) ignorieren
+    eingespeiste Tasten ohne Scancode - Strg+S/Strg+V kamen dort sonst nicht an."""
+    return user32.MapVirtualKeyW(vk, 0)  # MAPVK_VK_TO_VSC
+
+
+def druecke(kombi, anzahl=1):
+    """Drückt ein Kürzel wie "ctrl+shift+alt+m" oder eine einzelne Taste wie "lauter"."""
+    codes = [_vk(t) for t in kombi.split("+")]
+    for _ in range(anzahl):
+        runter = [_taste(c, scan=_scan(c)) for c in codes]
+        hoch = [_taste(c, scan=_scan(c), flags=KEYEVENTF_KEYUP) for c in reversed(codes)]
+        _senden(runter + hoch)
+        time.sleep(0.03)
+
+
+def tippe(text, bloeckchen=16):
+    """Tippt beliebigen Text (inkl. Umlaute und Emojis) in das aktive Fenster.
+
+    Die Zeichen gehen gebuendelt raus: einzeln mit 4 ms Pause verschluckten
+    Programme wie Notepad Zeichen oder wiederholten das vorige
+    ("eins zwei" wurde zu "nnns iiii").
+    """
+    daten = text.encode("utf-16-le")
+    einheiten = [int.from_bytes(daten[i:i + 2], "little") for i in range(0, len(daten), 2)]
+    for start in range(0, len(einheiten), bloeckchen):
+        eingaben = []
+        for einheit in einheiten[start:start + bloeckchen]:
+            eingaben.append(_taste(scan=einheit, flags=KEYEVENTF_UNICODE))
+            eingaben.append(_taste(scan=einheit, flags=KEYEVENTF_UNICODE | KEYEVENTF_KEYUP))
+        _senden(eingaben)
+        time.sleep(0.02)
+
+
+# --- Zwischenablage: zuverlaessiger Weg, Text in fremde Programme zu bringen ---
+# Einzeln getippte Unicode-Zeichen verschlucken moderne Oberflaechen (Notepad/WinUI
+# nahm von "test eins zwei drei" nur ein Zeichen an). Einfuegen klappt ueberall.
+CF_UNICODETEXT, GMEM_MOVEABLE = 13, 0x0002
+
+# Ohne Prototypen kuerzt ctypes die Handles auf 32 Bit -> Absturz beim Einfuegen
+kernel32.GlobalAlloc.restype = wintypes.HGLOBAL
+kernel32.GlobalAlloc.argtypes = [wintypes.UINT, ctypes.c_size_t]
+kernel32.GlobalLock.restype = wintypes.LPVOID
+kernel32.GlobalLock.argtypes = [wintypes.HGLOBAL]
+kernel32.GlobalUnlock.argtypes = [wintypes.HGLOBAL]
+user32.OpenClipboard.argtypes = [wintypes.HWND]
+user32.GetClipboardData.restype = wintypes.HANDLE
+user32.GetClipboardData.argtypes = [wintypes.UINT]
+user32.SetClipboardData.restype = wintypes.HANDLE
+user32.SetClipboardData.argtypes = [wintypes.UINT, wintypes.HANDLE]
+kernel32.GlobalSize.restype = ctypes.c_size_t
+kernel32.GlobalSize.argtypes = [wintypes.HGLOBAL]
+user32.EnumClipboardFormats.restype = wintypes.UINT
+user32.EnumClipboardFormats.argtypes = [wintypes.UINT]
+user32.RegisterClipboardFormatW.restype = wintypes.UINT
+user32.RegisterClipboardFormatW.argtypes = [wintypes.LPCWSTR]
+
+# Markierungen, damit Jeffs Zwischentext nicht im Windows-Verlauf (Win+V) oder in der Cloud landet
+_KEIN_VERLAUF = user32.RegisterClipboardFormatW("ExcludeClipboardContentFromMonitorProcessing")
+_VERLAUF_ERLAUBT = user32.RegisterClipboardFormatW("CanIncludeInClipboardHistory")
+_CLOUD_ERLAUBT = user32.RegisterClipboardFormatW("CanUploadToCloudClipboard")
+# Diese Formate sind GDI-Handles statt Speicherblöcke und lassen sich nicht kopieren;
+# Windows erzeugt sie aus CF_DIB/Text wieder, wenn die kopierbaren Formate zurückgelegt sind.
+_NICHT_KOPIERBAR = {2, 3, 9, 14, 0x0080, 0x0082, 0x0083, 0x008E}
+
+
+def _oeffnen():
+    for _ in range(10):
+        if user32.OpenClipboard(None):
+            return True
+        time.sleep(0.05)
+    return False
+
+
+def _bytes_ablegen(fmt, daten):
+    """Bytes als eigenes Zwischenablage-Format ablegen (Zwischenablage muss offen sein)."""
+    h = kernel32.GlobalAlloc(GMEM_MOVEABLE, max(1, len(daten)))
+    if not h:
+        return
+    p = kernel32.GlobalLock(h)
+    if daten:
+        ctypes.memmove(p, daten, len(daten))
+    kernel32.GlobalUnlock(h)
+    user32.SetClipboardData(fmt, h)
+
+
+def _ohne_verlauf():
+    _bytes_ablegen(_KEIN_VERLAUF, b"")
+    _bytes_ablegen(_VERLAUF_ERLAUBT, (0).to_bytes(4, "little"))
+    _bytes_ablegen(_CLOUD_ERLAUBT, (0).to_bytes(4, "little"))
+
+
+def sichern():
+    """Alles Kopierbare aus der Zwischenablage (Text, Bilder, Dateien). -> [(format, bytes)] | None"""
+    if not _oeffnen():
+        return None
+    try:
+        gesichert = []
+        fmt = user32.EnumClipboardFormats(0)
+        while fmt:
+            if fmt not in _NICHT_KOPIERBAR and fmt not in (_KEIN_VERLAUF, _VERLAUF_ERLAUBT, _CLOUD_ERLAUBT):
+                h = user32.GetClipboardData(fmt)
+                if h:
+                    groesse = kernel32.GlobalSize(h)
+                    p = kernel32.GlobalLock(h) if groesse else None
+                    if p:
+                        gesichert.append((fmt, ctypes.string_at(p, groesse)))
+                        kernel32.GlobalUnlock(h)
+            fmt = user32.EnumClipboardFormats(fmt)
+        return gesichert
+    finally:
+        user32.CloseClipboard()
+
+
+def zuruecklegen(gesichert):
+    """Mit sichern() gemerkten Inhalt wiederherstellen (ohne neuen Verlaufseintrag)."""
+    if gesichert is None or not _oeffnen():
+        return False
+    try:
+        user32.EmptyClipboard()
+        for fmt, daten in gesichert:
+            _bytes_ablegen(fmt, daten)
+        if gesichert:
+            _ohne_verlauf()
+        return True
+    finally:
+        user32.CloseClipboard()
+
+
+def zwischenablage_lesen():
+    if not user32.OpenClipboard(None):
+        return None
+    try:
+        h = user32.GetClipboardData(CF_UNICODETEXT)
+        if not h:
+            return None
+        p = kernel32.GlobalLock(h)
+        try:
+            return ctypes.wstring_at(p) if p else None
+        finally:
+            kernel32.GlobalUnlock(h)
+    finally:
+        user32.CloseClipboard()
+
+
+def zwischenablage_setzen(text):
+    """Text in die Zwischenablage legen - als Zwischenschritt, also ohne Verlaufseintrag."""
+    if not _oeffnen():
+        return False
+    try:
+        user32.EmptyClipboard()
+        _bytes_ablegen(CF_UNICODETEXT, (text + "\0").encode("utf-16-le"))
+        _ohne_verlauf()
+        return True
+    finally:
+        user32.CloseClipboard()
+
+
+def einfuegen(text):
+    """Text ins aktive Fenster einfuegen; die alte Zwischenablage wird zurueckgelegt.
+
+    Gesichert werden alle kopierbaren Formate: frueher kam nur Text zurueck, ein
+    kopiertes Bild oder kopierte Dateien waren danach weg.
+    """
+    if not text:
+        return False
+    alt = sichern()
+    if not zwischenablage_setzen(text):
+        tippe(text)              # Rueckfall, wenn die Zwischenablage belegt ist
+        return True
+    time.sleep(0.08)
+    druecke("ctrl+v")
+    time.sleep(0.4)              # langsame Programme (Discord, Electron) lesen erst verzoegert
+    if alt is not None:
+        zuruecklegen(alt)
+    return True
+
+
+def vordergrund_prozess():
+    """Dateiname des Programms, dessen Fenster gerade vorne ist (z. B. "Discord.exe")."""
+    hwnd = user32.GetForegroundWindow()
+    pid = wintypes.DWORD()
+    user32.GetWindowThreadProcessId(hwnd, ctypes.byref(pid))
+    handle = kernel32.OpenProcess(0x1000, False, pid.value)  # PROCESS_QUERY_LIMITED_INFORMATION
+    if not handle:
+        return ""
+    try:
+        puffer = ctypes.create_unicode_buffer(1024)
+        laenge = wintypes.DWORD(1024)
+        kernel32.QueryFullProcessImageNameW(handle, 0, puffer, ctypes.byref(laenge))
+        return puffer.value.rsplit("\\", 1)[-1]
+    finally:
+        kernel32.CloseHandle(handle)

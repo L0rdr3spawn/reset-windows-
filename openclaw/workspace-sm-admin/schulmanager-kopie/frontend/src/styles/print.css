@@ -1,0 +1,154 @@
+/* ------------------------------------------------------------ Druck */
+.print-only {
+  display: none;
+}
+
+.print-page {
+  background: #fff;
+  color: #000;
+  min-height: 100vh;
+  padding: 16px;
+}
+.print-page .print-toolbar {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+.print-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: 2px solid #000;
+  padding-bottom: 4px;
+  margin-bottom: 8px;
+}
+.print-header h1 {
+  font-size: 20px;
+  margin: 0;
+}
+
+/* Zugangsbriefe */
+.letters {
+  display: grid;
+  gap: 16px;
+}
+.letter {
+  border: 1px dashed #999;
+  padding: 24px;
+  border-radius: 6px;
+  background: #fff;
+  color: #000;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.letter h2 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+.letter .cred {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 4px 16px;
+  font-size: 16px;
+  margin: 12px 0;
+}
+.letter .cred dd {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 18px;
+}
+.letter .small {
+  font-size: 12px;
+  color: #333;
+}
+
+@media print {
+  @page {
+    size: A4;
+    margin: 12mm;
+  }
+  :root {
+    color-scheme: light;
+  }
+  body {
+    background: #fff !important;
+    color: #000 !important;
+    font-size: 11pt;
+  }
+  .app-sidebar,
+  .app-header,
+  .bottom-nav,
+  .help-pop,
+  .toasts,
+  .no-print,
+  .print-toolbar,
+  .skip-link,
+  .sidebar-backdrop,
+  .tt-side,
+  .btn {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  .app-shell {
+    display: block;
+  }
+  .app-main {
+    padding: 0;
+  }
+  .card {
+    border: 0;
+    box-shadow: none;
+    padding: 0;
+  }
+  .tt-scroll,
+  .table-wrap,
+  .virtual-scroll {
+    overflow: visible !important;
+    border: 0;
+    max-height: none !important;
+  }
+  .tt-grid {
+    min-width: 0;
+    --tt-row: 54px;
+  }
+  .tt-head {
+    position: static;
+  }
+  .tt-cell {
+    border: 1px solid #000 !important;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+  .table th {
+    position: static;
+  }
+  tr.kind-row,
+  .kind,
+  .kind-short {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+  .letter {
+    border: 0;
+    border-bottom: 1px dashed #999;
+    border-radius: 0;
+    padding: 12mm 0;
+  }
+  .letters.one-per-page .letter {
+    break-after: page;
+    page-break-after: always;
+    border: 0;
+  }
+  .print-page {
+    padding: 0;
+    min-height: 0;
+  }
+  a {
+    color: #000;
+    text-decoration: none;
+  }
+}

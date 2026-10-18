@@ -1,0 +1,58 @@
+# Minecraft-Projekte. Dieser Ordner enthaelt auch andere Projekte - ins Repo kommt nur, was hier freigegeben ist.
+/*
+!/.gitignore
+!/.gitattributes
+!/README.md
+!/attrswap/
+!/autocart/
+!/begleiter/
+!/botlink/
+!/jevbaritone/
+!/mc-bot/
+!/mc-settings/
+!/upgrader-modpack/
+!/mc-kampfserver/
+!/mc-survival/
+!/mc-testserver/
+
+# Build- und Laufzeit-Artefakte
+.gradle/
+build/
+run/
+out/
+.idea/
+*.iml
+node_modules/
+*.log
+hs_err_pid*.log
+.auth/
+
+# Begleiter: Logs, Passwoerter, Logins, Einstellungen, ViaProxy (Jar + Konten)
+/begleiter/daten/
+/begleiter/viaproxy/*
+!/begleiter/viaproxy/.gitkeep
+
+# mc-bot: Testdateien
+/mc-bot/_*
+
+# Server: nur Konfiguration - keine Welten, Jars, Bibliotheken, Logs, Spielerlisten, Passwoerter
+/mc-kampfserver/*
+/mc-survival/*
+/mc-testserver/*
+!/mc-*server/start.cmd
+!/mc-survival/start.cmd
+!/mc-*server/server.properties.beispiel
+!/mc-survival/server.properties.beispiel
+!/mc-*server/bukkit.yml
+!/mc-survival/bukkit.yml
+!/mc-*server/spigot.yml
+!/mc-survival/spigot.yml
+!/mc-*server/commands.yml
+!/mc-survival/commands.yml
+!/mc-*server/wepif.yml
+!/mc-*server/config/
+!/mc-survival/config/
+!/mc-*server/PLUGINS.md
+!/mc-survival/PLUGINS.md
+seelen-ui/
+roblox-radar/overlay-einstellungen.json

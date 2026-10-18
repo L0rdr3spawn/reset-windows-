@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>WCAG Auditor manual-check fixture: missing focus indicator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      body {
+        font-family: system-ui, sans-serif;
+        max-width: 48rem;
+        margin: 2rem auto;
+        padding: 0 1rem;
+      }
+      /*
+       * Planted violation: SC 2.4.7 Focus Visible.
+       * The focus outline is removed with no replacement indicator.
+       * axe cannot detect this - it requires visual/keyboard inspection.
+       */
+      .no-focus-ring:focus {
+        outline: none;
+      }
+      button {
+        padding: 0.5rem 1rem;
+        margin-right: 0.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Manual-check fixture: missing focus indicator</h1>
+    <p>
+      Tab through the buttons below. The first button has a visible browser
+      focus ring (the default). The second button has <code>outline: none</code>
+      with no replacement, which violates SC 2.4.7 Focus Visible. axe cannot
+      detect this - it must be caught by the manual-check pass.
+    </p>
+
+    <p>
+      <button type="button">Button with default focus ring (OK)</button>
+      <button type="button" class="no-focus-ring">
+        Button with no focus ring (FAILS SC 2.4.7)
+      </button>
+    </p>
+  </body>
+</html>

@@ -1,0 +1,298 @@
+/* Aufgaben im Kursraum: Bewertungsraster, Bewertungstabelle, Gruppen – nur Design-Tokens (hell/dunkel), handytauglich. */
+
+/* ------------------------------------------------------------------ Raster bearbeiten */
+.au-criterion {
+  margin: 0;
+  padding: var(--space-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface-2);
+  display: grid;
+  gap: var(--space-2);
+  min-width: 0;
+}
+.au-crit-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: var(--space-2);
+}
+.au-crit-head > input {
+  flex: 1 1 14rem;
+  min-width: 0;
+}
+.au-points {
+  display: grid;
+  gap: 2px;
+  width: 6rem;
+}
+.au-desc {
+  width: 100%;
+  min-width: 0;
+}
+.au-levels {
+  display: grid;
+  gap: var(--space-2);
+}
+.au-level {
+  display: grid;
+  grid-template-columns: minmax(7rem, 1fr) 4.5rem minmax(7rem, 2fr) auto;
+  gap: var(--space-2);
+  align-items: center;
+}
+.au-level input {
+  min-width: 0;
+}
+@media (max-width: 560px) {
+  .au-level {
+    grid-template-columns: 1fr 4.5rem auto;
+  }
+  .au-level input:nth-child(3) {
+    grid-column: 1 / -1;
+    order: 4;
+  }
+}
+.au-tpl {
+  display: grid;
+  gap: var(--space-2);
+}
+.au-scale {
+  display: grid;
+  gap: var(--space-2);
+}
+.au-scale-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: var(--space-2);
+}
+.au-scale-row label {
+  display: grid;
+  gap: 2px;
+}
+.au-scale-row input {
+  width: 6rem;
+}
+
+/* ------------------------------------------------------------------ Bewerten (Stufen anklicken) */
+.au-grade-row {
+  display: grid;
+  gap: var(--space-1);
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+}
+.au-grade-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--space-2);
+}
+.au-grade-desc {
+  margin: 0;
+}
+.au-levels-pick {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+.au-pick {
+  display: grid;
+  gap: 2px;
+  min-height: var(--touch);
+  padding: var(--space-1) var(--space-3);
+  text-align: left;
+  color: var(--text);
+  background: var(--surface-2);
+  border: 1px solid var(--border-control);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+.au-pick:hover:not(:disabled) {
+  border-color: var(--primary);
+}
+.au-pick.on {
+  color: var(--on-primary);
+  background: var(--primary);
+  border-color: var(--primary);
+}
+.au-pick:disabled {
+  cursor: default;
+  opacity: 0.7;
+}
+.au-pick-title {
+  font-weight: var(--fw-semibold);
+}
+.au-pick-pts {
+  font-size: var(--fs-xs);
+}
+.au-points-in {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+.au-points-in input {
+  width: 6rem;
+}
+.au-note-btn {
+  justify-self: start;
+}
+.au-sum {
+  margin: 0;
+  font-size: var(--fs-md);
+}
+
+/* ------------------------------------------------------------------ ausgefülltes Raster (lesen) */
+.au-view {
+  list-style: none;
+  margin: var(--space-2) 0;
+  padding: 0;
+  display: grid;
+  gap: var(--space-2);
+}
+.au-view li {
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+}
+.au-view-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--space-2);
+}
+.au-view-levels {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+  margin-top: var(--space-1);
+}
+.au-chip {
+  padding: 2px var(--space-2);
+  font-size: var(--fs-xs);
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+}
+.au-chip.on {
+  color: var(--on-primary);
+  background: var(--primary);
+  border-color: var(--primary);
+}
+.au-view-comment {
+  margin: var(--space-1) 0 0;
+}
+.au-criteria summary {
+  cursor: pointer;
+  font-weight: var(--fw-semibold);
+}
+.au-versions summary {
+  cursor: pointer;
+  font-size: var(--fs-sm);
+}
+.au-version {
+  padding-left: var(--space-3);
+  border-left: 3px solid var(--border-strong);
+}
+.au-ext,
+.au-nta {
+  margin: 0;
+  padding: var(--space-2) var(--space-3);
+  color: var(--text);
+  background: var(--info-soft);
+  border-radius: var(--radius-sm);
+}
+.au-group {
+  border-color: var(--primary);
+}
+
+/* ------------------------------------------------------------------ Bewertungstabelle */
+.au-table th.au-name {
+  text-align: left;
+  font-weight: normal;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  min-width: 10rem;
+}
+.au-table td,
+.au-table th {
+  vertical-align: top;
+}
+.au-fb-cell {
+  padding: 0 var(--space-3) var(--space-3) !important;
+  background: var(--surface-2);
+}
+.au-scope {
+  margin: 0;
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  display: grid;
+  gap: var(--space-1);
+}
+.au-groupext {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+}
+
+/* ------------------------------------------------------------------ Gruppen */
+.au-sets {
+  display: grid;
+  gap: var(--space-4);
+}
+.au-groups {
+  display: grid;
+  gap: var(--space-3);
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+}
+.au-group-card {
+  display: grid;
+  gap: var(--space-2);
+  align-content: start;
+  padding: var(--space-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  min-width: 0;
+}
+.au-members {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 2px;
+}
+.au-members li {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-2);
+  min-width: 0;
+}
+.au-pool {
+  max-height: 14rem;
+  overflow: auto;
+  display: grid;
+  gap: 2px;
+  padding: var(--space-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+}
+.au-gate-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: var(--space-2);
+}
+.au-gate-list li {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-2);
+}

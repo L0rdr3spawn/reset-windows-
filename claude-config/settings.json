@@ -1,0 +1,83 @@
+{
+  "env": {
+    "ENABLE_TOOL_SEARCH": "true",
+    "CLAUDE_CODE_FORK_SUBAGENT": "1",
+    "CLAUDE_CODE_SUBAGENT_MODEL": "sonnet",
+    "AGENTS_OBSERVE_RUNTIME": "local"
+  },
+  "enabledPlugins": {
+    "typesafe@typesafe-ai": true,
+    "agents-observe@agents-observe": true,
+    "claude-code-setup@claude-plugins-official": true,
+    "insecure-defaults@trailofbits": true
+  },
+  "extraKnownMarketplaces": {
+    "typesafe-ai": {
+      "source": {
+        "source": "github",
+        "repo": "typesafe-ai/skills"
+      }
+    },
+    "building-with-jev": {
+      "source": {
+        "source": "github",
+        "repo": "dbreunig/building-with-jev-skill"
+      }
+    },
+    "claude-jev": {
+      "source": {
+        "source": "directory",
+        "path": "C:\\Users\\reiss\\.claude\\local-plugins\\claude-jev"
+      }
+    },
+    "claude-code-addons": {
+      "source": {
+        "source": "directory",
+        "path": "C:\\Users\\reiss\\Claude.Code"
+      }
+    },
+    "agents-observe": {
+      "source": {
+        "source": "github",
+        "repo": "simple10/agents-observe"
+      }
+    },
+    "thedotmack": {
+      "source": {
+        "source": "github",
+        "repo": "thedotmack/claude-mem"
+      }
+    },
+    "trailofbits": {
+      "source": {
+        "source": "github",
+        "repo": "trailofbits/skills"
+      }
+    },
+    "i-have-adhd": {
+      "source": {
+        "source": "github",
+        "repo": "ayghri/i-have-adhd"
+      }
+    }
+  },
+  "modelSettings": {
+    "claude-opus-5-5": {
+      "effortLevel": "high"
+    }
+  },
+  "pluginConfigs": {
+    "claude-jev@claude-jev": {
+      "options": {
+        "model": "jev-latest",
+        "allowSourceReading": true,
+        "maxFileBytes": 65536,
+        "maxFilesPerCall": 20,
+        "maxRequests": 8
+      }
+    }
+  },
+  "autoUpdatesChannel": "latest",
+  "theme": "dark",
+  "switchModelsOnFlag": false
+}

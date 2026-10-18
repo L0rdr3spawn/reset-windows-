@@ -1,0 +1,77 @@
+/* Plan prüfen: Vorschlagspakete (Präfix pp-) */
+.pp-package {
+  display: grid;
+  gap: var(--space-3);
+}
+.pp-variants {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr));
+  gap: var(--space-3);
+  align-items: stretch;
+}
+.pp-variant {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+.pp-variant h4 {
+  margin: 0;
+  font-size: var(--fs-md);
+}
+.pp-variant .pp-actions {
+  margin-top: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  align-items: center;
+}
+.pp-metrics {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--fs-sm);
+}
+.pp-metrics th,
+.pp-metrics td {
+  padding: 2px 0;
+  text-align: left;
+  font-weight: normal;
+}
+.pp-metrics td {
+  text-align: right;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+.pp-tone-good {
+  color: var(--success);
+  font-weight: var(--fw-semibold);
+}
+.pp-tone-bad {
+  color: var(--danger);
+  font-weight: var(--fw-semibold);
+}
+.pp-changes {
+  margin: 0;
+  padding-left: 1.1em;
+  font-size: var(--fs-sm);
+}
+.pp-note {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  align-items: center;
+}
+.pp-note input {
+  flex: 1 1 14rem;
+  min-width: 0;
+}
+.pp-postponed {
+  opacity: 0.8;
+}
+.pp-preview-grid {
+  display: grid;
+  gap: var(--space-3);
+}

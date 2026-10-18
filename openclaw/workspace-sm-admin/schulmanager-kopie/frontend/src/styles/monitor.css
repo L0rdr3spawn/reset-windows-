@@ -1,0 +1,146 @@
+/* ------------------------------------------------------------ Monitor-Vollbild */
+.monitor {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg);
+  color: var(--text);
+  font-size: clamp(16px, 1.45vw, 30px);
+  overflow: hidden;
+}
+.monitor-head {
+  display: flex;
+  align-items: center;
+  gap: 1.2em;
+  padding: 0.5em 1em;
+  background: var(--primary);
+  color: var(--on-primary);
+  flex-shrink: 0;
+}
+.monitor-head h1 {
+  margin: 0;
+  font-size: 1.5em;
+}
+.monitor-head .grow {
+  flex: 1;
+}
+.monitor-clock {
+  font-size: 2em;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+.monitor-date {
+  font-size: 1em;
+  opacity: 0.9;
+  text-align: right;
+}
+.monitor-body {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 32em), 1fr));
+  gap: 0.8em;
+  padding: 0.8em;
+  min-height: 0;
+}
+.monitor-col {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  background: var(--surface);
+  border-radius: 0.5em;
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+.monitor-col h2 {
+  margin: 0;
+  padding: 0.4em 0.7em;
+  font-size: 1.15em;
+  background: var(--surface-3);
+  display: flex;
+  justify-content: space-between;
+  gap: 1em;
+}
+.monitor-scroll {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+}
+.monitor-scroll-inner {
+  will-change: transform;
+}
+.monitor table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.monitor th,
+.monitor td {
+  padding: 0.3em 0.5em;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+  vertical-align: top;
+}
+.monitor th {
+  font-size: 0.75em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: var(--surface-2);
+}
+.monitor td.nowrap {
+  white-space: nowrap;
+}
+.monitor .class-head td {
+  background: var(--surface-2);
+  font-weight: 800;
+  font-size: 1.05em;
+  padding-top: 0.45em;
+}
+.monitor .kind {
+  font-size: 0.8em;
+}
+.monitor-foot {
+  flex-shrink: 0;
+  padding: 0.4em 1em;
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  display: flex;
+  gap: 2em;
+  align-items: center;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.monitor-ticker {
+  display: inline-block;
+  animation: ticker 40s linear infinite;
+  padding-left: 100%;
+}
+@keyframes ticker {
+  to {
+    transform: translateX(-100%);
+  }
+}
+.monitor-empty {
+  padding: 2em;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 1.1em;
+}
+.monitor-absent {
+  padding: 0.4em 0.7em;
+  font-size: 0.85em;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--border);
+}
+/* Bewegung reduzieren: Mitteilungen ohne Laufband, statisch lesbar (docs/DESIGN.md §12) */
+@media (prefers-reduced-motion: reduce) {
+  .monitor-ticker {
+    animation: none;
+    padding-left: 0;
+    white-space: normal;
+  }
+}
+
+/* Hinweise der Schule (Monitor-Einstellungen) */
+.monitor-notices { display: flex; flex-direction: column; gap: 6px; padding: 8px 16px 0; }
+.monitor-notice { padding: 8px 14px; border-radius: var(--radius); background: color-mix(in srgb, var(--text) 8%, transparent); font-size: 1.15em; font-weight: 600; }
+.monitor-notice.important { background: var(--danger); color: var(--on-status); }

@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "package": "de.reiss.botlink.mixin",
+  "compatibilityLevel": "JAVA_25",
+  "client": [
+    "EntityMixin",
+    "JoinMultiplayerScreenAccessor",
+    "MinecraftMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

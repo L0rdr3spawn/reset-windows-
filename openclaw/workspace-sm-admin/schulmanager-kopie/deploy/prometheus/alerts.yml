@@ -1,0 +1,56 @@
+# Schulmanager – Alarmregeln für Prometheus
+#
+# Die Regeln sind in Prometheus (http://127.0.0.1:9090/alerts) und in Grafana (Alerting →
+# Alert rules, Datenquelle Prometheus) sichtbar. E-Mail-Benachrichtigungen versendet Grafana
+# über die provisionierten Grafana-Regeln (deploy/grafana/provisioning/alerting/), Erreichbarkeit
+# von außen überwacht Uptime-Kuma. Schwellwerte bei Bedarf anpassen.
+
+groups:
+  - name: schulmanager
+    rules:
+      - alert: SchulmanagerNichtErreichbar
+        expr: up{job="schulmanager"} == 0
+        for: 2m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Schulmanager ist nicht erreichbar"
+          description: "Prometheus kann /metrics seit mehr als 2 Minuten nicht abrufen."
+
+      - alert: SchulmanagerFehlerquoteHoch
+        expr: |
+          sum(rate(schulmanager_http_requests_total{status=~"5.."}[5m]))
+            / clamp_min(sum(rate(schulmanager_http_requests_total[5m])), 0.001) > 0.05
+        for: 10m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Mehr als 5 % Serverfehler (HTTP 5xx)"
+          description: "Fehlerquote {{ $value | humanizePercentage }} in den letzten 10 Minuten."
+
+      - alert: SchulmanagerLangsam
+        expr: |
+          histogram_quantile(0.95, sum by (le) (rate(schulmanager_http_request_duration_seconds_bucket[5m]))) > 2
+        for: 15m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Antwortzeiten hoch (p95 > 2 s)"
+          description: "95 % der Anfragen dauern länger als {{ $value | humanizeDuration }}."
+
+      - alert: SchulmanagerSpeicherHoch
+        expr: process_resident_memory_bytes{job="schulmanager"} > 2.5e9
+        for: 15m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Speicherverbrauch der App über 2,5 GB"
+          description: "RSS {{ $value | humanize1024 }}B – Container-Limit APP_MEMORY prüfen."
+
+      - alert: SchulmanagerVieleFehlanmeldungen
+        expr: increase(schulmanager_login_failures_total[15m]) > 50
+        labels:
+          severity: warning
+        annotations:
+          summary: "Auffällig viele fehlgeschlagene Anmeldungen"
+          description: "{{ $value | humanize }} Fehlanmeldungen in 15 Minuten – möglicher Brute-Force-Versuch."

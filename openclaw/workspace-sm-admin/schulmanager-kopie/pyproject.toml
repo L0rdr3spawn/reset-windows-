@@ -1,0 +1,47 @@
+[project]
+name = "schulmanager"
+version = "0.1.0"
+description = "Schulverwaltung mit Stundenplan-Generator und Live-Vertretungsplanung"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.110",
+    "uvicorn[standard]>=0.29",
+    "sqlalchemy>=2.0",
+    "alembic>=1.13",
+    "python-multipart>=0.0.9",
+    "psycopg[binary]>=3.1",
+    "cryptography>=42",
+    "segno>=1.5",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "httpx>=0.27", "ruff>=0.5"]
+
+[project.scripts]
+schulmanager-admin = "schulmanager.server.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["schulmanager*"]
+
+[tool.setuptools.package-data]
+"schulmanager.server.migrations" = ["script.py.mako"]
+"schulmanager.server" = ["static/swagger/*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+filterwarnings = [
+    "ignore:Using `httpx` with `starlette.testclient` is deprecated",
+]
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+
+[tool.ruff.lint]
+# Regelauswahl fest vorgeben: neuere ruff-Versionen (ab 0.16) aktivieren standardmäßig deutlich mehr Regeln,
+# sonst prüfen CI und lokale Umgebung je nach installierter Version Unterschiedliches.
+select = ["E4", "E7", "E9", "F"]

@@ -1,0 +1,69 @@
+2026-09-05 13:32:27.1607 [SettingsService] Info loading settings 
+2026-09-05 13:32:27.2791 [SettingsService] Info saving settings 
+2026-09-05 13:32:27.8592 [MainViewModel] Info MainViewModel Loaded 
+2026-09-05 13:32:27.9093 [SteamService] Info init 
+2026-09-05 13:32:28.7426 [ApiClient] Info getting https://dayzsalauncher.com/api/v1/launcher/banner/LauncherLeft 
+2026-09-05 13:32:28.8683 [ApiClient] Info getting https://dayzsalauncher.com/api/v1/launcher/version 
+2026-09-05 13:32:29.0346 [ApiClient] Info response https://dayzsalauncher.com/api/v1/launcher/version - 89 
+2026-09-05 13:32:29.0384 [ApiClient] Info response https://dayzsalauncher.com/api/v1/launcher/banner/LauncherLeft - 148 
+2026-09-05 13:32:29.0384 [UpdateChecker] Info Checking for update. Local version: 0.0.6.3 | Remote version: 0.0.6.3 
+2026-09-05 13:32:29.0990 [ApiClient] Info getting https://dayzsalauncher.com/api/v1/launcher/banner/LauncherRight 
+2026-09-05 13:32:29.1593 [ApiClient] Info response https://dayzsalauncher.com/api/v1/launcher/banner/LauncherRight - 155 
+2026-09-05 13:32:29.2912 [ServerListDownloader] Info downloading dayz server list 
+2026-09-05 13:32:29.2912 [ApiClient] Info getting https://dayzsalauncher.com/api/v2/launcher/servers/dayz 
+2026-09-05 13:32:29.2912 [ApiClient] Info getting https://dayzsalauncher.com/api/v2/launcher/listings/dayz 
+2026-09-05 13:32:29.4409 [ApiClient] Info response https://dayzsalauncher.com/api/v2/launcher/listings/dayz - 11574 
+2026-09-05 13:32:30.9655 [ApiClient] Info response https://dayzsalauncher.com/api/v2/launcher/servers/dayz - 24393208 
+2026-09-05 13:32:31.7443 [ServerListDownloader] Info downloading dayz profile list 
+2026-09-05 13:32:31.7443 [ApiClient] Info getting https://dayzsalauncher.com/api/v2/launcher/profiles/dayz 
+2026-09-05 13:32:31.9924 [ApiClient] Info response https://dayzsalauncher.com/api/v2/launcher/profiles/dayz - 19181 
+2026-09-05 13:32:32.3429 [ServerQueryManager] Info Starting query runner 
+2026-09-05 13:32:32.9465 [ApiClient] Info getting https://dayzsalauncher.com/api/v1/launcher/open 
+2026-09-05 13:32:33.0017 [ApiClient] Info response https://dayzsalauncher.com/api/v1/launcher/open - 26 
+2026-09-05 13:32:33.0017 [ApiClient] Info getting https://dayzsalauncher.com/api/v1/launcher/version 
+2026-09-05 13:32:33.0623 [ApiClient] Info response https://dayzsalauncher.com/api/v1/launcher/version - 89 
+2026-09-05 13:32:33.0623 [UpdateChecker] Info Checking for update. Local version: 0.0.6.3 | Remote version: 0.0.6.3 
+2026-09-05 13:32:33.0623 [UserProtocolHandler] Info Ensuring protocol 'dzsal' is registered. 
+2026-09-05 13:32:33.0709 [UserProtocolHandler] Info Protocol 'dzsal' is already registered correctly. 
+2026-09-05 13:33:35.4180 [ApiClient] Info getting https://dayzsalauncher.com/api/v2/launcher/players/37.187.143.55:27019 
+2026-09-05 13:33:36.6650 [ApiClient] Info response https://dayzsalauncher.com/api/v2/launcher/players/37.187.143.55:27019 - 51 
+2026-09-05 13:33:36.8488 [DayZLauncherService] Info Finding existing dayz process 
+2026-09-05 13:33:36.8559 [DayZLauncherService] Info Creating launch parameters 
+2026-09-05 13:33:36.8559 [DayZLauncherService] Info Checking for mods 
+2026-09-05 13:33:43.2571 [ApiClient] Info getting https://dayzsalauncher.com/api/v2/launcher/players/37.187.143.55:27016 
+2026-09-05 13:33:44.5196 [DayZLauncherService] Info Finding existing dayz process 
+2026-09-05 13:33:44.5228 [DayZLauncherService] Info Creating launch parameters 
+2026-09-05 13:33:44.5228 [DayZLauncherService] Info Checking for mods 
+2026-09-05 13:33:44.7894 [DayZLauncherService] Info Getting mod paths 
+2026-09-05 13:33:44.9401 [ApiClient] Info response https://dayzsalauncher.com/api/v2/launcher/players/37.187.143.55:27016 - 51 
+2026-09-05 13:33:45.2208 [DayZLauncherService] Info Checking local dayz version 
+2026-09-05 13:33:45.2269 [DayZLauncherService] Info starting dayz "C:\Program Files (x86)\Steam\steamapps\common\DayZ\DayZ_BE.exe" 0 1 1 -exe DayZ_x64.exe "-name=L0rdr3spawn" "-mod=C:\Program Files (x86)\Steam\steamapps\common\DayZ\!dzsal\@Vehicle3PP;C:\Program Files (x86)\Steam\steamapps\common\DayZ\!dzsal\@Dogtags;C:\Program Files (x86)\Steam\steamapps\common\DayZ\!dzsal\@MDZ_ServerPack;C:\Program Files (x86)\Steam\steamapps\common\DayZ\!dzsal\@MDZ_ItemPack;C:\Program Files (x86)\Steam\steamapps\common\DayZ\!dzsal\@MDZ_WeaponsPack;C:\Program Files (x86)\Steam\steamapps\common\DayZ\!dzsal\@Vehicle Shooting;C:\Program Files (x86)\Steam\steamapps\common\DayZ\!dzsal\@Survivor Animations;C:\Program Files (x86)\Steam\steamapps\common\DayZ\!dzsal\@DayZCasinoV2;C:\Program Files (x86)\Steam\steamapps\common\DayZ\!dzsal\@Gerphelius_CarXFence;C:\Program Files (x86)\Steam\steamapps\common\DayZ\!dzsal\@DayZ-Raven;C:\Program Files (x86)\Steam\steamapps\common\DayZ\!dzsal\@CannabisPlus;C:\Program Files (x86)\Steam\steamapps\common\DayZ\!dzsal\@AgricultureCore;C:\Program Files (x86)\Steam\steamapps\common\DayZ\!dzsal\@[CrSk] BMW 525i E34;C:\Program Files (x86)\Steam\steamapps\common\DayZ\!dzsal\@RaG_Vehicle_Pack;C:\Program Files (x86)\Steam\steamapps\common\DayZ\!dzsal\@WindstridesClothingPack;C:\Program Files (x86)\Steam\steamapps\common\DayZ\!dzsal\@DayZ-Expansion-Map-Assets;C:\Program Files (x86)\Steam\steamapps\common\DayZ\!dzsal\@DayZ-Expansion-Licensed;C:\Program Files (x86)\Steam\steamapps\common\DayZ\!dzsal\@DayZ-Expansion-Hardline;C:\Program Files (x86)\Steam\steamapps\common\DayZ\!dzsal\@DayZ-Expansion-Vehicles;C:\Program Files (x86)\Steam\steamapps\common\DayZ\!dzsal\@DayZ-Expansion-Quests;C:\Program Files (x86)\Steam\steamapps\common\DayZ\!dzsal\@DayZ-Expansion-Market;C:\Program Files (x86)\Steam\steamapps\common\DayZ\!dzsal\@DayZ-Expansion-AI;C:\Program Files (x86)\Steam\steamapps\common\DayZ\!dzsal\@DayZ-Expansion-Missions;C:\Program Files (x86)\Steam\steamapps\common\DayZ\!dzsal\@DayZ-Expansion;C:\Program Files (x86)\Steam\steamapps\common\DayZ\!dzsal\@DayZ-Expansion-Core;C:\Program Files (x86)\Steam\steamapps\common\DayZ\!dzsal\@DayZ Editor Loader;C:\Program Files (x86)\Steam\steamapps\common\DayZ\!dzsal\@Dabs Framework;C:\Program Files (x86)\Steam\steamapps\common\DayZ\!dzsal\@CF" -connect=37.187.143.55:2302:27016 
+2026-09-05 13:33:45.8679 [DayZLauncherService] Warn System.ArgumentOutOfRangeException: Der Index und die Länge müssen sich auf eine Position in der Zeichenfolge beziehen.
+Parametername: length System.ArgumentOutOfRangeException: Der Index und die Länge müssen sich auf eine Position in der Zeichenfolge beziehen.
+Parametername: length
+   bei System.String.Substring(Int32 startIndex, Int32 length)
+   bei Client.Discord.RichPresenceService.JoinServer(DayZServer server)
+   bei Client.DayZ.DayZLauncherService.<Launch>d__10.MoveNext()
+2026-09-05 13:33:45.8679 [DayZLauncherService] Info Updating last joined time 
+2026-09-05 13:33:45.8679 [SettingsService] Info saving settings 
+2026-09-05 15:58:30.5818 [ApiClient] Info getting https://dayzsalauncher.com/api/v2/launcher/players/37.187.143.55:27016 
+2026-09-05 15:58:30.7448 [ApiClient] Info response https://dayzsalauncher.com/api/v2/launcher/players/37.187.143.55:27016 - 51 
+2026-09-05 15:58:30.7773 [ApiClient] Info getting https://dayzsalauncher.com/api/v2/launcher/players/37.187.143.55:27016 
+2026-09-05 15:58:30.8359 [ApiClient] Info response https://dayzsalauncher.com/api/v2/launcher/players/37.187.143.55:27016 - 51 
+2026-09-05 15:58:30.9251 [ApiClient] Info getting https://dayzsalauncher.com/api/v2/launcher/players/37.187.143.55:27016 
+2026-09-05 15:58:30.9797 [ApiClient] Info response https://dayzsalauncher.com/api/v2/launcher/players/37.187.143.55:27016 - 51 
+2026-09-05 15:58:31.9962 [DayZLauncherService] Info Finding existing dayz process 
+2026-09-05 15:58:31.9962 [DayZLauncherService] Info Creating launch parameters 
+2026-09-05 15:58:31.9962 [DayZLauncherService] Info Checking for mods 
+2026-09-05 15:58:32.3336 [DayZLauncherService] Info Getting mod paths 
+2026-09-05 15:58:32.7122 [DayZLauncherService] Info Checking local dayz version 
+2026-09-05 15:58:32.7122 [DayZLauncherService] Info starting dayz "C:\Program Files (x86)\Steam\steamapps\common\DayZ\DayZ_BE.exe" 0 1 1 -exe DayZ_x64.exe "-name=L0rdr3spawn" "-mod=C:\Program Files (x86)\Steam\steamapps\common\DayZ\!dzsal\@Vehicle3PP;C:\Program Files (x86)\Steam\steamapps\common\DayZ\!dzsal\@Dogtags;C:\Program Files (x86)\Steam\steamapps\common\DayZ\!dzsal\@MDZ_ServerPack;C:\Program Files (x86)\Steam\steamapps\common\DayZ\!dzsal\@MDZ_ItemPack;C:\Program Files (x86)\Steam\steamapps\common\DayZ\!dzsal\@MDZ_WeaponsPack;C:\Program Files (x86)\Steam\steamapps\common\DayZ\!dzsal\@Vehicle Shooting;C:\Program Files (x86)\Steam\steamapps\common\DayZ\!dzsal\@Survivor Animations;C:\Program Files (x86)\Steam\steamapps\common\DayZ\!dzsal\@DayZCasinoV2;C:\Program Files (x86)\Steam\steamapps\common\DayZ\!dzsal\@Gerphelius_CarXFence;C:\Program Files (x86)\Steam\steamapps\common\DayZ\!dzsal\@DayZ-Raven;C:\Program Files (x86)\Steam\steamapps\common\DayZ\!dzsal\@CannabisPlus;C:\Program Files (x86)\Steam\steamapps\common\DayZ\!dzsal\@AgricultureCore;C:\Program Files (x86)\Steam\steamapps\common\DayZ\!dzsal\@[CrSk] BMW 525i E34;C:\Program Files (x86)\Steam\steamapps\common\DayZ\!dzsal\@RaG_Vehicle_Pack;C:\Program Files (x86)\Steam\steamapps\common\DayZ\!dzsal\@WindstridesClothingPack;C:\Program Files (x86)\Steam\steamapps\common\DayZ\!dzsal\@DayZ-Expansion-Map-Assets;C:\Program Files (x86)\Steam\steamapps\common\DayZ\!dzsal\@DayZ-Expansion-Licensed;C:\Program Files (x86)\Steam\steamapps\common\DayZ\!dzsal\@DayZ-Expansion-Hardline;C:\Program Files (x86)\Steam\steamapps\common\DayZ\!dzsal\@DayZ-Expansion-Vehicles;C:\Program Files (x86)\Steam\steamapps\common\DayZ\!dzsal\@DayZ-Expansion-Quests;C:\Program Files (x86)\Steam\steamapps\common\DayZ\!dzsal\@DayZ-Expansion-Market;C:\Program Files (x86)\Steam\steamapps\common\DayZ\!dzsal\@DayZ-Expansion-AI;C:\Program Files (x86)\Steam\steamapps\common\DayZ\!dzsal\@DayZ-Expansion-Missions;C:\Program Files (x86)\Steam\steamapps\common\DayZ\!dzsal\@DayZ-Expansion;C:\Program Files (x86)\Steam\steamapps\common\DayZ\!dzsal\@DayZ-Expansion-Core;C:\Program Files (x86)\Steam\steamapps\common\DayZ\!dzsal\@DayZ Editor Loader;C:\Program Files (x86)\Steam\steamapps\common\DayZ\!dzsal\@Dabs Framework;C:\Program Files (x86)\Steam\steamapps\common\DayZ\!dzsal\@CF" -connect=37.187.143.55:2302:27016 
+2026-09-05 15:58:33.3068 [DayZLauncherService] Warn System.ArgumentOutOfRangeException: Der Index und die Länge müssen sich auf eine Position in der Zeichenfolge beziehen.
+Parametername: length System.ArgumentOutOfRangeException: Der Index und die Länge müssen sich auf eine Position in der Zeichenfolge beziehen.
+Parametername: length
+   bei System.String.Substring(Int32 startIndex, Int32 length)
+   bei Client.Discord.RichPresenceService.JoinServer(DayZServer server)
+   bei Client.DayZ.DayZLauncherService.<Launch>d__10.MoveNext()
+2026-09-05 15:58:33.3068 [DayZLauncherService] Info Updating last joined time 
+2026-09-05 15:58:33.3068 [SettingsService] Info saving settings 
+2026-09-05 15:58:34.0120 [ModViewModel] Info Loaded 

@@ -1,0 +1,210 @@
+[
+    {
+        "slug":  "planung",
+        "titel":  "Planung, Generator, Plan-Prüfung",
+        "zweck":  "Stundenplan-Generator (Scheduler, Autoplan), Planungsseite mit Generator/Kalender/Kurse, P",
+        "status":  "offen",
+        "zuletzt":  "",
+        "patch":  ""
+    },
+    {
+        "slug":  "regeln",
+        "titel":  "Regeln und Prioritäten",
+        "zweck":  "Planungsregeln (hart/weich, Profile, Überschreibungen, Simulation) und ihr Editor.",
+        "status":  "offen",
+        "zuletzt":  "",
+        "patch":  ""
+    },
+    {
+        "slug":  "stundenplan",
+        "titel":  "Stundenplan, Wochen, Kalender",
+        "zweck":  "Stundenplan-Ansichten (Klasse/Lehrkraft/Raum), Raster, Wochenmuster (weeks), Kalender, Tau",
+        "status":  "offen",
+        "zuletzt":  "",
+        "patch":  ""
+    },
+    {
+        "slug":  "vertretung",
+        "titel":  "Vertretung und Monitore",
+        "zweck":  "Vertretungs-Engine, Vertretungsplan, Druck, Monitor-Anzeigen (Aula/Flur).",
+        "status":  "offen",
+        "zuletzt":  "",
+        "patch":  ""
+    },
+    {
+        "slug":  "klausuren-aufsichten",
+        "titel":  "Klausuren, Aufsichten, Nachholtermine",
+        "zweck":  "Klausurplanung, Pausenaufsichten, Nachschreibe-/Nachholtermine.",
+        "status":  "offen",
+        "zuletzt":  "",
+        "patch":  ""
+    },
+    {
+        "slug":  "klassenbuch",
+        "titel":  "Klassenbuch und Anwesenheit",
+        "zweck":  "Digitales Klassenbuch (Stundeneinträge, Anwesenheit je Stunde, Hausaufgaben im Eintrag).",
+        "status":  "offen",
+        "zuletzt":  "",
+        "patch":  ""
+    },
+    {
+        "slug":  "klassen",
+        "titel":  "Klassen, Jahrgänge, Lehrplan",
+        "zweck":  "Klassen-Seite (Personen, Kalender, Lehrplan), Jahrgangsstufen, Klassenzimmer-Infos.",
+        "status":  "offen",
+        "zuletzt":  "",
+        "patch":  ""
+    },
+    {
+        "slug":  "fehlzeiten",
+        "titel":  "Fehlzeiten und Krankmeldungen",
+        "zweck":  "Schüler-Krankmeldungen, Fehlzeiten-Protokoll, Statistik, Entschuldigungen.",
+        "status":  "offen",
+        "zuletzt":  "",
+        "patch":  ""
+    },
+    {
+        "slug":  "nachrichten",
+        "titel":  "Nachrichten, Postfach, Chats",
+        "zweck":  "Ein Eintrag „Nachrichten“: Postfach, Mitteilungen, verschlüsselte Chats, Mail-Anbindung.",
+        "status":  "offen",
+        "zuletzt":  "",
+        "patch":  ""
+    },
+    {
+        "slug":  "kursraeume",
+        "titel":  "Kursräume, Aufgaben, Gruppen, Fortschritt",
+        "zweck":  "Kursräume (Kanäle) mit Material, Aufgaben/Abgaben, Gruppen, Lernfortschritt.",
+        "status":  "offen",
+        "zuletzt":  "",
+        "patch":  ""
+    },
+    {
+        "slug":  "notenbuch",
+        "titel":  "Notenbuch und Zeugnisse",
+        "zweck":  "Notenbücher (Quellelemente, Gewichtung, Berechnung), Klassenansicht, Zeugnis/Noten der Sch",
+        "status":  "offen",
+        "zuletzt":  "",
+        "patch":  ""
+    },
+    {
+        "slug":  "kompetenzen",
+        "titel":  "Kompetenzen und Abzeichen",
+        "zweck":  "Kompetenzraster, Einschätzungen, Abzeichen, Berichte.",
+        "status":  "offen",
+        "zuletzt":  "",
+        "patch":  ""
+    },
+    {
+        "slug":  "lernaktivitaeten",
+        "titel":  "Lernaktivitäten (Umfragen, Tests, Selbsttests)",
+        "zweck":  "Lernaktivitäten im Kursraum: Umfragen, Tests, Selbsttests, Fragenpool.",
+        "status":  "offen",
+        "zuletzt":  "",
+        "patch":  ""
+    },
+    {
+        "slug":  "benachrichtigungen",
+        "titel":  "Benachrichtigungen",
+        "zweck":  "Glocke, Benachrichtigungsarten, Einstellungen, Schulvorgaben, Mail/SMS-Zustellung.",
+        "status":  "offen",
+        "zuletzt":  "",
+        "patch":  ""
+    },
+    {
+        "slug":  "formulare",
+        "titel":  "Formulare",
+        "zweck":  "Formulare/Anträge mit Vorlagen, Einreichungen und PDF.",
+        "status":  "offen",
+        "zuletzt":  "",
+        "patch":  ""
+    },
+    {
+        "slug":  "lehrkraefte",
+        "titel":  "Lehrkräfte-Profil und Verfügbarkeit",
+        "zweck":  "Lehrer-Selbstverwaltung: Verfügbarkeit, Wegezeiten, Ausnahmen, Anträge.",
+        "status":  "offen",
+        "zuletzt":  "",
+        "patch":  ""
+    },
+    {
+        "slug":  "schueler-eltern",
+        "titel":  "Schüler/innen und Eltern",
+        "zweck":  "Schüler-Selbstbedienung, Eltern-Zugriff und Elternfreigabe, Förderkatalog, Schülerseiten.",
+        "status":  "offen",
+        "zuletzt":  "",
+        "patch":  ""
+    },
+    {
+        "slug":  "rechte-rollen",
+        "titel":  "Rechte und Rollen",
+        "zweck":  "Rollen, Rechte, Datenumfang (Scopes), Rechte-Matrix und Rechteverwaltung.",
+        "status":  "offen",
+        "zuletzt":  "",
+        "patch":  ""
+    },
+    {
+        "slug":  "login-sso",
+        "titel":  "Login, SSO, Sitzungen, Konten",
+        "zweck":  "Anmeldung, Sitzungen, 2FA, SSO/OIDC, Anmelde-Richtlinien, Konten, Zugangsbriefe, Kontakt/P",
+        "status":  "offen",
+        "zuletzt":  "",
+        "patch":  ""
+    },
+    {
+        "slug":  "datenschutz",
+        "titel":  "Datenschutz, Löschkonzept, Verschlüsselung, Dateien",
+        "zweck":  "Löschkonzept (Aufbewahrung, Ausgetretene), Verschlüsselung ruhender Daten, Dateiablage, Da",
+        "status":  "offen",
+        "zuletzt":  "",
+        "patch":  ""
+    },
+    {
+        "slug":  "integrationen",
+        "titel":  "Integrationen, Import/Export, API-Zugänge",
+        "zweck":  "Untis/CSV/iCal/Webhooks/Schulmanager-Online-Import, Ferienimport, öffentliche API und API-",
+        "status":  "offen",
+        "zuletzt":  "",
+        "patch":  ""
+    },
+    {
+        "slug":  "demo",
+        "titel":  "Demo-Daten und Vorschau",
+        "zweck":  "Erfundene Demo-Schulen/-Konten für Vorschau und Tests.",
+        "status":  "offen",
+        "zuletzt":  "",
+        "patch":  ""
+    },
+    {
+        "slug":  "branding",
+        "titel":  "Branding",
+        "zweck":  "Produktname Schulpuls, Logo, Farben.",
+        "status":  "fertig",
+        "zuletzt":  "2026-10-17 16:16",
+        "patch":  "2026-10-17_1608_branding.md"
+    },
+    {
+        "slug":  "betrieb",
+        "titel":  "Betrieb, Wartung, Lizenz, Einrichtung",
+        "zweck":  "App-Start, Konfiguration (SM_*), DB, Wartung/Backup, Metriken, Lizenz, Ersteinrichtung, Sc",
+        "status":  "offen",
+        "zuletzt":  "",
+        "patch":  ""
+    },
+    {
+        "slug":  "stammdaten-kern",
+        "titel":  "Planungsdokument, Stammdaten, Store, Verlauf",
+        "zweck":  "Das School-Dokument (Dataclasses), Stammdaten-CRUD, versionierter Store, Audit/Verlauf, Li",
+        "status":  "offen",
+        "zuletzt":  "",
+        "patch":  ""
+    },
+    {
+        "slug":  "ui-basis",
+        "titel":  "Frontend-Basis und Design",
+        "zweck":  "App-Rahmen, Routing/Guard, API-Schicht, Kontexte, Hooks, Basiskomponenten, Tokens, Styles,",
+        "status":  "offen",
+        "zuletzt":  "",
+        "patch":  ""
+    }
+]

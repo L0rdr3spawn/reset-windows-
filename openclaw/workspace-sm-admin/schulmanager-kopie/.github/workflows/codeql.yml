@@ -1,0 +1,46 @@
+# Schulmanager – Statische Sicherheitsanalyse (CodeQL) für Python und TypeScript
+#
+# Voraussetzung: „Code scanning“ ist im Repository aktiviert (Settings → Code security). Ohne diese
+# Einstellung bricht CodeQL bei jedem Lauf mit „Code scanning is not enabled for this repository“ ab.
+# Deshalb läuft die Analyse erst, wenn die Repository-Variable ENABLE_CODEQL=true gesetzt ist
+# (Settings → Secrets and variables → Actions → Variables); sonst wird der Job übersprungen (kein Fehler).
+name: CodeQL
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  schedule:
+    - cron: "17 4 * * 1"   # montags 04:17 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  analyze:
+    name: Analyse (${{ matrix.language }})
+    if: vars.ENABLE_CODEQL == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: read
+      security-events: write
+      actions: read
+    strategy:
+      fail-fast: false
+      matrix:
+        language: [python, javascript-typescript]
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: github/codeql-action/init@v3
+        with:
+          languages: ${{ matrix.language }}
+          build-mode: none
+          queries: security-and-quality
+
+      - uses: github/codeql-action/analyze@v3
+        with:
+          category: "/language:${{ matrix.language }}"

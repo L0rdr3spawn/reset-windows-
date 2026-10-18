@@ -1,0 +1,24 @@
+# Schulmanager – Rate-Limit für den Login (benötigt Caddy mit Plugin caddy-ratelimit)
+#
+# Aktivieren:
+#   1. Caddy mit Plugin bauen:  docker build -t schulmanager-caddy:latest deploy/caddy
+#      (oder: make caddy-ratelimit)
+#   2. In .env:                 CADDY_IMAGE=schulmanager-caddy:latest
+#   3. Diese Datei kopieren:     cp deploy/caddy/conf.d/ratelimit.caddy.example deploy/caddy/conf.d/ratelimit.caddy
+#   4. Neu starten:              docker compose up -d caddy
+#
+# Ohne Plugin schützt die App selbst: Sperre nach SM_LOGIN_MAX_FAILURES Fehlversuchen je Konto
+# und SM_LOGIN_MAX_FAILURES_IP je IP-Adresse (HTTP 429 mit Retry-After).
+
+handle /api/v1/auth/login {
+	route {
+		rate_limit {
+			zone sm_login {
+				key {remote_host}
+				events 10
+				window 1m
+			}
+		}
+		reverse_proxy {$SM_UPSTREAM:app:8000}
+	}
+}

@@ -1,0 +1,7 @@
+{
+  "name": "token-saver",
+  "version": "1.0.0",
+  "description": "Minimiert den Token-Verbrauch in Claude Code: Guards gegen riesige Dateien/Ausgaben, knappe Arbeitsregeln, Haiku-Scout-Agent, Verbrauchsbericht und Checkpoints.",
+  "author": { "name": "L0rdr3spawn" },
+  "keywords": ["tokens", "context", "cost", "efficiency"]
+}

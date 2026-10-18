@@ -1,0 +1,30 @@
+{
+	"schemaVersion": 1,
+	"id": "botlink",
+	"version": "${version}",
+	"name": "Botlink",
+	"description": "Verbindet deinen Client mit dem Begleiter-Bot (Mineflayer): /bot- und /arena-Befehle mit Tab-Vorschlaegen, Bot-Inventar als Kiste, Bot leuchtet + Wegweiser, Menue-Knoepfe, meldet deinen Zustand lokal an den Bot.",
+	"authors": [
+		"reiss"
+	],
+	"license": "MIT",
+	"icon": "assets/botlink/icon.png",
+	"environment": "client",
+	"entrypoints": {
+		"client": [
+			"de.reiss.botlink.BotLinkClient"
+		]
+	},
+	"depends": {
+		"fabricloader": ">=0.19.5",
+		"minecraft": "~26.3",
+		"java": ">=25",
+		"fabric-api": "*"
+	},
+	"mixins": [
+		{
+			"config": "botlink.client.mixins.json",
+			"environment": "client"
+		}
+	]
+}

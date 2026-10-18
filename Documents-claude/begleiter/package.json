@@ -1,0 +1,20 @@
+{
+  "name": "begleiter",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Mineflayer-Begleiter: beschuetzt den Besitzer, PvP/Mace/Speer/Elytra, Aufgaben, Blackbox-Welten",
+  "main": "manager.js",
+  "scripts": {
+    "start": "node manager.js"
+  },
+  "dependencies": {
+    "@typesafe-ai/sdk": "^0.6.0",
+    "minecraft-data": "^3.117.0",
+    "mineflayer": "^4.39.0",
+    "mineflayer-collectblock": "^1.6.0",
+    "mineflayer-pathfinder": "^2.4.5",
+    "mineflayer-pvp": "^1.3.2",
+    "prismarine-nbt": "^2.8.0",
+    "vec3": "^0.2.0"
+  }
+}

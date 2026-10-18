@@ -1,0 +1,64 @@
+/* Zugangsbriefe (§11.3) – nur Variablen aus styles/tokens.css, Präfix .zd- */
+
+.zd-page > * {
+  min-width: 0;
+}
+.zd-title {
+  overflow-wrap: anywhere;
+}
+.zd-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  align-items: center;
+}
+.zd-timer {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  white-space: nowrap;
+}
+.zd-table td {
+  vertical-align: top;
+}
+.zd-name {
+  display: flex;
+  flex-direction: column;
+  min-width: 10rem;
+  overflow-wrap: anywhere;
+}
+.zd-fieldset {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: var(--space-2) var(--space-3);
+  margin: var(--space-3) 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+.zd-fieldset legend {
+  font-weight: 600;
+  padding: 0 var(--space-1);
+}
+/* Erläuterung hinter „an die Eltern“ am Handy in eine eigene Zeile statt einer schmalen Spalte */
+.zd-fieldset .check {
+  flex-wrap: wrap;
+  row-gap: 0;
+}
+.zd-result {
+  margin: var(--space-1) 0 0;
+  padding-left: var(--space-5);
+  overflow-wrap: anywhere;
+}
+.zd-section h3 {
+  margin: 0 0 var(--space-1);
+  font-size: var(--fs-md);
+}
+.zd-section + .zd-section {
+  border-top: 1px solid var(--border);
+  padding-top: var(--space-4);
+}

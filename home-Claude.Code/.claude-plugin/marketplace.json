@@ -1,0 +1,17 @@
+{
+  "name": "claude-code-addons",
+  "owner": {
+    "name": "L0rdr3spawn"
+  },
+  "metadata": {
+    "description": "Addons/Plugins für Claude Code",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "token-saver",
+      "source": "./plugins/token-saver",
+      "description": "Spart Tokens: blockiert unnötig große Reads/Bash-Ausgaben, liefert einen günstigen Scout-Agenten und einen Token-Verbrauchsbericht."
+    }
+  ]
+}

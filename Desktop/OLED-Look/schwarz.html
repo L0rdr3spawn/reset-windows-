@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="de"><head><meta charset="utf-8"><title>Schwarzbild</title>
+<style>
+  html, body { margin:0; height:100%; background:#000; overflow:hidden; cursor:pointer; }
+  #hint { position:fixed; inset:auto 0 40px 0; text-align:center; font:15px system-ui, sans-serif; color:#777; transition:opacity 1s; line-height:1.7; }
+  #lvl { position:fixed; top:20px; right:24px; font:13px system-ui, sans-serif; color:#555; opacity:0; transition:opacity .4s; }
+  body.full { cursor:none; }
+</style></head>
+<body>
+<div id="hint">
+  <b>Klicken</b> = Vollbild (Esc beendet)<br>
+  <b>↑ / ↓</b> Graustufe ändern &nbsp;·&nbsp; <b>B</b> Schwarz &nbsp;·&nbsp; <b>W</b> Weiß &nbsp;·&nbsp; <b>R G U</b> Rot/Grün/Blau &nbsp;·&nbsp; <b>H</b> Hinweis ein/aus
+</div>
+<div id="lvl"></div>
+<script>
+  let g = 0, color = null, t;
+  const hint = document.getElementById('hint'), lvl = document.getElementById('lvl');
+  function paint() {
+    document.body.style.background = color || `rgb(${g},${g},${g})`;
+    lvl.textContent = color ? color : `Grau ${g}`;
+    lvl.style.opacity = 1; clearTimeout(t); t = setTimeout(() => lvl.style.opacity = 0, 1200);
+  }
+  document.addEventListener('click', () => {
+    if (!document.fullscreenElement) document.documentElement.requestFullscreen();
+  });
+  document.addEventListener('fullscreenchange', () => {
+    const full = !!document.fullscreenElement;
+    document.body.classList.toggle('full', full);
+    hint.style.opacity = full ? 0 : 1;
+  });
+  document.addEventListener('keydown', e => {
+    const k = e.key.toLowerCase();
+    if (k === 'arrowup')   { color = null; g = Math.min(255, g + (e.shiftKey ? 10 : 1)); }
+    else if (k === 'arrowdown') { color = null; g = Math.max(0, g - (e.shiftKey ? 10 : 1)); }
+    else if (k === 'b') { color = null; g = 0; }
+    else if (k === 'w') { color = null; g = 255; }
+    else if (k === 'r') color = '#ff0000';
+    else if (k === 'g') color = '#00ff00';
+    else if (k === 'u') color = '#0000ff';
+    else if (k === 'h') { hint.style.opacity = hint.style.opacity === '0' ? 1 : 0; return; }
+    else return;
+    paint();
+  });
+</script>
+</body></html>

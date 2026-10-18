@@ -1,0 +1,3 @@
+﻿Kopie vom Server geholt: 2026-10-17 16:08
+Server-Image: schulmanager:test
+Quelle: server:~/schulmanager/src (ohne lizenzserver, tests, .env, Datenbanken)

@@ -1,0 +1,30 @@
+{
+	"schemaVersion": 1,
+	"id": "jevbaritone",
+	"version": "${version}",
+	"name": "Jev Baritone Bot",
+	"description": "Macht diesen Client zum Begleitbot: Chat-Befehle des Besitzers versteht Jev (TypeSafe), ausgefuehrt wird mit Baritone.",
+	"authors": [
+		"reiss"
+	],
+	"license": "MIT",
+	"environment": "client",
+	"entrypoints": {
+		"client": [
+			"de.reiss.jevbaritone.JevBaritoneClient"
+		]
+	},
+	"depends": {
+		"fabricloader": ">=0.19.3",
+		"minecraft": "~26.2",
+		"java": ">=25",
+		"fabric-api": "*",
+		"baritone-meteor": "*"
+	},
+	"mixins": [
+		{
+			"config": "jevbaritone.client.mixins.json",
+			"environment": "client"
+		}
+	]
+}

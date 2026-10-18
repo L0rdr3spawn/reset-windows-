@@ -1,0 +1,202 @@
+/* Stammdaten → Jahrgänge (features/gradeLevels): Karten je Jahrgang mit Farbe, Klassen und Stundentafel.
+   Farben nur über Tokens; die Jahrgangsfarbe kommt als --jg-color aus den Daten (wie Fachfarben im Raster). */
+
+.jg-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2) var(--space-3);
+}
+.jg-head h2 {
+  margin: 0;
+  font-size: var(--fs-lg);
+}
+.jg-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr));
+  gap: var(--space-3);
+}
+.jg-card {
+  --jg-color: var(--border-strong);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  padding-left: calc(var(--space-4) + 6px);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.jg-card::before {
+  content: '';
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 6px;
+  background: var(--jg-color);
+}
+.jg-card-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-2);
+}
+.jg-title {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  min-width: 0;
+}
+.jg-title h3 {
+  margin: 0;
+  font-size: var(--fs-lg);
+  line-height: var(--lh-tight);
+  overflow-wrap: anywhere;
+}
+.jg-short {
+  display: inline-flex;
+  align-items: center;
+  min-height: 22px;
+  padding: 0 var(--space-2);
+  border-radius: var(--radius-xs);
+  background: var(--jg-color);
+  color: var(--jg-on, var(--on-primary));
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  letter-spacing: 0.02em;
+}
+.jg-meta {
+  color: var(--text-muted);
+  font-size: var(--fs-sm);
+}
+.jg-actions {
+  display: flex;
+  gap: var(--space-1);
+  flex-shrink: 0;
+}
+.jg-facts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-2);
+}
+.jg-fact {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+.jg-fact-value {
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-semibold);
+  line-height: var(--lh-tight);
+  font-variant-numeric: tabular-nums;
+}
+.jg-fact-label {
+  font-size: var(--fs-xs);
+  color: var(--text-muted);
+}
+.jg-tafel {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-1) var(--space-2);
+  padding-top: var(--space-2);
+  border-top: 1px solid var(--border);
+  font-size: var(--fs-sm);
+}
+.jg-tafel .jg-tafel-name {
+  font-weight: var(--fw-semibold);
+}
+.jg-classes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+}
+.jg-class {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  min-height: var(--control-h-sm);
+  padding: 0 var(--space-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface-2);
+  color: var(--text);
+  text-decoration: none;
+  font-size: var(--fs-sm);
+}
+.jg-class:hover {
+  border-color: var(--border-strong);
+  background: var(--surface-3);
+}
+.jg-class.warn {
+  border-color: var(--warning);
+}
+.jg-class-add {
+  border-style: dashed;
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  font: inherit;
+  font-size: var(--fs-sm);
+}
+.jg-card details {
+  margin: 0;
+}
+.jg-card details > summary {
+  cursor: pointer;
+  font-size: var(--fs-sm);
+  color: var(--text-muted);
+}
+.jg-unassigned {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2) var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border: 1px dashed var(--border-strong);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+.jg-unassigned + .jg-unassigned {
+  margin-top: var(--space-2);
+}
+.jg-swatch {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  background: var(--jg-color, var(--border-strong));
+  flex-shrink: 0;
+}
+.jg-color-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+.jg-color-row input[type='color'] {
+  width: var(--control-h);
+  height: var(--control-h);
+  padding: 2px;
+}
+.jg-preview-table td,
+.jg-preview-table th {
+  vertical-align: top;
+}
+
+@media (max-width: 599.98px) {
+  .jg-card {
+    padding: var(--space-3);
+    padding-left: calc(var(--space-3) + 6px);
+  }
+  .jg-facts {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .jg-fact-value {
+    font-size: var(--fs-lg);
+  }
+}

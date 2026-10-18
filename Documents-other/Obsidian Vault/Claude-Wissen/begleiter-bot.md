@@ -1,0 +1,17 @@
+---
+name: begleiter-bot
+description: "Mineflayer-Begleitsystem begleiter/ + Client-Mod botlink 0.2.0: Stand 2026-09-26, Git-Repos, Test-Setup (Labor-Server, Gametest mit Zuschauer-Client) und die gefundenen Mineflayer-Fallen"
+metadata:
+  node_type: memory
+  type: project
+  originSessionId: 68a9a36d-50fd-43c5-b0bd-c97e277cf817
+  modified: 2026-09-26T13:20:12.288Z
+---
+
+Unter `C:\Users\reiss\Documents\claude\begleiter\` (Bot für Zweitaccount NotL0rdr3spawn, User = L0rdr3spawn) und Mod `C:\Users\reiss\Documents\claude\botlink\`. **Seit 2026-09-26 Teil des Monorepos `C:\Users\reiss\Documents\claude\`** (Branch main, Allowlist-.gitignore nur für MC-Ordner, Historien per Subtree übernommen, alte .git-Ordner in `.git-alt/`; noch kein Remote, `gh` nicht installiert). Mod-Jar liegt in den Prism-Instanzen **26.3 und Kampftest** – nach Mod-Änderungen in beide kopieren.
+
+**User-Wünsche 2026-09-26:** Blackbox-Feature komplett entfernt (liegt nur noch in der Git-Historie); stattdessen nennt der Bot beim Ausloggen den Grund (wer/was wie viel Schaden, TNT-Lore/TNT/Creeper/Endkristall). Items **nur auf Befehl** aufheben (`loot:false`, `!nimm an`). Beim Geben auf den Block werfen, auf dem der User steht (Wurfbahn berechnet, sonst „komme nicht ran"). Zum Testen will er ein **eigenes Fenster nur für sich**: Test-Client öffnet Welt im LAN auf 127.0.0.1:25580, dann `prismlauncher.exe --launch 26.3 --profile L0rdr3spawn --server 127.0.0.1:25580` (Prism unter `%LOCALAPPDATA%\Programs\PrismLauncher`); er wird beim ersten Betreten Zuschauer, bekommt Testschritte per tellraw. Das Gametest-Fenster selbst ist für ihn nur „wie ein Video".
+
+**Why (Fallen, gemessen):** (1) 26.3 erlaubt nur ein Positionspaket pro Client-Tick (Reset nur durch `tick_end`, das Mineflayer nie schickt) → Kick `invalid_player_movement`; Fix: nach jedem Positionspaket `tick_end` (bot/index.js). (2) Singleplayer: normaler LAN-Knopf = Online-Modus → Bot abgewiesen; „Bot holen" setzt `setUsesAuthentication(false)` auch bei schon offener Welt. (3) Paper setzt Mineflayer an Wänden zurück → 2 mm Abstand; prismarine-physics kann den Oberflächensprung im Wasser nicht → Tritt-Block. (4) MLG: Server rechnet mit der zuletzt gesendeten Position; Laub/Stufen nehmen Wasser auf → erst Baublock, dann Wasser (geht nur bis ~30 Blöcke); Client-Vorhersage für gesetzte Blöcke. (5) `setGoal(g,true)` während `goto()` hängt ewig → neu planen per `setMovements(movements)`. (6) Manager forkt Bots mit `windowsHide:true`, sonst Konsolenfenster → wird es geschlossen, stirbt der Bot (0xC000013A). (7) Test-Spuren: meine Tests hatten `!logout aus` + Freund „Kumpel" in `daten/einstellungen-NotL0rdr3spawn.json` hinterlassen → nach Tests zurücksetzen.
+**How to apply:** Testen ohne den User zu stören: Labor-Server (Scratchpad, Flachwelt, 127.0.0.1:25530, RCON 25531 „labor", Profil `labor`) + Test-Besitzer-Harness + `./gradlew runClientGameTest` in botlink (Env BOTLINK_RC, BOTLINK_PHASEN=server,menue,singleplayer,offen). Bot-Joins im Test immer mit `bot: "NotL0rdr3spawn"`, nie den Hauptaccount. Nach Tests `debug:false` in konfig.json.
+**Seit 2026-09-26 (Fehlerdurchsicht):** Der User startet alles per Doppelklick auf `begleiter/START.cmd` (Manager neu + Prism `--launch 26.3`). Manager weist Anfragen mit `Origin`-Header und POSTs ohne `Content-Type: application/json` ab (Schutz gegen Webseiten) → eigene Test-Skripte/curl immer mit JSON-Header; Arena (47812) nur POST ohne Origin. `bc stop` wartet jetzt aufs echte Ende.

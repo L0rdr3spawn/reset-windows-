@@ -1,0 +1,14 @@
+name,idnumber,description,descriptionformat,visible,context
+GS1 Bienen,GS1,Lerngruppe GS1 Bienen (Jahrgang 1-3),1,1,System
+GS2 Hummeln,GS2,Lerngruppe GS2 Hummeln (Jahrgang 1-3),1,1,System
+GS3 Schmetterlinge,GS3,Lerngruppe GS3 Schmetterlinge (Jahrgang 1-3),1,1,System
+GS4 Marienkäfer,GS4,Lerngruppe GS4 Marienkäfer (Jahrgang 1-3),1,1,System
+MS1 Füchse,MS1,Lerngruppe MS1 Füchse (Jahrgang 4-6),1,1,System
+MS2 Dachse,MS2,Lerngruppe MS2 Dachse (Jahrgang 4-6),1,1,System
+MS3 Igel,MS3,Lerngruppe MS3 Igel (Jahrgang 4-6),1,1,System
+SEK1 Eichen,SEK1,Lerngruppe SEK1 Eichen (Jahrgang 7-10),1,1,System
+SEK2 Buchen,SEK2,Lerngruppe SEK2 Buchen (Jahrgang 7-10),1,1,System
+SEK3 Linden,SEK3,Lerngruppe SEK3 Linden (Jahrgang 7-10),1,1,System
+ABD1 Abendschule Abschlussjahr,ABD1,Lerngruppe ABD1 Abendschule Abschlussjahr (Jahrgang 9-10),1,1,System
+ABD2 Abendschule Vorkurs,ABD2,Lerngruppe ABD2 Abendschule Vorkurs (Jahrgang 8-9),1,1,System
+Kollegium,KOLL,Alle Paedagog/innen,1,1,System

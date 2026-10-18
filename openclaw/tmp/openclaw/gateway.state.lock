@@ -1,0 +1,17 @@
+{
+  "pid": 14012,
+  "ownerId": "a5491ebb-4dd9-4e91-ae71-a7139d8f13d7",
+  "createdAt": "2026-10-17T13:49:49.673Z",
+  "configPath": "C:\\Users\\reiss\\.openclaw\\openclaw.json",
+  "stateDir": "C:\\Users\\reiss\\.openclaw",
+  "role": "gateway",
+  "processNamespace": {
+    "platform": "win32",
+    "identity": "2026-10-16T10:28:54.5003380Z",
+    "host": "L0rdr3spawn"
+  },
+  "cronOwnerProjection": "dynamic-default-v1",
+  "port": 18789,
+  "startTime": 1792244974142
+}
+													  	 							 	  					  	 						  		  	 			 	 	 		 	 			  	  					  			   	 	 		   		  		 			 	 		 		 			  	  		 	 	         

@@ -1,0 +1,11 @@
+Originalwerte 2. Monitor (44C1G, DISPLAY2) vor der Kalibrierung, 2026-10-03:
+Helligkeit 0x10 = 70
+Kontrast   0x12 = 50
+Farbpreset 0x14 = 5 (6500K)
+RGB-Gain   0x16/0x18/0x1A = 20/20/20
+Schwarz    0x6C/0x6E/0x70 = 50/50/50
+Gamma-Ramp: linear (Standard)
+
+Zuruecksetzen:
+  powershell -ExecutionPolicy Bypass -File gamma.ps1 -Reset
+  powershell -ExecutionPolicy Bypass -File ddc.ps1 -Action set -Code 16 -Value 70   (0x10 Helligkeit)

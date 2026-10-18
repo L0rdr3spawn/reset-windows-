@@ -1,0 +1,306 @@
+/* Notenbuch (docs/NOTENBUCH.md) – nur Variablen aus styles/tokens.css; Klassen mit Präfix gbk- */
+.gbk-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2) var(--space-3);
+}
+.gbk-bar > .grow {
+  min-width: 0;
+}
+.gbk-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  align-items: center;
+}
+
+/* ---- Notentabelle ---- */
+.gbk-scroll {
+  overflow: auto;
+  max-width: 100%;
+  max-height: min(78vh, 900px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+.gbk-table {
+  border-collapse: separate;
+  border-spacing: 0;
+  min-width: 100%;
+  font-size: var(--fs-sm);
+}
+.gbk-table th,
+.gbk-table td {
+  padding: var(--space-1) var(--space-2);
+  border-bottom: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+  text-align: center;
+  vertical-align: middle;
+  background: var(--surface);
+}
+.gbk-table thead th {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: var(--surface-3);
+  vertical-align: bottom;
+  font-weight: var(--fw-semibold);
+}
+.gbk-table .gbk-name {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  min-width: 11rem;
+  max-width: 14rem;
+  text-align: left;
+  background: var(--surface-2);
+}
+.gbk-table thead .gbk-name {
+  z-index: 3;
+  background: var(--surface-3);
+}
+.gbk-name-btn {
+  all: unset;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  color: var(--text);
+  text-decoration: underline dotted;
+  text-underline-offset: 3px;
+}
+.gbk-name-btn:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+.gbk-group {
+  font-size: var(--fs-xs);
+  color: var(--text-muted);
+  font-weight: normal;
+}
+.gbk-head-btn {
+  all: unset;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1px;
+  min-width: 4.2rem;
+  padding: var(--space-1);
+  border-radius: var(--radius-sm);
+}
+.gbk-head-btn:hover,
+.gbk-head-btn:focus-visible {
+  background: var(--primary-soft);
+  outline: none;
+}
+.gbk-head-title {
+  overflow-wrap: anywhere;
+  max-width: 7rem;
+}
+.gbk-head-meta {
+  font-size: var(--fs-xs);
+  color: var(--text-muted);
+  font-weight: normal;
+}
+.gbk-cell {
+  padding: 2px;
+  min-width: 4.2rem;
+}
+.gbk-input {
+  width: 3.6rem;
+  min-height: 2rem;
+  padding: 2px 4px;
+  text-align: center;
+  border: 1px solid var(--border-control);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--text);
+  font: inherit;
+}
+.gbk-input:focus {
+  outline: 2px solid var(--focus);
+  outline-offset: 0;
+}
+.gbk-input[readonly] {
+  cursor: pointer;
+}
+.gbk-input[aria-invalid='true'] {
+  border-color: var(--danger);
+  background: var(--danger-soft);
+}
+.gbk-input:disabled {
+  background: var(--surface-3);
+  color: var(--text-muted);
+}
+.gbk-tone-good {
+  background: var(--success-soft);
+}
+.gbk-tone-ok {
+  background: var(--warning-soft);
+}
+.gbk-tone-bad {
+  background: var(--danger-soft);
+}
+.gbk-status {
+  font-style: italic;
+}
+.gbk-sub {
+  display: block;
+  font-size: var(--fs-xs);
+  color: var(--text-muted);
+}
+.gbk-avg {
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.gbk-avg-strong {
+  font-weight: var(--fw-semibold);
+}
+.gbk-final {
+  min-width: 7.5rem;
+}
+.gbk-final-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-1);
+}
+.gbk-final-row .gbk-input {
+  flex: none;
+}
+.gbk-flag {
+  display: inline-block;
+  min-width: 1.2rem;
+  padding: 0 4px;
+  border-radius: var(--radius-sm);
+  background: var(--info-soft);
+  color: var(--info);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+}
+
+/* ---- Dialoge und Listen ---- */
+.gbk-quick {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+.gbk-quick .btn {
+  min-width: 2.75rem;
+}
+.gbk-cat-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 5.5rem auto;
+  gap: var(--space-2);
+  align-items: center;
+  padding: var(--space-1) 0;
+}
+.gbk-cat-row input {
+  min-width: 0;
+}
+.gbk-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+.gbk-list > li {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-3);
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+.gbk-list .gbk-li-main {
+  min-width: 0;
+  flex: 1 1 14rem;
+}
+.gbk-steps {
+  display: grid;
+  grid-template-columns: 6rem minmax(0, 1fr) auto;
+  gap: var(--space-2);
+  align-items: center;
+}
+
+/* ---- Klassenübersicht ---- */
+.gbk-ov td,
+.gbk-ov th {
+  text-align: center;
+}
+.gbk-ov .gbk-name {
+  text-align: left;
+}
+.gbk-warn {
+  text-align: left;
+  color: var(--danger);
+  font-weight: var(--fw-semibold);
+  min-width: 9rem;
+}
+.gbk-deficit {
+  outline: 2px solid var(--danger);
+  outline-offset: -3px;
+  font-weight: var(--fw-semibold);
+}
+.gbk-prov {
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* ---- Sicht für Schüler/innen und Eltern ---- */
+.gbk-final-badge {
+  display: inline-flex;
+  align-items: baseline;
+  gap: var(--space-1);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-lg);
+  background: var(--primary-soft);
+  color: var(--text);
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-semibold);
+}
+.gbk-my-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2) var(--space-3);
+}
+
+@media (max-width: 599.98px) {
+  .gbk-table .gbk-name {
+    min-width: 8rem;
+    max-width: 9rem;
+  }
+  .gbk-input {
+    width: 3.2rem;
+    min-height: var(--touch);
+  }
+  .gbk-cat-row {
+    grid-template-columns: minmax(0, 1fr) 4.5rem auto;
+  }
+}
+.gbk-cell[class*='gbk-tone-'] .gbk-input {
+  background: transparent;
+}
+.gbk-ind-1 {
+  padding-left: 1.5rem;
+}
+.gbk-ind-2 {
+  padding-left: 3rem;
+}
+.gbk-ind-3 {
+  padding-left: 4.5rem;
+}
+.gbk-cat-row .gbk-ind-0 input,
+.gbk-cat-row [class^='gbk-ind-'] input {
+  width: 100%;
+}
