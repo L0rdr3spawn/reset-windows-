@@ -59,6 +59,7 @@ Install 'GitHub.GitHubDesktop'                'GitHub Desktop'
 
 # ---------- 2b. Pentesting ----------
 Write-Host '=== Pentesting ===' -ForegroundColor Yellow
+Install 'GlassWire.GlassWire'                 'GlassWire (Netzwerk-Monitor/Firewall)'
 Install 'Insecure.Nmap'                       'Nmap (bringt Npcap + Zenmap + ncat mit)'
 Install 'WiresharkFoundation.Wireshark'       'Wireshark'
 Install 'PortSwigger.BurpSuite.Community'     'Burp Suite Community (Web-Proxy)'
@@ -113,5 +114,6 @@ Write-Host @'
     (hashcat nutzt in WSL keine NVIDIA-GPU zuverlaessig -> fuer GPU-Cracking Windows-Version von hashcat.net holen.)
 10. John the Ripper fuer Windows (optional): Release von github.com/openwall/john-packages.
 '@
+
 
 
