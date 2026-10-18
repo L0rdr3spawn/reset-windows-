@@ -1,6 +1,0 @@
-node_modules/
-# Laufzeitdaten: Logs, Passwoerter, Logins, Blackbox-Szenen, Einstellungen
-daten/
-viaproxy/*
-!viaproxy/.gitkeep
-*.log

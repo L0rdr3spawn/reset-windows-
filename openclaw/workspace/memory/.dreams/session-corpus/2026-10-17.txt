@@ -1,9 +1,0 @@
-[main/sessions/main/claude-test#L5] User: Antworte nur mit einem kurzen deutschen Satz: Welches Modell bist du und laeufst du lokal?
-[main/sessions/main/claude-test#L420] User: [System] Your previous turn was interrupted by a gateway restart while OpenClaw was waiting on tool/model work. The restart did not cancel the user's task. Continue from the existing transcript: check the current state, recover interrupted work, and finish the task without 
-[main/sessions/main/claude-test#L420] User: continue it, assign replacement work, or finish it yourself. A restart interruption alone is not a blocker. Finish the original task or report the specific remaining blocker that requires user input or unavailable authority. Treat a tool result marked interrupted or missing
-[main/sessions/main/claude-test#L421] Assistant: Ich bin das Modell `lmstudio/google/gemma-4-e4b` und laufe lokal auf dieser Maschine.
-[main/sessions/main/claude-test2#L5] User: Antworte nur mit einem kurzen deutschen Satz: Wer bist du?
-[main/sessions/main/claude-test3#L5] User: Antworte nur mit einem kurzen deutschen Satz: Wer bist du?
-[main/sessions/main/claude-test3#L58] User: [System] Your previous turn was interrupted by a gateway restart while OpenClaw was waiting on tool/model work. The restart did not cancel the user's task. Continue from the existing transcript: check the current state, recover interrupted work, and finish the task without 
-[main/sessions/main/claude-test3#L58] User: continue it, assign replacement work, or finish it yourself. A restart interruption alone is not a blocker. Finish the original task or report the specific remaining blocker that requires user input or unavailable authority. Treat a tool result marked interrupted or missing
-[main/sessions/main/gemma-t2#L5] User: Antworte nur mit einem kurzen deutschen Satz: Wer bist du?

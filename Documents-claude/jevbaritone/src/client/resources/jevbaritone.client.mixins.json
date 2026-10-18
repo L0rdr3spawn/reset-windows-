@@ -1,7 +1,0 @@
-{
-	"required": true,
-	"package": "de.reiss.jevbaritone.mixin",
-	"compatibilityLevel": "JAVA_25",
-	"client": ["BlockOptionalMetaMixin", "MultiPlayerGameModeAccessor"],
-	"injectors": {"defaultRequire": 1}
-}

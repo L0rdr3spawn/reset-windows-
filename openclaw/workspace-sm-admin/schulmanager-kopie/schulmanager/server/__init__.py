@@ -1,1 +1,0 @@
-"""Server des Schulmanagers (FastAPI)."""
