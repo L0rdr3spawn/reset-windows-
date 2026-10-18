@@ -1,4 +1,4 @@
-# Neuinstallation nach dem Reset. Als Administrator starten:
+﻿# Neuinstallation nach dem Reset. Als Administrator starten:
 #   powershell -ExecutionPolicy Bypass -File install.ps1
 # Ablauf: Grundlagen -> Programme -> Browser aufraeumen -> Python-Libs -> Handarbeit-Liste
 
@@ -46,6 +46,9 @@ Install 'OpenRGB.OpenRGB'                     'OpenRGB'
 Install 'Guru3D.Afterburner'                  'MSI Afterburner'
 Install 'Guru3D.RTSS'                         'RivaTuner (gehoert zu Afterburner, FPS-Overlay)'
 Install 'SteelSeries.GG'                      'SteelSeries GG'
+Install 'Valve.Steam'                         'Steam (Spiele neu laden)'
+Install 'RARLab.WinRAR'                       'WinRAR'
+Install '7zip.7zip'                          '7-Zip (Zweitarchivierer, 7z/ISO)'
 Install 'XP8CLZL93F5Z4P'                      'NVIDIA App (installiert den Grafiktreiber mit)' 'msstore'
 
 # ---------- 3. Browser aufraeumen ----------
@@ -82,5 +85,7 @@ Write-Host @'
  5. Womier-Treiber: Installer von der Womier-Webseite (WOMIER Driver)
  6. Plasticity: Installer + Lizenz von plasticity.xyz (Konto)
  7. NVIDIA: Nach der NVIDIA App den Treiber dort installieren lassen, Neustart.
- 8. Steam, Spiele: separat (Steam ist nicht in dieser Liste).
+ 8. Steam: nach dem Login die Spiele neu laden (oder aus den Zips auf dem Heimserver entpacken).
+ 9. Weitere Programme: vorschlaege.txt durchsehen, dann install-optional.ps1 starten.
 '@
+

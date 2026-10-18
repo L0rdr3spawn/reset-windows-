@@ -1,0 +1,108 @@
+# Format: winget-ID | Gruppe | Warum
+# Zeilen mit # am Anfang werden von install-optional.ps1 uebersprungen (= nicht installieren).
+# Alle IDs wurden am 2026-10-19 gegen winget geprueft.
+#
+# --- Abhaengigkeiten (Spiele/Programme brauchen sie oft still im Hintergrund) ---
+Microsoft.VCRedist.2013.x64 | Abhaengigkeit | Aeltere Spiele/Tools brauchen die 2013er C++-Runtime
+Microsoft.VCRedist.2013.x86 | Abhaengigkeit | Dasselbe fuer 32-Bit-Programme
+Microsoft.VCRedist.2012.x64 | Abhaengigkeit | Noch aeltere Programme (Mod-Tools, Treiber-Panels)
+Microsoft.VCRedist.2010.x64 | Abhaengigkeit | Uralt-Spiele und Cheat-/Mod-Werkzeuge
+Microsoft.XNARedist | Abhaengigkeit | Indie-Spiele auf XNA-Basis
+Microsoft.DotNet.Runtime.8 | Abhaengigkeit | .NET-Konsolenprogramme und Tools
+Microsoft.DotNet.SDK.8 | Abhaengigkeit | Falls du selbst C#-Projekte baust
+Microsoft.DotNet.DesktopRuntime.6 | Abhaengigkeit | Aeltere GUI-Tools
+Microsoft.DotNet.DesktopRuntime.7 | Abhaengigkeit | Dasselbe fuer .NET-7-Programme
+EclipseAdoptium.Temurin.21.JRE | Abhaengigkeit | Java fuer neue Minecraft-Versionen/Server
+EclipseAdoptium.Temurin.17.JRE | Abhaengigkeit | Java 17 fuer Minecraft 1.18-1.20
+EclipseAdoptium.Temurin.8.JRE | Abhaengigkeit | Java 8 fuer Minecraft 1.12 (Forge-Packs wie Arctic)
+Microsoft.VisualStudio.2022.BuildTools | Abhaengigkeit | C++-Compiler fuer Rust/Python-Pakete mit nativem Code
+Microsoft.WSL | Abhaengigkeit | Linux-Umgebung (Docker, Tools)
+#Nvidia.CUDA | Abhaengigkeit | Nur fuer GPU-KI/Python; sehr gross, bei Bedarf einschalten
+#Docker.DockerDesktop | Abhaengigkeit | Container lokal; Server laufen laut Regel eh auf dem Heimserver
+# --- Entwicklung ---
+Microsoft.PowerShell | Entwicklung | PowerShell 7: schneller, modernere Syntax
+OpenJS.NodeJS.LTS | Entwicklung | Node/npm fuer Frontends, MCP-Server, Tools
+astral-sh.uv | Entwicklung | Sehr schneller Python-Paket- und venv-Manager
+GitHub.cli | Entwicklung | gh: Repos, PRs, Login ohne Browser-Gefummel
+GitHub.GitLFS | Entwicklung | Grosse Dateien in Git (Modelle, Assets)
+GitHub.GitHubDesktop | Entwicklung | Git per Klick, wenn die Konsole nervt
+Rustlang.Rustup | Entwicklung | Rust-Toolchain (Tauri/Seelen-UI)
+GoLang.Go | Entwicklung | Go-Compiler fuer kleine CLI-Tools
+jqlang.jq | Entwicklung | JSON auf der Kommandozeile lesen/filtern
+BurntSushi.ripgrep.MSVC | Entwicklung | Blitzschnelle Textsuche, Claude Code nutzt sie
+sharkdp.fd | Entwicklung | Schnelleres find
+sharkdp.bat | Entwicklung | cat mit Syntax-Farben
+junegunn.fzf | Entwicklung | Fuzzy-Suche in Verlauf und Dateien
+ajeetdsouza.zoxide | Entwicklung | cd, das sich haeufige Ordner merkt
+eza-community.eza | Entwicklung | Schoeneres ls
+dandavison.delta | Entwicklung | Lesbare Git-Diffs
+Starship.Starship | Entwicklung | Schlanker, schneller Terminal-Prompt
+JanDeDobbeleer.OhMyPosh | Entwicklung | Alternative zu Starship (nur eins von beiden nehmen)
+Microsoft.Edit | Entwicklung | Kleiner Terminal-Editor von Microsoft
+icsharpcode.ILSpy | Entwicklung | .NET-Programme/Mods ansehen und decompilieren
+x64dbg.x64dbg | Entwicklung | Debugger fuer eigene Programme/Mod-Analyse
+MHNexus.HxD | Entwicklung | Hex-Editor fuer Savegames und Binaerdateien
+Notepad++.Notepad++ | Entwicklung | Schneller Texteditor fuer Logs und Configs
+# --- Windows-Komfort (QoL) ---
+Microsoft.PowerToys | QoL | FancyZones, Schnellstarter, Farbwaehler, Massen-Umbenennen
+voidtools.Everything | QoL | Dateisuche in Millisekunden
+Flow-Launcher.Flow-Launcher | QoL | Alt+Leertaste-Starter (Alternative zu Rovyl)
+Ditto.Ditto | QoL | Zwischenablage-Verlauf
+FilesCommunity.Files | QoL | Datei-Explorer mit Tabs
+ShareX.ShareX | QoL | Screenshots, Aufnahmen, Upload per Hotkey
+Greenshot.Greenshot | QoL | Einfachere Screenshot-Alternative zu ShareX
+AutoHotkey.AutoHotkey | QoL | Eigene Tastenkuerzel und Mini-Automatisierungen
+Nilesoft.Shell | QoL | Aufgeraeumtes, anpassbares Rechtsklick-Menue
+M2Team.NanaZip | QoL | 7-Zip-Fork mit Windows-11-Menue
+WinDirStat.WinDirStat | QoL | Zeigt, was Platz frisst
+JAMSoftware.TreeSize.Free | QoL | Platzfresser mit schneller Ansicht
+Klocman.BulkCrapUninstaller | QoL | Programme restlos entfernen, mehrere auf einmal
+Microsoft.Sysinternals.Suite | QoL | Process Explorer, Autoruns und weitere Systemwerkzeuge
+WinsiderSS.SystemInformer | QoL | Task-Manager-Ersatz mit allen Details
+# --- Hardware / Tuning ---
+CrystalDewWorld.CrystalDiskInfo | Hardware | SSD-Gesundheit (SMART) pruefen
+CrystalDewWorld.CrystalDiskMark | Hardware | SSD-Geschwindigkeit messen
+CPUID.CPU-Z | Hardware | CPU/RAM-Details (XMP/EXPO pruefen)
+TechPowerUp.GPU-Z | Hardware | Grafikkarten-Details und Sensoren
+LibreHardwareMonitor.LibreHardwareMonitor | Hardware | Sensoren-Alternative zu HWiNFO
+Wagnardsoft.DisplayDriverUninstaller | Hardware | Grafiktreiber sauber entfernen (bei Treiberproblemen)
+Orbmu2k.nvidiaProfileInspector | Hardware | Versteckte NVIDIA-Spieleinstellungen
+Recol.DLSSUpdater | Hardware | DLSS-Dateien in Spielen aktualisieren
+# --- Sicherheit / Netzwerk ---
+KeePassXCTeam.KeePassXC | Sicherheit | Lokaler Passwortmanager ohne Cloud
+Bitwarden.Bitwarden | Sicherheit | Passwortmanager mit Sync (Alternative zu KeePassXC)
+Proton.ProtonVPN | Sicherheit | VPN, passt zu deinem Proton Mail
+Tailscale.Tailscale | Sicherheit | Heimserver von ueberall ohne Portfreigaben erreichen
+Syncthing.Syncthing | Sicherheit | Ordner zwischen PC und Heimserver synchron halten
+WinSCP.WinSCP | Sicherheit | Dateien per SSH/SFTP auf den Heimserver
+PuTTY.PuTTY | Sicherheit | Fallback-SSH-Client
+WiresharkFoundation.Wireshark | Sicherheit | Netzwerk-Mitschnitt (hattest du schon)
+Insecure.Nmap | Sicherheit | Netzwerk-Scanner (hattest du schon)
+WireGuard.WireGuard | Sicherheit | VPN-Tunnel (hattest du schon)
+# --- Medien / Kreatives ---
+VideoLAN.VLC | Medien | Spielt wirklich alles ab
+OBSProject.OBSStudio | Medien | Aufnahme und Streaming
+HandBrake.HandBrake | Medien | Videos verkleinern/umwandeln
+Gyan.FFmpeg | Medien | Video/Audio-Werkzeug (hattest du, Dependency vieler Tools)
+yt-dlp.yt-dlp | Medien | Videos/Audio von Webseiten laden
+ImageMagick.ImageMagick | Medien | Bilder per Kommandozeile umwandeln
+Audacity.Audacity | Medien | Audio schneiden und bearbeiten
+GIMP.GIMP.3 | Medien | Bildbearbeitung
+Inkscape.Inkscape | Medien | Vektorgrafik
+BlenderFoundation.Blender | Medien | 3D (passt zu Plasticity/Blockbench)
+SumatraPDF.SumatraPDF | Medien | Schneller, leichter PDF-Leser
+TheDocumentFoundation.LibreOffice | Medien | Office ohne Abo
+# --- Spiele / Mods ---
+Playnite.Playnite | Spiele | Alle Launcher in einer Bibliothek
+EpicGames.EpicGamesLauncher | Spiele | Gratis-Spiele und Epic-Titel
+GOG.Galaxy | Spiele | GOG-Spiele
+ElectronicArts.EADesktop | Spiele | EA-Spiele
+Overwolf.CurseForge | Spiele | Mods/Modpacks (hattest du)
+Modrinth.ModrinthApp | Spiele | Minecraft-Mods, Alternative zu CurseForge
+JannisX11.Blockbench | Spiele | Minecraft-Modelle (hattest du)
+MoonlightGameStreamingProject.Moonlight | Spiele | PC-Spiele auf andere Geraete streamen
+Parsec.Parsec | Spiele | Fernspielen mit Freunden
+# --- Kommunikation ---
+Telegram.TelegramDesktop | Kommunikation | Messenger
+OpenWhisperSystems.Signal | Kommunikation | Verschluesselter Messenger
+Mozilla.Thunderbird | Kommunikation | Mail-Client (falls Proton Mail App nicht reicht)
