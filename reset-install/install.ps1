@@ -48,7 +48,29 @@ Install 'Guru3D.RTSS'                         'RivaTuner (gehoert zu Afterburner
 Install 'SteelSeries.GG'                      'SteelSeries GG'
 Install 'Valve.Steam'                         'Steam (Spiele neu laden)'
 Install 'RARLab.WinRAR'                       'WinRAR'
-Install '7zip.7zip'                          '7-Zip (Zweitarchivierer, 7z/ISO)'
+Install 'VideoLAN.VLC'                        'VLC'
+Install 'OBSProject.OBSStudio'                'OBS Studio'
+Install 'Proton.ProtonVPN'                    'Proton VPN'
+Install 'Proton.ProtonMail'                   'Proton Mail'
+Install 'Microsoft.PowerToys'                 'PowerToys'
+Install 'voidtools.Everything'                'Everything (Dateisuche)'
+Install 'GitHub.cli'                          'GitHub CLI (gh)'
+Install 'GitHub.GitHubDesktop'                'GitHub Desktop'
+
+# ---------- 2b. Pentesting ----------
+Write-Host '=== Pentesting ===' -ForegroundColor Yellow
+Install 'Insecure.Nmap'                       'Nmap (bringt Npcap + Zenmap + ncat mit)'
+Install 'WiresharkFoundation.Wireshark'       'Wireshark'
+Install 'PortSwigger.BurpSuite.Community'     'Burp Suite Community (Web-Proxy)'
+Install 'ZAP.ZAP'                             'OWASP ZAP (Web-Scanner, Alternative/Ergaenzung zu Burp)'
+Install 'mitmproxy.mitmproxy'                 'mitmproxy (HTTPS-Mitschnitt auf der Konsole)'
+Install 'ffuf.ffuf'                           'ffuf (Verzeichnis-/Parameter-Fuzzing)'
+Install 'WerWolv.ImHex'                       'ImHex (Hex-Editor fuer Reverse Engineering)'
+Install 'PuTTY.PuTTY'                         'PuTTY (SSH/Serial)'
+Install 'Microsoft.Sysinternals.Suite'        'Sysinternals (Process Explorer, Autoruns, ...)'
+Write-Host '>> WSL + Kali Linux (John the Ripper, hashcat, Metasploit, hydra, sqlmap, gobuster ...)' -ForegroundColor Cyan
+wsl --install --no-distribution
+Install 'OffSec.KaliLinux'                    'Kali Linux (WSL-Distro)'
 Install 'XP8CLZL93F5Z4P'                      'NVIDIA App (installiert den Grafiktreiber mit)' 'msstore'
 
 # ---------- 3. Browser aufraeumen ----------
@@ -86,6 +108,10 @@ Write-Host @'
  6. Plasticity: Installer + Lizenz von plasticity.xyz (Konto)
  7. NVIDIA: Nach der NVIDIA App den Treiber dort installieren lassen, Neustart.
  8. Steam: nach dem Login die Spiele neu laden (oder aus den Zips auf dem Heimserver entpacken).
- 9. Weitere Programme: vorschlaege.txt durchsehen, dann install-optional.ps1 starten.
+ 9. Kali: nach dem Neustart 'kali' starten, Benutzer anlegen, dann:
+      sudo apt update && sudo apt install -y kali-tools-top10 john hashcat hydra sqlmap gobuster seclists
+    (hashcat nutzt in WSL keine NVIDIA-GPU zuverlaessig -> fuer GPU-Cracking Windows-Version von hashcat.net holen.)
+10. John the Ripper fuer Windows (optional): Release von github.com/openwall/john-packages.
 '@
+
 
